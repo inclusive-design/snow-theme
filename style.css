@@ -1,0 +1,124 @@
+/*
+Theme Name:     SNOW
+Description:    Theme for the SNOW video website
+Template:       wordpress-fss-theme
+*/
+
+@import url("../wordpress-fss-theme/style.css");
+
+body {
+    font-family: Verdana;
+}
+.fl-container.fl-centered {
+    width: 72em;
+}
+
+#site-logo {
+    width: 30em;
+}
+#logo {
+    text-decoration: none;
+    background-image: url('images/logo.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;
+    line-height: 1.7;
+}
+#site-logo a#logo .video-tag {
+    color: #F47621;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-left: 210px; /* for non-changing image width */
+    vertical-align: -1em;
+    position: relative;
+}
+#site-slogan {
+    color: #74C6EB;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-left: 4em;
+    margin-top: -0.5em;
+}
+
+#navigation {
+    padding: 1.5em 0 0.5em;
+}
+
+#navigation ul.inline, ul.links.inline {
+    display: inline;
+    padding-left: 0;
+}
+
+#navigation li {
+    display: inline;
+    float: left;
+    padding: 0;
+}
+
+#navigation li a {
+    color: #331C03;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-right: 2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#navigation li a:hover {
+    color: #F47621;
+}
+
+.banner-divider {
+    background-color: #F47621;
+    height: 1em;
+}
+
+.content-left-side {
+    background-color: #0F1820;
+    width: 20em;
+    min-height: 40em;
+}
+.content-left-side h2 {
+    padding-top: 1em;
+    color: #F47621;
+    text-align: center;
+}
+.content-left-side ul {
+    margin: 0;
+}
+.content-left-side ul li {
+    color: #FFFFFF;
+    font-size: 1.1em;
+    list-style: none outside none;
+    margin: 0;
+    text-decoration: none;
+    width: 100%;
+}
+.content-left-side ul li a {
+    color: #FFFFFF;
+    display: block;
+    padding: 5px 10px 5px 25px;
+    text-decoration: none;
+}
+.content-left-side ul li a.active, .content-left-side ul li a:hover, .content-left-side ul li a:focus {
+    background-color: #F47621;
+}
+.fl-col-mixed-200 .fl-col-flex.video-content {
+    margin-left: 22em;
+}
+
+.video-content .post {
+    padding-top: 1em;
+}
+.video-content .post h3 {
+    font-family: Verdana;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 150%;
+    margin-top: 0.2em;
+}
+.video-content .post h3 a {
+    text-decoration: none;
+    color: black;
+}
