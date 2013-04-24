@@ -44,6 +44,7 @@ body {
 .banner-divider {
     background-color: #F47621;
     height: 1em;
+    margin-top: 1em;
 }
 
 /* Top Navigation */
@@ -80,6 +81,7 @@ body {
     width: 15em;
     min-height: 40em;
     margin-top: 2em;
+    display: block; /* needed for IE8 */
 }
 .content-left-side h2 {
     color: #F47621;
