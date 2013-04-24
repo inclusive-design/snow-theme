@@ -76,11 +76,12 @@ body {
 
 .content-left-side {
     background-color: #0F1820;
+    border: 1px solid #0F1820;
     width: 20em;
     min-height: 40em;
+    margin-top: 2em;
 }
 .content-left-side h2 {
-    padding-top: 1em;
     color: #F47621;
     text-align: center;
 }
@@ -101,16 +102,21 @@ body {
     padding: 5px 10px 5px 25px;
     text-decoration: none;
 }
-.content-left-side ul li a.active, .content-left-side ul li a:hover, .content-left-side ul li a:focus {
+.content-left-side ul li a.active,
+.content-left-side ul li a:hover,
+.content-left-side ul li a:focus {
     background-color: #F47621;
 }
+.fl-col-mixed-200 .fl-col-flex.front-content,
 .fl-col-mixed-200 .fl-col-flex.video-content {
     margin-left: 22em;
 }
 
+.fl-col-fixed, .fl-col-flex.front-content,
 .video-content .post {
     padding-top: 1em;
 }
+.front-content h3,
 .video-content .post h3 {
     font-family: Verdana;
     font-size: 2em;
@@ -121,4 +127,17 @@ body {
 .video-content .post h3 a {
     text-decoration: none;
     color: black;
+}
+
+.fl-theme-uio-yb .banner-divider {
+    background-color: #FFFF00 !important;
+}
+.fl-theme-uio-yb .content-left-side {
+    border: 1px solid #FFFF00 !important;
+}
+.fl-theme-uio-yb .content-left-side ul li a.active,
+.fl-theme-uio-yb .content-left-side ul li a:hover,
+.fl-theme-uio-yb .content-left-side ul li a:focus {
+    color: #000000 !important;
+    background-color: #FFFF00 !important;
 }
