@@ -8,11 +8,8 @@ get_header(); ?>
 
     <main id="content" class="a11y-site-main small-12 columns">
         <div class="a11y-site-tagline">
-            <p>
-                <?php
-                echo ($settings['site_text_tagline']);
-            ?>
-            </p>
+            <p><span>Welcome to</span><br /> <span class="snow">SNOW</span></p>
+            </span>
         </div>
         <section class="row a11y-panel-container">
             <?php

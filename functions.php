@@ -1,5 +1,5 @@
 <?php
-function big_idea_theme_enqueue_styles() {
+function snow_theme_enqueue_styles() {
     $parent_style = 'a11y-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
@@ -8,5 +8,5 @@ function big_idea_theme_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 }
-add_action( 'wp_enqueue_scripts', 'big_idea_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
 ?>
