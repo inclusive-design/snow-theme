@@ -11,6 +11,12 @@ get_header(); ?>
             <p><span>Welcome to</span><br /> <span class="a11y-tagline-emphasis">SNOW</span></p>
             </span>
         </div>
+        
+        <?php
+            if (is_active_sidebar('snow-home')) {
+                dynamic_sidebar('snow-home');
+            }
+        ?>
         <section class="row a11y-panel-container">
             <?php
                 $panels = array (

@@ -9,4 +9,14 @@ function snow_theme_enqueue_styles() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
+
+register_sidebar( array(
+	'name' => __( 'Snow Home', 'snow' ),
+	'id' => 'snow-home',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widgettitle">',
+	'after_title' => '</h3>'
+));
+
 ?>
