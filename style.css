@@ -171,7 +171,7 @@ html {
 /* Shared navigation styles for all screen sizes. */
 .a11y-main-nav-items ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: nowrap;
   align-items: stretch;
   align-content: center;
@@ -237,9 +237,12 @@ html {
   display: flex;
   align-items: center;
 }
+.a11y-site-tagline p {
+  float: right false;
+}
 .a11y-site-tagline span {
   font-size: 6rem;
-  font-weight: heavy;
+  font-weight: bold;
   text-transform: uppercase;
   text-shadow: none;
   color: #fff;
@@ -248,11 +251,8 @@ html {
   line-height: 8rem;
   display: inline;
 }
-.a11y-site-tagline span snow {
-  color: #f7ac82;
-}
 .a11y-tagline-emphasis {
-  color: #f7ac82;
+  color: #f7ac82 !important;
 }
 /* The Three Panels that appear on the front page. */
 .a11y-panel-container {
@@ -286,9 +286,11 @@ html {
 }
 /* Site Sidebar (appears on all other pages, except front page) */
 .a11y-site-aside {
-  color: #fff;
-  background: #006274;
+  color: #dcde70;
+  background: #dcde70;
   padding: 1rem 1.6rem;
+  box-shadow: 0.2rem 0.2rem 0.8rem #808080;
+  z-index: 1;
 }
 .a11y-site-aside ul {
   list-style: none;
@@ -301,7 +303,7 @@ html {
   text-transform: uppercase;
 }
 .a11y-site-aside a {
-  color: #fff;
+  color: #0f191d;
   padding: 0.4rem;
   margin-bottom: 0.2rem;
   width: 100%;
@@ -309,20 +311,20 @@ html {
 }
 .a11y-site-aside a:hover {
   background-color: #fff;
-  color: #006274;
+  color: #fff;
 }
 .a11y-site-aside a:focus {
   outline: 0.2rem solid #fff;
-  color: #fff;
+  color: #0f191d;
 }
 .a11y-site-aside a:focus:hover {
   background-color: #fff;
-  color: #006274;
+  color: #fff;
 }
 .a11y-site-aside h1,
 .a11y-site-aside h2,
 .a11y-site-aside h3 {
-  color: #fff;
+  color: #dcde70;
   font-size: 1.2rem;
 }
 /* Main Content Area Styles */
@@ -368,7 +370,7 @@ html {
 }
 /* Footer styles for the home page only. */
 .home .a11y-site-footer {
-  background-color: #006274;
+  background-color: #132133;
 }
 .home .a11y-site-footer a:hover {
   background-color: #fff;
@@ -632,18 +634,6 @@ html {
     text-align: right;
     background-position: 0 -10rem;
   }
-  .a11y-site-tagline p {
-    position: absolute;
-    clear: right;
-    right: 3rem;
-    display: inline;
-  }
-  .a11y-site-tagline p span {
-    font-weight: bold;
-  }
-  .a11y-site-tagline p span snow {
-    color: #f7ac82;
-  }
   .a11y-site-footer {
     background-image: url("./images/sidebar-graphic-COLOUR-02.svg");
     background-position: left top;
@@ -652,45 +642,10 @@ html {
   }
   .single .a11y-site-main,
   .category .a11y-site-main {
-    border-top: 1.6rem solid #eceded;
-    border-left: 1.6rem solid #eceded;
-    border-right: 1.6rem solid #eceded;
+    border-top: 1.6rem solid #fff;
+    border-left: 1.6rem solid #fff;
+    border-right: 1.6rem solid #fff;
     padding-bottom: 4rem;
-  }
-  .fl-theme-wb .a11y-site-aside {
-    background-image: url("./images/sidebar-graphic-WHITE-01.svg");
-  }
-  .fl-theme-wb .a11y-site-footer {
-    border-top: 0.2rem solid #fff;
-    background-image: url("./images/sidebar-graphic-WHITE-02.svg");
-  }
-  .fl-theme-bw .a11y-site-aside {
-    background-image: url("./images/sidebar-graphic-GREY-01.svg");
-  }
-  .fl-theme-bw .a11y-site-footer {
-    border-top: 0.2rem solid #000;
-    background-image: url("./images/sidebar-graphic-GREY-02.svg");
-  }
-  .fl-theme-yb .a11y-site-aside {
-    background-image: url("./images/sidebar-graphic-YELLOW-01.svg");
-  }
-  .fl-theme-yb .a11y-site-footer {
-    border-top: 0.2rem solid #ff0;
-    background-image: url("./images/sidebar-graphic-YELLOW-02.svg");
-  }
-  .fl-theme-by .a11y-site-aside {
-    background-image: url("./images/sidebar-graphic-GREY-01.svg");
-  }
-  .fl-theme-by .a11y-site-footer {
-    border-top: 0.2rem solid #000;
-    background-image: url("./images/sidebar-graphic-GREY-02.svg");
-  }
-  .fl-theme-lgdg .a11y-site-aside {
-    background-image: url("./images/sidebar-graphic-WHITE-01.svg");
-  }
-  .fl-theme-lgdg .a11y-site-footer {
-    border-top: 0.2rem solid #bdbdbb;
-    background-image: url("./images/sidebar-graphic-WHITE-02.svg");
   }
 }
 /* Large screens and bigger */

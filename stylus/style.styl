@@ -44,11 +44,11 @@ main-nav-link-background-hover ?= #7EC9BC;
 main-nav-link-focus ?= 0.2rem solid #00303C;
 
 /* Sidebar */
-sidebar-color ?= #fff;
-sidebar-background ?= #006274;
-sidebar-link-color ?= #fff;
+sidebar-color ?= #DCDE70;
+sidebar-background ?= #DCDE70;
+sidebar-link-color ?= #0F191D;
 sidebar-link-background-hover ?= #fff;
-sidebar-link-color-hover ?= #006274;
+sidebar-link-color-hover ?= #fff;
 sidebar-link-focus ?= 0.2rem solid #fff;
 
 /* Front Main Content Area */
@@ -58,7 +58,7 @@ front-main-content-link-hover ?= #fff;
 front-main-content-link-focus ?= 0.2rem solid #006274;
 
 /* Main Content Area for all other pages */
-main-content-border ?= 1.6rem solid #ECEDED;
+main-content-border ?= 1.6rem solid #fff;
 main-content-background ?= #fff;
 main-content-color ?= #000;
 main-content-link-color ?= #AD3362;
@@ -76,7 +76,7 @@ skip-hover-color ?= #ECEDED;
 skip-hover-background ?= #006274;
 
 /* Front Page Footer */
-front-footer-background ?= #006274;
+front-footer-background ?= #132133;
 front-footer-color ?= #fff;
 front-footer-link-color ?= #fff;
 front-footer-link-hover-background ?= #fff;
@@ -84,7 +84,7 @@ front-footer-link-hover ?= #006274;
 front-footer-link-focus ?= 0.2rem solid #fff;
 
 /* Sub Page Footer */
-footer-background ?= #00303C;
+footer-background ?= #132133;
 footer-color ?= #fff;
 footer-link-color ?= #fff;
 footer-link-hover-background ?= #fff;
@@ -98,14 +98,14 @@ site-tagline-background-image ?= "./images/banner.jpg";
 
 /* Mixins */
 apply-contrast-sidebar-images(foreground fileSuffix) {
-    .a11y-site-aside {
+/*    .a11y-site-aside {
         background-image: url("./images/sidebar-graphic-"+fileSuffix+"-01.svg");
     }
 
     .a11y-site-footer {
         border-top: 0.2rem solid foreground;
         background-image: url("./images/sidebar-graphic-"+fileSuffix+"-02.svg");
-    }
+    }*/
 }
 
 apply-contrast-tagline-background(fileSuffix) {
@@ -340,7 +340,7 @@ html {
 .a11y-main-nav-items {
     ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: nowrap;
         align-items: stretch;
         align-content: center;
@@ -422,10 +422,14 @@ html {
 
     display:flex;
     align-items:center;
+
+    p {
+        float: right !import;
+    }
     
     span {
         font-size: 6rem;
-        font-weight: heavy;
+        font-weight: bold;
         text-transform: uppercase;
         text-shadow: none;
         color: site-tagline-color;
@@ -433,15 +437,11 @@ html {
         background-color: #0F191D;
         line-height: 8rem;
         display: inline;
-
-        snow {
-            color: site-tagline-emphasis;
-        }
     }
 }
 
 .a11y-tagline-emphasis {
-    color: site-tagline-emphasis;
+    color: site-tagline-emphasis !important;
 }
 
 /* The Three Panels that appear on the front page. */
@@ -486,6 +486,8 @@ html {
     color: sidebar-color;
     background: sidebar-background;
     padding: 1rem 1.6rem;
+    box-shadow: 0.2rem 0.2rem 0.8rem #808080;
+    z-index: 1;
 
     ul {
         list-style: none;
@@ -683,21 +685,6 @@ html {
           font-size: 1.6rem;
           text-align: right;
           background-position: 0 -10rem;
-
-          p {
-            position: absolute;
-            clear: right;
-            right: 3rem;
-            display: inline;
-
-            span {
-                font-weight: bold;
-
-                snow {
-                    color: site-tagline-emphasis;
-                }
-            }
-          }
       }
 
       .a11y-site-footer {
