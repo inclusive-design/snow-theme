@@ -12,7 +12,7 @@ Text Domain: a11y
 Tags: accessibility
 */
 /* Colours */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
 @font-face {
   font-family: "Roboto";
 }
@@ -50,7 +50,7 @@ html {
 .a11y-theme h3 {
   font-family: "Roboto";
   color: #f9c981;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: bold;
 }
 .a11y-site-header {
@@ -213,6 +213,53 @@ html {
   padding: 0;
   overflow-x: hidden;
 }
+.snow-intro {
+  display: flex;
+  box-shadow: 0rem 2rem 3rem 0rem #808080;
+  z-index: 1;
+  padding: 2rem;
+}
+.snow-home {
+  flex-grow: 1;
+  padding: 2rem 2rem 2rem 0;
+  float: left;
+}
+.snow-access {
+  width: 90rem;
+  border: 1px solid #dcde70;
+  margin: auto;
+  padding: 2rem;
+  vertical-align: middle;
+}
+.snow-access .textwidget {
+  padding: 1rem;
+}
+.snow-access-title {
+  color: #0f191d !important;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #dcde70;
+  padding-bottom: 0.5rem;
+}
+.snow-experiences {
+  text-align: center;
+  background-color: #dcde70;
+  padding: 1rem 1rem;
+  margin: 0;
+}
+h3.snow-experiences-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #0f191d;
+}
+h3.snow-title {
+  color: #0f191d;
+  font-weight: bold;
+}
+.column,
+.columns {
+  padding: 0 !important;
+}
 .category main,
 .single main {
   border: none;
@@ -256,8 +303,8 @@ html {
 }
 /* The Three Panels that appear on the front page. */
 .a11y-panel-container {
-  padding: 1rem 2rem;
-  background-color: #eceded;
+  padding: 2rem 2rem;
+  background-color: #f7ac82;
 }
 .a11y-panel-container.row {
   margin-left: 0;
@@ -265,13 +312,13 @@ html {
 }
 .a11y-front-panel {
   background-color: #fff;
-  border: 1rem solid #eceded;
+  border: 1rem solid #f7ac82;
   color: inherit;
 }
 .a11y-front-panel:focus,
 .a11y-front-panel:hover {
   color: inherit;
-  border-color: #006274;
+  border-color: #dcde70;
 }
 .a11y-front-panel.columns {
   padding: 0;
@@ -281,7 +328,8 @@ html {
   text-transform: none;
 }
 .a11y-front-panel h1,
-.a11y-front-panel section {
+.a11y-front-panel section,
+.a11y-front-panel .textwidget {
   padding: 0.5rem 1.5rem;
 }
 /* Site Sidebar (appears on all other pages, except front page) */
@@ -331,6 +379,11 @@ html {
 .a11y-site-main h1,
 .a11y-entry-header h1 {
   font-size: 2.6rem;
+  color: #0f191d;
+}
+.a11y-entry-header {
+  text-align: center;
+  background-color: #dcde70;
 }
 .a11y-site-main article h1,
 .a11y-site-main article h2,
@@ -354,23 +407,23 @@ html {
 /* Footer */
 .a11y-site-footer {
   padding: 1rem;
-  background-color: #00303c;
-  color: #fff;
+  background-color: #7ec9bc;
+  color: #0f191d;
 }
 .a11y-site-footer a {
-  color: #fff;
+  color: #0f191d;
 }
 .a11y-site-footer a:hover {
-  background-color: #fff;
+  background-color: #0f191d;
   color: #00303c;
 }
 .a11y-site-footer a:focus {
-  outline: 0.2rem solid #fff;
-  color: #fff;
+  outline: 0.2rem solid #0f191d;
+  color: #0f191d;
 }
 /* Footer styles for the home page only. */
 .home .a11y-site-footer {
-  background-color: #132133;
+  background-color: #7ec9bc;
 }
 .home .a11y-site-footer a:hover {
   background-color: #fff;
@@ -590,6 +643,10 @@ html {
     width: 4.1rem;
     height: 5.2rem;
   }
+  .column,
+  .columns {
+    padding: 0 !important;
+  }
   .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
     margin-right: 10rem;
   }
@@ -698,7 +755,7 @@ span.fa {
 .a11y-front-panel h1 {
   font-size: 1.2rem;
   text-transform: none;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 .a11y-front-panel section {
   padding: 0.5rem 1.5rem 1.5rem 1.5rem;

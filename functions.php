@@ -13,9 +13,27 @@ add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
 register_sidebar( array(
 	'name' => __( 'Snow Home', 'snow' ),
 	'id' => 'snow-home',
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'before_widget' => '<div id="snow-home" class="snow-home">',
 	'after_widget' => '</div>',
-	'before_title' => '<h3 class="widgettitle">',
+	'before_title' => '<h3 class="snow-title">',
+	'after_title' => '</h3>'
+));
+
+register_sidebar( array(
+	'name' => __( 'Accessing the Site', 'access' ),
+	'id' => 'access-site',
+	'before_widget' => '<div id="snow-access" class="snow-access">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="snow-access-title">',
+	'after_title' => '</h3>'
+));
+
+register_sidebar( array(
+	'name' => __( 'Experiences', 'experiences' ),
+	'id' => 'snow-experiences',
+	'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="snow-experiences-title">',
 	'after_title' => '</h3>'
 ));
 

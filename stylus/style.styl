@@ -19,7 +19,7 @@ limegreen ?= #DCDE70;
 seagreen ?= #7EC9BC;
 black ?= #0F191D;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
 @font-face {
     font-family: "Roboto";
@@ -52,7 +52,7 @@ sidebar-link-color-hover ?= #fff;
 sidebar-link-focus ?= 0.2rem solid #fff;
 
 /* Front Main Content Area */
-front-main-content-link-color ?= #006274;
+front-main-content-link-color ?= #0F191D;
 front-main-content-link-hover-background ?= #006274;
 front-main-content-link-hover ?= #fff;
 front-main-content-link-focus ?= 0.2rem solid #006274;
@@ -64,8 +64,10 @@ main-content-color ?= #000;
 main-content-link-color ?= #AD3362;
 
 /* Front Page Panels */
-front-panel-container-background ?= #ECEDED;
+front-panel-container-background ?= #F7AC82;
 front-panel-background ?= #fff;
+front-panel-header ?= #DCDE70;
+front-panel-text ?= #0F191D;
 
 /* Skip Links */
 skip-color ?= #006274;
@@ -76,7 +78,7 @@ skip-hover-color ?= #ECEDED;
 skip-hover-background ?= #006274;
 
 /* Front Page Footer */
-front-footer-background ?= #132133;
+front-footer-background ?= #7EC9BC;
 front-footer-color ?= #fff;
 front-footer-link-color ?= #fff;
 front-footer-link-hover-background ?= #fff;
@@ -84,12 +86,12 @@ front-footer-link-hover ?= #006274;
 front-footer-link-focus ?= 0.2rem solid #fff;
 
 /* Sub Page Footer */
-footer-background ?= #132133;
-footer-color ?= #fff;
-footer-link-color ?= #fff;
-footer-link-hover-background ?= #fff;
-footer-link-hover ?= #00303C;
-footer-link-focus ?= 0.2rem solid #fff;
+footer-background ?= #7EC9BC;
+footer-color ?= #0F191D;
+footer-link-color ?= #0F191D;
+footer-link-hover-background ?= #0F191D;
+footer-link-hover ?= #fff;
+footer-link-focus ?= 0.2rem solid #0F191D;
 
 /* Site description */
 site-tagline-color ?= #fff;
@@ -193,7 +195,7 @@ html {
     h1, h2, h3 {
         font-family: header-font;
         color: header-color;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: bold;
     }
 }
@@ -394,6 +396,61 @@ html {
     overflow-x: hidden;
 }
 
+.snow-intro {
+    display: flex;
+    box-shadow: 0rem 2rem 3rem 0rem #808080;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.snow-home {
+    flex-grow: 1;
+    padding: 2rem 2rem 2rem 0;
+    float: left;
+}
+
+.snow-access {
+    width: 90rem;
+    border: 1px solid #DCDE70;
+    margin: auto;
+    padding: 2rem;
+    vertical-align: middle;
+
+    .textwidget {
+        padding: 1rem;
+    }
+}
+
+.snow-access-title {
+    color: front-main-content-link-color !important;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #DCDE70;
+    padding-bottom: 0.5rem;
+}
+
+.snow-experiences {
+    text-align: center;
+    background-color: #DCDE70;
+    padding: 1rem 1rem;
+    margin: 0;
+}
+
+h3.snow-experiences-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #0F191D;
+}
+
+h3.snow-title {
+    color: front-main-content-link-color;
+    font-weight: bold;
+}
+
+.column, .columns {
+    padding: 0 !important;
+}
+
 // Main - All other pages.
 .category,
 .single {
@@ -446,7 +503,7 @@ html {
 
 /* The Three Panels that appear on the front page. */
 .a11y-panel-container {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     background-color: front-panel-container-background;
 
     &.row {
@@ -464,7 +521,11 @@ html {
 
     &:focus, &:hover {
         color: inherit;
-        border-color: front-main-content-link-color;
+        border-color: front-panel-header;
+
+        h1 {
+            font-size: ;
+        }
     }
 
     &.columns {
@@ -476,7 +537,7 @@ html {
         text-transform: none;
     }
 
-    h1, section {
+    h1, section, .textwidget {
         padding: 0.5rem 1.5rem;
     }
 }
@@ -534,6 +595,12 @@ html {
 /* Main Content Area Styles */
 .a11y-site-main h1, .a11y-entry-header h1 {
     font-size: 2.6rem;
+    color: front-panel-text;
+}
+
+.a11y-entry-header {
+    text-align: center;
+    background-color: front-panel-header;
 }
 
 .a11y-site-main article {
@@ -632,6 +699,10 @@ html {
       #logo {
           width: 4.1rem;
           height: 5.2rem;
+      }
+
+      .column, .columns {
+        padding: 0 !important;
       }
 
       .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
@@ -773,7 +844,7 @@ span.fa {
     h1 {
         font-size: 1.2rem;
         text-transform: none;
-        padding: 0.5rem 1.5rem;
+        padding: 1rem 1.5rem;
     }
 
     section {
