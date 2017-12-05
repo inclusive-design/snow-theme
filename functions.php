@@ -10,6 +10,7 @@ function snow_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
 
+/* Add SNOW introduction to front page */
 register_sidebar( array(
 	'name' => __( 'Snow Home', 'snow' ),
 	'id' => 'snow-home',
@@ -19,6 +20,7 @@ register_sidebar( array(
 	'after_title' => '</h3>'
 ));
 
+/* Add 'Accessing the Site' to front page */
 register_sidebar( array(
 	'name' => __( 'Accessing the Site', 'access' ),
 	'id' => 'access-site',
@@ -28,6 +30,7 @@ register_sidebar( array(
 	'after_title' => '</h3>'
 ));
 
+/* Add 'Share your experiences on SNOW' to front page.' */
 register_sidebar( array(
 	'name' => __( 'Experiences', 'experiences' ),
 	'id' => 'snow-experiences',
@@ -37,6 +40,7 @@ register_sidebar( array(
 	'after_title' => '</h3>'
 ));
 
+/* Add footer widgets */
 register_sidebar( array(
 	'name' => __( 'License Information', 'license-info' ),
 	'id' => 'license-info',
@@ -63,8 +67,10 @@ register_sidebar( array(
 	'before_title' => '<h3 class="snow-partners-title">',
 	'after_title' => '</h3>'
 ));
+/* End footer widgets */
 
 
+/* Begin extending widget for Upcoming Workshops front panel */
 function snow_upcoming_workshops_sticky() { 
  
 	/* Get all sticky posts */
@@ -77,56 +83,52 @@ function snow_upcoming_workshops_sticky() {
 	 
 	/* Query sticky posts */
 	$the_query = new WP_Query($sticky);
-	// The Loop
 	if ( $the_query->have_posts() ) {
-	    $return .= '<ul>';
 	    while ( $the_query->have_posts() ) {
 	        $the_query->the_post();
-	        $return .= '<li><a href="' .get_permalink(). '" title="'  . get_the_title() . '">' . get_the_title() . '</a><br />' . get_the_excerpt(). '</li>';
-	         
+	        $return .= '<p><a href="' .get_permalink(). '" title="'  . get_the_title() . '">' . get_the_title() . '</a></p>' . '<p>' . get_the_excerpt() . '</p>';
 	    }
-	    $return .= '</ul>';
      
 	} else {
 	    // no posts found
 	}
+
 	/* Restore original Post Data */
 	wp_reset_postdata();
 	 
 	return $return; 
 } 
 add_shortcode('snow_upcoming_workshops_sticky', 'snow_upcoming_workshops_sticky');
-	
-add_filter('widget_text', 'do_shortcode');
 
+class snow_upcoming_workshops extends WP_Widget {
 
- class snow_upcoming_workshops extends WP_Widget {
-
-  // Set up the widget name and description.
+  /* Set up the widget name and description */
   public function __construct() {
     $widget_options = array( 'classname' => 'snow_upcoming_workshops', 'description' => 'Display the sticky Upcoming Workshop.' );
     parent::__construct( 'snow_upcoming_workshops', 'Upcoming Workshops', $widget_options );
   }
 
-  // Create the widget output.
+  /* Create the widget output */
   public function widget( $args ) {
     $title = 'Upcoming Workshops';
-    $content = '[snow_upcoming_workshops_sticky]';
+    $content = do_shortcode('[snow_upcoming_workshops_sticky]');
 
     echo $args['before_widget'] . $args['before_title'] . $title . $args['after_title']; ?>
    	<div class="snow-widget">
- 		[snow_upcoming_workshops_sticky]
+ 		<?php echo $content; ?>
     </div>
     <?php echo $args['after_widget'];
   }
 }
 
-// Register the widget.
+/* Register the widget */
 function snow_upcoming_workshops() { 
   register_widget( 'snow_upcoming_workshops' );
 }
 add_action( 'widgets_init', 'snow_upcoming_workshops' );
+/* End extending widget for Upcoming Workshops front panel */
 
+add_filter('widget_text', 'do_shortcode');
 
 ?>
 
