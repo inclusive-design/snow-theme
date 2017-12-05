@@ -37,4 +37,96 @@ register_sidebar( array(
 	'after_title' => '</h3>'
 ));
 
+register_sidebar( array(
+	'name' => __( 'License Information', 'license-info' ),
+	'id' => 'license-info',
+	'before_widget' => '<div id="snow-license" class="snow-license">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="snow-license-title">',
+	'after_title' => '</h3>'
+));
+
+register_sidebar( array(
+	'name' => __( 'Contact Information', 'contact' ),
+	'id' => 'contact',
+	'before_widget' => '<div id="snow-contact" class="snow-contact">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="snow-contact-title">',
+	'after_title' => '</h3>'
+));
+
+register_sidebar( array(
+	'name' => __( 'Partners', 'partners' ),
+	'id' => 'partners',
+	'before_widget' => '<div id="snow-partners" class="snow-partners">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="snow-partners-title">',
+	'after_title' => '</h3>'
+));
+
+
+function snow_upcoming_workshops_sticky() { 
+ 
+	/* Get all sticky posts */
+	$sticky = array(
+	  'category__and' => array( '7' ),
+	  'posts_per_page' => 1,
+	  'post__in' => get_option( 'sticky_posts' ),
+	  'ignore_sticky_posts' => 1
+	);
+	 
+	/* Query sticky posts */
+	$the_query = new WP_Query($sticky);
+	// The Loop
+	if ( $the_query->have_posts() ) {
+	    $return .= '<ul>';
+	    while ( $the_query->have_posts() ) {
+	        $the_query->the_post();
+	        $return .= '<li><a href="' .get_permalink(). '" title="'  . get_the_title() . '">' . get_the_title() . '</a><br />' . get_the_excerpt(). '</li>';
+	         
+	    }
+	    $return .= '</ul>';
+     
+	} else {
+	    // no posts found
+	}
+	/* Restore original Post Data */
+	wp_reset_postdata();
+	 
+	return $return; 
+} 
+add_shortcode('snow_upcoming_workshops_sticky', 'snow_upcoming_workshops_sticky');
+	
+add_filter('widget_text', 'do_shortcode');
+
+
+ class snow_upcoming_workshops extends WP_Widget {
+
+  // Set up the widget name and description.
+  public function __construct() {
+    $widget_options = array( 'classname' => 'snow_upcoming_workshops', 'description' => 'Display the sticky Upcoming Workshop.' );
+    parent::__construct( 'snow_upcoming_workshops', 'Upcoming Workshops', $widget_options );
+  }
+
+  // Create the widget output.
+  public function widget( $args ) {
+    $title = 'Upcoming Workshops';
+    $content = '[snow_upcoming_workshops_sticky]';
+
+    echo $args['before_widget'] . $args['before_title'] . $title . $args['after_title']; ?>
+   	<div class="snow-widget">
+ 		[snow_upcoming_workshops_sticky]
+    </div>
+    <?php echo $args['after_widget'];
+  }
+}
+
+// Register the widget.
+function snow_upcoming_workshops() { 
+  register_widget( 'snow_upcoming_workshops' );
+}
+add_action( 'widgets_init', 'snow_upcoming_workshops' );
+
+
 ?>
+
