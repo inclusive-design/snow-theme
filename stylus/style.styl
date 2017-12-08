@@ -398,8 +398,6 @@ html {
 
 .snow-intro {
     display: flex;
-    box-shadow: 0rem 2rem 3rem 0rem #808080;
-    z-index: 1;
     padding: 2rem;
 }
 
@@ -427,6 +425,7 @@ html {
     text-align: center;
     border-bottom: 1px solid #DCDE70;
     padding-bottom: 0.5rem;
+    font-size: 1.2rem !important;
 }
 
 .snow-experiences {
@@ -434,22 +433,41 @@ html {
     background-color: #DCDE70;
     padding: 1rem 1rem;
     margin: 0;
+    box-shadow: 0.2rem 0.2rem 0.8rem #808080;
+    /*box-shadow: 0px 5px 12px 0px #808080;*/
+
 }
 
-h3.snow-experiences-title {
+h1.snow-experiences-title {
     text-transform: uppercase;
     text-align: center;
     color: #0F191D;
+    font-size: 1.3rem !important;
 }
 
-h3.snow-title {
+h1.snow-title {
     color: front-main-content-link-color;
     font-weight: bold;
+    font-size: 1.5rem !important;
+}
+
+.snow-license   {
+    float: left;
+}
+
+.snow-contact {
+    float: left;
+}
+
+.snow-partners {
+    float: right;
 }
 
 .column, .columns {
     padding: 0 !important;
 }
+
+
 
 // Main - All other pages.
 .category,
@@ -505,6 +523,7 @@ h3.snow-title {
 .a11y-panel-container {
     padding: 2rem 2rem;
     background-color: front-panel-container-background;
+    box-shadow: 0.2rem 0.2rem 0.8rem #808080;
 
     &.row {
         // override Foundation margins.
@@ -522,10 +541,6 @@ h3.snow-title {
     &:focus, &:hover {
         color: inherit;
         border-color: front-panel-header;
-
-        h1 {
-            font-size: ;
-        }
     }
 
     &.columns {
@@ -540,6 +555,12 @@ h3.snow-title {
     h1, section, .snow-widget {
         padding: 0.5rem 1.5rem;
     }
+
+    .snow-widget a {
+        color: front-panel-text;
+        text-decoration: underline;
+    }
+
 }
 
 /* Site Sidebar (appears on all other pages, except front page) */
@@ -547,7 +568,6 @@ h3.snow-title {
     color: sidebar-color;
     background: sidebar-background;
     padding: 1rem 1.6rem;
-    box-shadow: 0.2rem 0.2rem 0.8rem #808080;
     z-index: 1;
 
     ul {
@@ -629,9 +649,18 @@ h3.snow-title {
 
 /* Footer */
 .a11y-site-footer {
-    padding: 1rem;
+
+    display: flex;
+    padding: 2rem 2rem;
     background-color: footer-background;
     color: footer-color;
+    font-size: 0.9rem;
+
+    &.row {
+        // override Foundation margins.
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     a {
         color: footer-link-color;
@@ -644,6 +673,11 @@ h3.snow-title {
             outline: footer-link-focus;
             color: footer-link-color; // override Foundation style.
         }
+    }
+
+    h1 {
+        font-size: 0.9rem !important;
+        color: footer-color;
     }
 }
 

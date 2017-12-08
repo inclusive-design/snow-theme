@@ -13,20 +13,24 @@
 
     </div>
 
-    <footer class="small-12 columns a11y-site-footer text-center" role="contentinfo">
-        <p>
-            License Information
-            Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 4.0 International license
-            Terms of Use
-        </p>
-        <p>
-            Contact information
-            205 Richmond St. W., 2nd fl, Toronto, ON, M5V 1V3 Telephone: 416 977 6000 ext. 3967 Fax: 416 977 9844 idi@ocadu.ca
-        </p>
-        <p>
-            Partners
-            SNOW is a project of the Inclusive Design Research Centre, OCAD University, funded by Provincial Schools Branch, Ontario Ministry of Education.
-        </p>
+    <footer class="row a11y-site-footer" role="contentinfo">
+        <?php
+            if (is_active_sidebar('license-info')) {
+                dynamic_sidebar('license-info');
+            }
+        ?>
+
+        <?php
+            if (is_active_sidebar('contact')) {
+                dynamic_sidebar('contact');
+            }
+        ?>
+
+        <?php
+            if (is_active_sidebar('partners')) {
+                dynamic_sidebar('partners');
+            }
+        ?>
     </footer>
 </div>
 

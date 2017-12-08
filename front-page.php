@@ -53,6 +53,8 @@ get_header(); ?>
                 }
             ?>
         </section>
+        <section class="row a11y-panel-container">
+        </section>
 
     </main>
 
