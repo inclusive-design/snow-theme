@@ -34,19 +34,13 @@
                 $nav_menu = wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'container' => '','echo' => false, 'items_wrap' => '%3$s' ) );
             ?>
 
-            <div class="small-12 columns">
+            <div class="a11y-site-header small-12 columns">
                 <h1 class="a11y-site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
                 </h1>
 
-                <svg id="corner-flourish" role="presentation">
-                    <use xlink:href="<?php bloginfo('template_url');?>/images/corner-flourish.svg#Layer_1" />
-                </svg>
-
                 <nav class="a11y-main-nav">
-                    <div class="title-bar float-right" data-responsive-toggle="site-menu" data-hide-for="medium">
-                        <button class="menu-icon" type="button" data-toggle="site-menu"></button>
-                    </div>
+                    
 
                     <div id="site-menu">
                         <div class="top-bar-left a11y-main-nav-items">
