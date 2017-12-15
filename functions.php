@@ -10,6 +10,12 @@ function snow_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
 
+/* Add custom menu for sidebar */
+function snow_sidebar_menu() {
+  register_nav_menu('snow_sidebar_menu',__( 'Sidebar Menu' ));
+}
+add_action( 'init', 'snow_sidebar_menu' );
+
 /* Add SNOW introduction to front page */
 register_sidebar( array(
 	'name' => __( 'Snow Home', 'snow' ),
@@ -71,11 +77,11 @@ register_sidebar( array(
 
 
 /* Begin extending widget for Upcoming Workshops front panel */
-function snow_front_panel_sticky($params = array()) { 
+function snow_front_panel_sticky( $params = array() ) { 
  
  	/* Default Parameters */
 	extract(shortcode_atts(array(
-	  'category__and' => 7, // Change to prod category ID
+	  'category__and' => 7,
 	  'posts_per_page' => 1,
 	  'post__in' => get_option( 'sticky_posts' ),
 	  'ignore_sticky_posts' => 1
@@ -101,84 +107,45 @@ function snow_front_panel_sticky($params = array()) {
 add_shortcode('snow_front_panel_sticky', 'snow_front_panel_sticky');
 
 
-class snow_upcoming_workshops extends WP_Widget {
+class snow_panel_widget extends WP_Widget {
 
-  /* Set up the widget name and description */
-  public function __construct( $id = 'snow_upcoming_workshops', $descr = 'Upcoming Workshops', $opts = array() ) {
-	$widget_options = array();
-	parent::__construct( $id, $descr, $widget_options );
-  }    
+	public $title;
+	public $category;
 
-  /* Create the widget output */
-  public function widget( $args ) {
-    $title = 'Upcoming Workshops';
-    $content = do_shortcode('[snow_front_panel_sticky category__and=\'7\']');
+	/* Set up the widget name and description */
+	public function __construct( $id, $title, $category ) {
+		$widget_options = array();
+		$this->title = $title;
+		$this->category = $category;
+		parent::__construct( $id, $title, $widget_options );
+	}    
 
-    echo $args['before_widget'] . $args['before_title'] . $title . $args['after_title']; ?>
-   	<div class="snow-widget">
- 		<?php echo $content; ?>
-    </div>
-    <?php echo $args['after_widget'];
-  }
+	/* Create the widget output */
+	public function widget( $args ) {
+
+	    echo $args['before_widget'] . $args['before_title'] . $this->title . $args['after_title']; ?>
+	   	<div class="snow-widget">
+	 		<?php echo do_shortcode('[snow_front_panel_sticky category__and=' . $this->category . ']'); ?>
+	    </div>
+	    <?php echo $args['after_widget'];
+	}
 
 }
 
-/* Register the widget */
 function snow_upcoming_workshops() { 
-  register_widget( 'snow_upcoming_workshops' );
+  register_widget( new snow_panel_widget('snow_upcoming_workshops','Upcoming Workshops','7'));
 }
 add_action('widgets_init', 'snow_upcoming_workshops');
 
-/* End extending widget for Upcoming Workshops front panel */
 
-class snow_feature_article extends snow_upcoming_workshops {
-	function __construct() {
-      $widget_options = array();
-      parent::__construct( 'snow_feature_article', 'Feature Article', $widget_options );
-    }
-
-  /* Create the widget output */
-  public function widget( $args ) {
-    $title = 'Feature Article';
-    $content = do_shortcode('[snow_front_panel_sticky category__and=\'9\']'); // Change to prod category ID
-
-    echo $args['before_widget'] . $args['before_title'] . $title . $args['after_title']; ?>
-   	<div class="snow-widget">
- 		<?php echo $content; ?>
-    </div>
-    <?php echo $args['after_widget'];
-  }
-}
-
-/* Register the widget */
 function snow_feature_article() { 
-  register_widget( 'snow_feature_article' );
+	register_widget( new snow_panel_widget('snow_feature_article','Feature Article','9'));
 }
 add_action('widgets_init', 'snow_feature_article');
 
 
-class snow_featured_content extends snow_upcoming_workshops {
-	function __construct() {
-      $widget_options = array();
-      parent::__construct( 'snow_featured_content', 'Featured Content', $widget_options );
-    }
-
-  /* Create the widget output */
-  public function widget( $args ) {
-    $title = 'Featured Content';
-    $content = do_shortcode('[snow_front_panel_sticky category__and=\'10\']'); // Change to prod category ID
-
-    echo $args['before_widget'] . $args['before_title'] . $title . $args['after_title']; ?>
-   	<div class="snow-widget">
- 		<?php echo $content; ?>
-    </div>
-    <?php echo $args['after_widget'];
-  }
-}
-
-/* Register the widget */
 function snow_featured_content() { 
-  register_widget( 'snow_featured_content' );
+	register_widget( new snow_panel_widget('snow_featured_content','Featured Content','10'));
 }
 add_action('widgets_init', 'snow_featured_content');
 
