@@ -31,27 +31,18 @@ get_header(); ?>
                     )
                 ),
                 'experiences' => array(
-                    'section_class' => 'snow-experiences',
+                    'section_class' => '',
                     'widgets' => array(
                         'snow-experiences' => 'snow-experiences'
                     )
                 ),
                 'empty' => array(
-                    'section_class' => 'row a11y-panel-container'
+                    'section_class' => 'row a11y-panel-container',
+                    'widgets' => array()
                 )
             );
 
-            foreach($sections as $section) {
-
-                echo '<section class="' . $section['section_class'] . '">';
-                foreach($section['widgets'] as $widget) {
-                    if (is_active_sidebar($widget)) {
-                        dynamic_sidebar($widget);
-                    }
-                }
-                echo '</section>';
-
-            };
+            add_widgets($sections, 'section');
         ?>
 
     </main>
