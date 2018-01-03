@@ -77,7 +77,7 @@ register_sidebar( array(
 
 
 /* Begin extending widget for Upcoming Workshops front panel */
-function snow_front_panel_sticky( $params = array() ) { 
+function snow_front_panel_sticky( $atts = array() ) { 
  
  	/* Default Parameters */
 	extract(shortcode_atts(array(
@@ -85,10 +85,10 @@ function snow_front_panel_sticky( $params = array() ) {
 	  'posts_per_page' => 1,
 	  'post__in' => get_option( 'sticky_posts' ),
 	  'ignore_sticky_posts' => 1
-	), $params));
+	), $atts));
 	 
 	/* Query the posts */
-	$the_query = new WP_Query($params);
+	$the_query = new WP_Query($atts);
 	if ( $the_query->have_posts() ) {
 	    while ( $the_query->have_posts() ) {
 	        $the_query->the_post();
