@@ -13,25 +13,20 @@
 
     </div>
 
-    <footer class="row a11y-site-footer" role="contentinfo">
-        <?php
-            if (is_active_sidebar('license-info')) {
-                dynamic_sidebar('license-info');
-            }
-        ?>
+    <?php
+        $sections = array(
+            'footer' => array(
+                'section_class' => 'row a11y-site-footer',
+                'widgets' => array(
+                    'license-info' => 'license-info',
+                    'contact' => 'contact',
+                    'partners' => 'partners'
+                )
+            )
+        );
 
-        <?php
-            if (is_active_sidebar('contact')) {
-                dynamic_sidebar('contact');
-            }
-        ?>
-
-        <?php
-            if (is_active_sidebar('partners')) {
-                dynamic_sidebar('partners');
-            }
-        ?>
-    </footer>
+        add_widgets($sections, 'footer');
+    ?>
 </div>
 
 <?php wp_footer(); ?>

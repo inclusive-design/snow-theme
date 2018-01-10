@@ -11,50 +11,39 @@ get_header(); ?>
             <p><span>Welcome to</span><br /> <span class="a11y-tagline-emphasis">SNOW</span></p>
             </span>
         </div>
-        
-        <div class="snow-intro">
-            <?php
-                if (is_active_sidebar('snow-home')) {
-                    dynamic_sidebar('snow-home');
-                }
-            ?>
 
-            <?php
-                if (is_active_sidebar('access-site')) {
-                    dynamic_sidebar('access-site');
-                }
-            ?>
-        </div>
-        
-       <section class="row a11y-panel-container">
-            
-            <?php
-                if (is_active_sidebar('a11y-front-panel1')) {
-                    dynamic_sidebar('a11y-front-panel1');
-                }
-            ?>
+        <?php
 
-            <?php
-                if (is_active_sidebar('a11y-front-panel2')) {
-                    dynamic_sidebar('a11y-front-panel2');
-                }
-            ?>
+            $sections = array(
+                'introduction' => array(
+                    'section_class' => 'snow-intro',
+                    'widgets' => array(
+                        'home' => 'snow-home',
+                        'access' => 'access-site'
+                    )
+                ),
+                'panels' => array(
+                    'section_class' => 'row a11y-panel-container',
+                    'widgets' => array(
+                        'panel1' => 'a11y-front-panel1',
+                        'panel2' => 'a11y-front-panel2',
+                        'panel3' => 'a11y-front-panel3',
+                    )
+                ),
+                'experiences' => array(
+                    'section_class' => '',
+                    'widgets' => array(
+                        'snow-experiences' => 'snow-experiences'
+                    )
+                ),
+                'empty' => array(
+                    'section_class' => 'row a11y-panel-container',
+                    'widgets' => array()
+                )
+            );
 
-            <?php
-                if (is_active_sidebar('a11y-front-panel3')) {
-                    dynamic_sidebar('a11y-front-panel3');
-                }
-            ?>
-        </section>
-        <section>
-            <?php
-                if (is_active_sidebar('snow-experiences')) {
-                    dynamic_sidebar('snow-experiences');
-                }
-            ?>
-        </section>
-        <section class="row a11y-panel-container">
-        </section>
+            add_widgets($sections, 'section');
+        ?>
 
     </main>
 
