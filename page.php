@@ -1,8 +1,4 @@
 <?php
-/*
-Template Name: Widgetized Page
-*/
-<?php
 /**
  * The template for displaying all pages
  *

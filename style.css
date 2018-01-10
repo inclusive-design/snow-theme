@@ -370,8 +370,10 @@ h1.snow-title {
 /* Site Sidebar (appears on all other pages, except front page) */
 .a11y-site-aside {
   color: #dcde70;
+  font-size: 1.1rem;
+  box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
   background: #dcde70;
-  padding: 1rem 1.6rem;
+  padding-top: 5rem;
   z-index: 1;
 }
 .a11y-site-aside ul {
@@ -380,6 +382,9 @@ h1.snow-title {
 }
 .a11y-site-aside .a11y-sidebar-current:before {
   content: "\25B6";
+}
+.a11y-site-aside .a11y-sidebar-current {
+  font-weight: bold;
 }
 .a11y-site-aside .a11y-sidebar-category-link {
   text-transform: uppercase;
@@ -392,16 +397,16 @@ h1.snow-title {
   display: inline-block;
 }
 .a11y-site-aside a:hover {
-  background-color: #fff;
-  color: #fff;
+  text-decoration: underline;
+  color: #0f191d;
 }
 .a11y-site-aside a:focus {
-  outline: 0.2rem solid #fff;
+  outline: 0.2rem solid #0f191d;
   color: #0f191d;
 }
 .a11y-site-aside a:focus:hover {
-  background-color: #fff;
-  color: #fff;
+  text-decoration: underline;
+  color: #0f191d;
 }
 .a11y-site-aside h1,
 .a11y-site-aside h2,
@@ -412,12 +417,15 @@ h1.snow-title {
 /* Main Content Area Styles */
 .a11y-site-main h1,
 .a11y-entry-header h1 {
-  font-size: 2.6rem;
+  font-size: 2rem;
+  text-transform: uppercase;
   color: #0f191d;
+  background-color: none !important;
 }
-.a11y-entry-header {
+.a11y-panel-header {
   text-align: center;
   background-color: #dcde70;
+  color: #0f191d;
 }
 .a11y-site-main article h1,
 .a11y-site-main article h2,
@@ -437,6 +445,10 @@ h1.snow-title {
 .a11y-site-main article blockquote {
   color: #000;
   border-left: 0.2rem solid #000;
+}
+h2.a11y-entry-content:after {
+  content: "";
+  border-bottom: 0.8rem solid #000;
 }
 /* Footer */
 .a11y-site-footer {
@@ -715,7 +727,7 @@ h1.snow-title {
     min-width: 40rem;
   }
   .a11y-site-aside {
-    padding: 5rem 1.6rem 25rem 1.6rem;
+    padding: 3rem 1rem 25rem 1.6rem !important;
     background-image: url("./images/sidebar-graphic-COLOUR-01.svg");
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -805,4 +817,19 @@ span.fa {
 .bi-social-feeds .a11y-front-panel:focus,
 .bi-social-feeds .a11y-front-panel:hover {
   border-color: #eceded;
+}
+#breadcrumbs {
+  list-style: none;
+  margin: 10px 0;
+  overflow: hidden;
+}
+#breadcrumbs li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+#breadcrumbs .separator {
+  font-size: 18px;
+  font-weight: 100;
+  color: #ccc;
 }
