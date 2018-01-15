@@ -1,11 +1,16 @@
 /*!
-Theme Name: a11y-0.0.3
+Theme Name: snow-0.0.1
 Theme URI:
 Author: Floe Project
 Author URI: http://floeproject.org/
 Description: Accessible theme <code>a11y</code>
+<<<<<<< Updated upstream
+Template:     wp-a11y-theme
+Version: 0.0.3
+=======
 Template: wp-a11y-theme
 Version: 0.0.5
+>>>>>>> Stashed changes
 License:
 License URI:
 Text Domain: a11y
@@ -891,6 +896,8 @@ span.fa {
 .bi-social-feeds .a11y-front-panel:hover {
     border-color: #eceded;
 }
+<<<<<<< Updated upstream
+=======
 
 #breadcrumbs{
     list-style:none;
@@ -909,3 +916,4 @@ span.fa {
     font-weight:100;
     color:#ccc;
 }
+>>>>>>> Stashed changes
