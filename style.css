@@ -1,11 +1,11 @@
 /*
-Theme Name: snow-0.0.1
+Theme Name: a11y-0.0.3
 Theme URI:
 Author: Floe Project
 Author URI: http://floeproject.org/
 Description: Accessible theme <code>a11y</code>
 Template: wp-a11y-theme
-Version: 0.0.5
+Version: 0.0.3
 License:
 License URI:
 Text Domain: a11y
@@ -446,15 +446,9 @@ h1.snow-title {
   color: #000;
   border-left: 0.2rem solid #000;
 }
-.a11y-entry-content h2 {
-  color: #000;
-  border-bottom: 0.2rem solid #000;
-  margin-bottom: 0.2rem;
-}
-.a11y-entry-content h3 {
-  color: #000;
-  margin: 0;
-  padding: 0;
+h2.a11y-entry-content:after {
+  content: "";
+  border-bottom: 0.8rem solid #000;
 }
 /* Footer */
 .a11y-site-footer {
@@ -815,6 +809,7 @@ span.fa {
   font-size: 1.2rem;
   text-transform: none;
   padding: 1rem 1.5rem;
+  margin: 0;
 }
 .a11y-front-panel section {
   padding: 0.5rem 1.5rem 1.5rem 1.5rem;
@@ -823,19 +818,4 @@ span.fa {
 .bi-social-feeds .a11y-front-panel:focus,
 .bi-social-feeds .a11y-front-panel:hover {
   border-color: #eceded;
-}
-#breadcrumbs {
-  list-style: none;
-  margin: 10px 0;
-  overflow: hidden;
-}
-#breadcrumbs li {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 15px;
-}
-#breadcrumbs .separator {
-  font-size: 18px;
-  font-weight: 100;
-  color: #ccc;
 }
