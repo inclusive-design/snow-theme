@@ -5,7 +5,7 @@ Author: Floe Project
 Author URI: http://floeproject.org/
 Description: Accessible theme <code>a11y</code>
 Template: wp-a11y-theme
-Version: 0.0.3
+Version: 0.0.5
 License:
 License URI:
 Text Domain: a11y
@@ -446,9 +446,15 @@ h1.snow-title {
   color: #000;
   border-left: 0.2rem solid #000;
 }
-h2.a11y-entry-content:after {
-  content: "";
-  border-bottom: 0.8rem solid #000;
+.a11y-entry-content h2 {
+  color: #000;
+  border-bottom: 0.2rem solid #000;
+  margin-bottom: 0.2rem;
+}
+.a11y-entry-content h3 {
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 /* Footer */
 .a11y-site-footer {
