@@ -165,19 +165,19 @@ class snow_panel_widget extends WP_Widget {
 }
 
 function snow_upcoming_workshops() { 
-  register_widget( new snow_panel_widget('snow_upcoming_workshops','Upcoming Workshops','7'));
+  register_widget( new snow_panel_widget('snow_upcoming_workshops','Upcoming Workshops','8'));
 }
 add_action('widgets_init', 'snow_upcoming_workshops');
 
 
 function snow_feature_article() { 
-	register_widget( new snow_panel_widget('snow_feature_article','Feature Article','9'));
+	register_widget( new snow_panel_widget('snow_feature_article','Feature Article','22'));
 }
 add_action('widgets_init', 'snow_feature_article');
 
 
 function snow_featured_content() { 
-	register_widget( new snow_panel_widget('snow_featured_content','Featured Content','10'));
+	register_widget( new snow_panel_widget('snow_featured_content','Featured Content','23'));
 }
 add_action('widgets_init', 'snow_featured_content');
 
