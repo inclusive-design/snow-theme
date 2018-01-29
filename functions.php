@@ -10,44 +10,6 @@ function snow_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
 
-/**
-* a11y widgets for front page
-*/
-
-if (function_exists('register_sidebar')) {
-
-	register_sidebar(array(
-		'name' => 'Front Panel 1',
-		'id'   => 'a11y-front-panel1',
-		'before_widget' => '<div id="%1$s" class="small-12 medium-4 columns a11y-front-panel">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h1 class="a11y-panel-header">',
-		'after_title'   => '</h1>'
-	));
-	register_sidebar(array(
-		'name' => 'Front Panel 2',
-		'id'   => 'a11y-front-panel2',
-		'before_widget' => '<div id="%1$s" class="small-12 medium-4 columns a11y-front-panel">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h1 class="a11y-panel-header">',
-		'after_title'   => '</h1>'
-	));
-	register_sidebar(array(
-		'name' => 'Front Panel 3',
-		'id'   => 'a11y-front-panel3',
-		'before_widget' => '<div id="%1$s" class="small-12 medium-4 columns a11y-front-panel">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h1 class="a11y-panel-header">',
-		'after_title'   => '</h1>'
-	));
-}
-
-/* Add custom menu for sidebar */
-function snow_sidebar_menu() {
-  register_nav_menu('snow_sidebar_menu',__( 'Sidebar Menu' ));
-}
-add_action( 'init', 'snow_sidebar_menu' );
-
 /* Add SNOW introduction to front page */
 register_sidebar( array(
 	'name' => __( 'Snow Home', 'snow' ),
@@ -169,12 +131,10 @@ function snow_upcoming_workshops() {
 }
 add_action('widgets_init', 'snow_upcoming_workshops');
 
-
 function snow_feature_article() { 
 	register_widget( new snow_panel_widget('snow_feature_article','Feature Article','22'));
 }
 add_action('widgets_init', 'snow_feature_article');
-
 
 function snow_featured_content() { 
 	register_widget( new snow_panel_widget('snow_featured_content','Featured Content','23'));
@@ -183,6 +143,90 @@ add_action('widgets_init', 'snow_featured_content');
 
 /* Enable shortcodes */
 add_filter('widget_text', 'do_shortcode');
+
+
+if (function_exists('register_sidebar')) { 
+    register_sidebar('post'); 
+}
+
+if (function_exists('register_sidebar')) { 
+    register_sidebar('page'); 
+}
+
+function create_sidebar($post_type) {
+    $category_current = get_the_category();
+    $category_link =  get_term_link ($category_current[0]->slug, "category");
+    $current_displayed_id = get_the_ID (); // the ID of the post currently displayed in the main content panel.
+
+    if ( ! empty( $category_current ) ) {
+        $args = array(
+            // get posts belonging to the current category.
+            'post_type' => $post_type,
+            'category_name' => $category_current[0]->slug,
+        );
+        $sidebar_query = new WP_Query($args);
+
+        if ($sidebar_query->have_posts()) :
+
+            /*
+            If there are more than 1 post in the current category,
+            then the first item should be a link to the category.
+
+            Otherwise if there's just 1 post, then it can be ignore as it
+            will be the landing page already being shown.
+            */
+            if ($sidebar_query->found_posts > 1) :?>
+                <ul>
+                    <li><a href="<?php echo $category_link; ?>" class="a11y-sidebar-category-link
+                <?php
+                if (! empty ($category_landing_id)) : ?>a11y-sidebar-current<?php endif;?>">
+                    <?php
+                    /*
+                    if category_landing_id is not empty, then we are showing a
+                    landing page. Therefore give it active styling.
+                    */
+                    echo $category_current[0]->name; ?></a></li>
+
+                    <li>
+                        <ul>
+                        <?php
+                        while ( $sidebar_query->have_posts() ) : $sidebar_query->the_post();
+                            /*
+                            Display all pages in the category as a list of links.
+                            But if one of the pages is the landing page, we skip it
+                            since it's already the first item in the list.
+                            */
+
+                            $is_landing_page = get_post_meta (get_the_ID(), 'is_landing_page', true);
+                            if ( empty($is_landing_page) && (get_the_ID() != $category_landing_id)) :
+                            // If the post isn't the landing page, show a link. Otherwise ignore it.
+                                ?>
+                            <li>
+                                <a href="<?php the_permalink() ?>"
+                                <?php if ($current_displayed_id == get_the_ID() && empty ($category_landing_id)) :
+                                /*
+                                Check the category_landing_id if it is set, then we're displaying the
+                                landing page. So don't show the active styling for this item.
+                                */
+                                ?>
+                                    class="a11y-sidebar-current"
+                                    aria-current="page"
+                                <?php endif;?>>
+                                <?php the_title(); ?>
+                                </a>
+                            </li>
+                            <?php
+
+                            endif;
+                        endwhile;?>
+                        </ul>
+                    </li>
+                </ul>
+                <?php
+            endif;
+        endif;
+    }
+}
 
 ?>
 
