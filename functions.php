@@ -228,5 +228,18 @@ function create_sidebar($post_type) {
     }
 }
 
+function make_current_menu_item( $classes, $item ) {
+
+	$category = get_category( get_query_var( 'cat' ) );
+	echo $category;
+
+	if( is_single() && $item->category == $category ) {
+		$classes[] = 'current-menu-item';
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'make_current_menu_item', 10, 2 );
+
+
 ?>
 
