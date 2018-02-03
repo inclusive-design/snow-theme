@@ -44,6 +44,7 @@ html {
 .a11y-theme {
   font-family: "Roboto", sans-serif;
   background-color: #fff;
+  display: block !important;
 }
 .a11y-theme h1,
 .a11y-theme h2,
@@ -115,7 +116,7 @@ html {
 /* Site Header */
 .a11y-site-header {
   background-color: #fff;
-  margin-top: 1.2rem;
+  margin-top: 0;
   padding: 0;
 }
 .a11y-site-header .a11y-site-title {
@@ -826,6 +827,7 @@ span.fa {
   font-size: 1.2rem;
   text-transform: none;
   padding: 1rem 1.5rem;
+  margin: 0;
 }
 .a11y-front-panel section {
   padding: 0.5rem 1.5rem 1.5rem 1.5rem;
