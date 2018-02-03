@@ -57,9 +57,10 @@ html {
   padding: 0;
 }
 .dropdown {
-  border: 0.01rem solid;
+  border: 0.02rem solid;
   height: 5.5rem;
   padding: 0;
+  z-index: 10;
 }
 /* Skip links */
 #skip {
@@ -93,7 +94,6 @@ html {
   color: #eceded;
   background: #006274;
   padding: 1rem;
-  z-index: 1;
 }
 /* UI Options. */
 .fl-prefsEditor-separatedPanel .fl-panelBar {
@@ -146,6 +146,7 @@ html {
 .a11y-main-nav .title-bar {
   display: inline-block;
   background-color: inherit;
+  z-index: 10;
 }
 .a11y-main-nav .menu-icon {
   width: 2.5rem;
@@ -156,6 +157,7 @@ html {
 }
 .a11y-main-nav .menu-icon:focus {
   outline: 0.2rem solid #00303c;
+  z-index: 10;
 }
 .a11y-main-nav .menu-icon:before {
   font-size: 1.8rem;
@@ -181,8 +183,8 @@ html {
 .a11y-main-nav-items ul li {
   width: 100%;
   flex: 1 1 auto;
+  margin: 0 !important;
   align-self: auto;
-  margin: 0rem 0rem 0.1rem 0rem !important;
   text-align: center;
 }
 .a11y-main-nav-items ul li.current-menu-item:before {
@@ -198,6 +200,7 @@ html {
   color: #0f191d;
   text-transform: uppercase;
   font-weight: bold;
+  z-index: -10;
 }
 .a11y-main-nav-items ul a:hover {
   background-color: #7ec9bc;
@@ -230,10 +233,9 @@ html {
 }
 .snow-intro {
   position: relative;
-  z-index: 10;
   display: flex;
   padding: 2rem;
-  box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
+  box-shadow: 0rem 0.2rem 1rem -0.2rem #808080;
 }
 .snow-home {
   flex-grow: 1;
@@ -299,7 +301,8 @@ h1.snow-title {
 }
 .category main a,
 .single main a {
-  color: #ad3362;
+  text-decoration: underline;
+  color: #385c8a;
 }
 .category main a:focus,
 .single main a:focus,
@@ -371,7 +374,7 @@ h1.snow-title {
 .a11y-site-aside {
   color: #dcde70;
   font-size: 1.1rem;
-  box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
+  box-shadow: 0.4rem 0.2rem 0.6rem -0.3rem #c0c0c0;
   background: #dcde70;
   padding-top: 5rem;
   z-index: 1;
@@ -446,9 +449,22 @@ h1.snow-title {
   color: #000;
   border-left: 0.2rem solid #000;
 }
+.a11y-entry-content h2 {
+  color: #000;
+  border-bottom: 0.2rem solid #000;
+}
+.a11y-entry-content h3 {
+  color: #000;
+}
+h1.entry-title {
+  margin-top: 0 !important;
+}
 h2.a11y-entry-content:after {
   content: "";
   border-bottom: 0.8rem solid #000;
+}
+h3.comment-reply-title {
+  color: #000;
 }
 /* Footer */
 .a11y-site-footer {
@@ -751,7 +767,8 @@ h2.a11y-entry-content:after {
     background-size: 18rem auto;
   }
   .single .a11y-site-main,
-  .category .a11y-site-main {
+  .category .a11y-site-main,
+  .page .a11y-site-main {
     border-top: 1.6rem solid #fff;
     border-left: 1.6rem solid #fff;
     border-right: 1.6rem solid #fff;

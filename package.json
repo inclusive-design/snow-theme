@@ -1,0 +1,40 @@
+{
+  "name": "snow-theme",
+  "description": "This is the wordpress theme for SNOW website",
+  "version": "0.0.1",
+  "author": "Fluid Project",
+  "bugs": {
+    "url": "http://issues.fluidproject.org/browse/FLUID"
+  },
+  "homepage": "http://www.fluidproject.org/",
+  "license": "(BSD-3-Clause OR ECL-2.0)",
+  "keywords": [
+    "fluid",
+    "snow"
+  ],
+  "devDependencies": {
+    "fluid-grunt-eslint": "^18.1.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jsonlint": "^1.1.0",
+    "grunt-modulefiles": "^0.3.1",
+    "grunt-shell": "^2.1.0"
+  },
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grrrero/snow-theme.git"
+  }
+}
