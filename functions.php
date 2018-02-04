@@ -228,14 +228,14 @@ function create_sidebar($post_type) {
     }
 }
 
-// Add support for pages to have tags and categories
+// Add tag and category support to pages
 function allow_pages_tags_categories() {
   register_taxonomy_for_object_type('post_tag', 'page');
   register_taxonomy_for_object_type('category', 'page');  
 }
 add_action('init', 'allow_pages_tags_categories');
 
-// Include all tags and categories in queries
+// Ensure all tags and categories are included in queries
 function add_queries_tags_categories($wp_query) {
   if ($wp_query->get('tag')) $wp_query->set('post_type', 'any');
   if ($wp_query->get('category_name')) $wp_query->set('post_type', 'any');
