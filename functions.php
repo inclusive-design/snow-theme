@@ -161,7 +161,7 @@ function create_sidebar($post_type) {
     if ( ! empty( $category_current ) ) {
         $args = array(
             // get posts belonging to the current category.
-            'post_type' => $post_type,
+            'post_type' => '$post_type',
             'category_name' => $category_current[0]->slug,
         );
         $sidebar_query = new WP_Query($args);
@@ -227,6 +227,20 @@ function create_sidebar($post_type) {
         endif;
     }
 }
+
+// Add support for pages to have tags and categories
+function allow_pages_tags_categories() {
+  register_taxonomy_for_object_type('post_tag', 'page');
+  register_taxonomy_for_object_type('category', 'page');  
+}
+add_action('init', 'allow_pages_tags_categories');
+
+// Include all tags and categories in queries
+function add_queries_tags_categories($wp_query) {
+  if ($wp_query->get('tag')) $wp_query->set('post_type', 'any');
+  if ($wp_query->get('category_name')) $wp_query->set('post_type', 'any');
+}
+add_action('pre_get_posts', 'add_queries_tags_categories');
 
 ?>
 
