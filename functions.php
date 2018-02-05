@@ -10,64 +10,63 @@ function snow_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
 
-/* Add SNOW introduction to front page */
-register_sidebar( array(
-	'name' => __( 'Snow Home', 'snow' ),
-	'id' => 'snow-home',
-	'before_widget' => '<div id="snow-home" class="snow-home">',
-	'after_widget' => '</div>',
-	'before_title' => '<h1 class="snow-title">',
-	'after_title' => '</h1>'
-));
 
-/* Add 'Accessing the Site' to front page */
-register_sidebar( array(
-	'name' => __( 'Accessing the Site', 'access' ),
-	'id' => 'access-site',
-	'before_widget' => '<div id="snow-access" class="snow-access">',
-	'after_widget' => '</div>',
-	'before_title' => '<h1 class="snow-access-title">',
-	'after_title' => '</h1>'
-));
+/* Centralised array for registering widgets on the SNOW webpage */
+$snow_widgets = array(
+		'snow-home' => array(
+			'name' => __( 'Snow Home', 'snow' ),
+			'id' => 'snow-home',
+			'before_widget' => '<div id="snow-home" class="snow-home">',
+			'after_widget' => '</div>',
+			'before_title' => '<h1 class="snow-title">',
+			'after_title' => '</h1>'
+		),
+		'access-site' => array(
+			'name' => __( 'Accessing the Site', 'access' ),
+			'id' => 'access-site',
+			'before_widget' => '<div id="snow-access" class="snow-access">',
+			'after_widget' => '</div>',
+			'before_title' => '<h1 class="snow-access-title">',
+			'after_title' => '</h1>'
+		),
+		'snow-experiences' => array(
+			'name' => __( 'Experiences', 'experiences' ),
+			'id' => 'snow-experiences',
+			'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
+			'after_widget' => '</div>',
+			'before_title' => '<h1 class="snow-experiences-title">',
+			'after_title' => '</h1>'
+		),
+		'license-info' => array(
+			'name' => __( 'License Information', 'license-info' ),
+			'id' => 'license-info',
+			'before_widget' => '<div id="snow-license" class="small-12 medium-4 snow-license">',
+			'after_widget' => '</div>',
+			'before_title' => '<h1 class="snow-license-title">',
+			'after_title' => '</h1>'
+		),
+		'contact' => array(
+			'name' => __( 'Contact Information', 'contact' ),
+			'id' => 'contact',
+			'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
+			'after_widget' => '</div>',
+			'before_title' => '<h1 class="snow-contact-title">',
+			'after_title' => '</h1>'
+		),
+		'partners' => array(
+			'name' => __( 'Partners', 'partners' ),
+			'id' => 'partners',
+			'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
+			'after_widget' => '</div>',
+			'before_title' => '<h1 class="snow-partners-title">',
+			'after_title' => '</h1>'
+		)
+);
 
-/* Add 'Share your experiences on SNOW' to front page.' */
-register_sidebar( array(
-	'name' => __( 'Experiences', 'experiences' ),
-	'id' => 'snow-experiences',
-	'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
-	'after_widget' => '</div>',
-	'before_title' => '<h1 class="snow-experiences-title">',
-	'after_title' => '</h1>'
-));
-
-/* Add footer widgets */
-register_sidebar( array(
-	'name' => __( 'License Information', 'license-info' ),
-	'id' => 'license-info',
-	'before_widget' => '<div id="snow-license" class="small-12 medium-4 snow-license">',
-	'after_widget' => '</div>',
-	'before_title' => '<h1 class="snow-license-title">',
-	'after_title' => '</h1>'
-));
-
-register_sidebar( array(
-	'name' => __( 'Contact Information', 'contact' ),
-	'id' => 'contact',
-	'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
-	'after_widget' => '</div>',
-	'before_title' => '<h1 class="snow-contact-title">',
-	'after_title' => '</h1>'
-));
-
-register_sidebar( array(
-	'name' => __( 'Partners', 'partners' ),
-	'id' => 'partners',
-	'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
-	'after_widget' => '</div>',
-	'before_title' => '<h1 class="snow-partners-title">',
-	'after_title' => '</h1>'
-));
-/* End footer widgets */
+/* Register post/page sidebars */
+foreach ($snow_widgets as $value) {
+	register_sidebar($value);
+}
 
 
 /* Begin extending widget for Upcoming Workshops front panel */
