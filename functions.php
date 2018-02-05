@@ -156,13 +156,23 @@ add_action('widgets_init', 'snow_featured_content');
 add_filter('widget_text', 'do_shortcode');
 
 
-if (function_exists('register_sidebar')) { 
-    register_sidebar('post'); 
+/* Register post/page sidebars */
+$sidebar = array(
+		"post",
+		"page"
+	);
+
+foreach ($sidebar as $value) {
+	register_sidebar($value);
 }
 
-if (function_exists('register_sidebar')) { 
-    register_sidebar('page'); 
-}
+// if (function_exists('register_sidebar')) { 
+//     register_sidebar('post'); 
+// }
+
+// if (function_exists('register_sidebar')) { 
+//     register_sidebar('page'); 
+// }
 
 function create_sidebar($post_type) {
     $category_current = get_the_category();
@@ -180,10 +190,10 @@ function create_sidebar($post_type) {
         if ($sidebar_query->have_posts()) :
 
             /*
-            If there are more than 1 post in the current category,
+            If there is more than 1 post in the current category,
             then the first item should be a link to the category.
 
-            Otherwise if there's just 1 post, then it can be ignore as it
+            Otherwise if there's just 1 post, then it can be ignored as it
             will be the landing page already being shown.
             */
             if ($sidebar_query->found_posts > 1) :?>
