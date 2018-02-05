@@ -105,25 +105,23 @@ class snow_panel_widget extends WP_Widget {
 
 	public $title;
 	public $category;
-
+	
 	/* Set up the widget name and description */
-	public function __construct( array $snow_panels ) {
+	public function __construct( $id, $title, $category ) {
 		$widget_options = array();
 		$this->title = $title;
 		$this->category = $category;
 		parent::__construct( $id, $title, $widget_options );
 	}    
-
+	
 	/* Create the widget output */
 	public function widget( $args ) {
-
 	    echo $args['before_widget'] . $args['before_title'] . $this->title . $args['after_title']; ?>
 	   	<div class="snow-widget">
 	 		<?php echo do_shortcode('[snow_front_panel_sticky category__and=' . $this->category . ']'); ?>
 	    </div>
 	    <?php echo $args['after_widget'];
 	}
-
 }
 
 $snow_panels = array(
@@ -144,16 +142,36 @@ $snow_panels = array(
     ),
 );
 
-$all_panels = array(
-	"snow_upcoming_workshops",
-	"snow_feature_article",
-	"snow_featured_content"
-	);
 
-foreach ($all_panels as $panel) {
-	register_widget( new snow_panel_widget($snow_panels[$panel]));
-	add_action('widgets_init', $panel);
+// function snow_upcoming_workshops() { 
+//   register_widget( new snow_panel_widget('snow_upcoming_workshops','Upcoming Workshops','8'));
+// }
+// add_action('widgets_init', 'snow_upcoming_workshops');
+// function snow_feature_article() { 
+// 	register_widget( new snow_panel_widget('snow_feature_article','Feature Article','22'));
+// }
+// add_action('widgets_init', 'snow_feature_article');
+// function snow_featured_content() { 
+// 	register_widget( new snow_panel_widget('snow_featured_content','Featured Content','23'));
+// }
+// add_action('widgets_init', 'snow_featured_content');
+
+// $all_panels = array(
+// 	"snow_upcoming_workshops",
+// 	"snow_feature_article",
+// 	"snow_featured_content"
+// 	);
+
+foreach ($snow_panels as $panel) {
+	register_widget( new snow_panel_widget($panel[0], $panel[1], $panel[2]) );
+	// add_action('widgets_init', $panel[0]);
 }
+
+
+add_action('widgets_init', 'snow_upcoming_workshops');
+add_action('widgets_init', 'snow_feature_article');
+add_action('widgets_init', 'snow_featured_content');
+
 
 /* Enable shortcodes */
 add_filter('widget_text', 'do_shortcode');
