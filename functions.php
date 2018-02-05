@@ -3,64 +3,66 @@ function snow_theme_enqueue_styles() {
     $parent_style = 'a11y-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style ),
-        wp_get_theme()->get('Version')
+	    get_stylesheet_directory_uri() . '/style.css',
+	    array( $parent_style ),
+	    wp_get_theme()->get('Version')
     );
 }
 add_action( 'wp_enqueue_scripts', 'snow_theme_enqueue_styles' );
 
 
-/* Centralised array for registering widgets on the SNOW webpage */
+/* Centralised array for registering widgets and sidebars (post and page) on the SNOW webpage */
 $snow_widgets = array(
-		'snow-home' => array(
-			'name' => __( 'Snow Home', 'snow' ),
-			'id' => 'snow-home',
-			'before_widget' => '<div id="snow-home" class="snow-home">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="snow-title">',
-			'after_title' => '</h1>'
-		),
-		'access-site' => array(
-			'name' => __( 'Accessing the Site', 'access' ),
-			'id' => 'access-site',
-			'before_widget' => '<div id="snow-access" class="snow-access">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="snow-access-title">',
-			'after_title' => '</h1>'
-		),
-		'snow-experiences' => array(
-			'name' => __( 'Experiences', 'experiences' ),
-			'id' => 'snow-experiences',
-			'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="snow-experiences-title">',
-			'after_title' => '</h1>'
-		),
-		'license-info' => array(
-			'name' => __( 'License Information', 'license-info' ),
-			'id' => 'license-info',
-			'before_widget' => '<div id="snow-license" class="small-12 medium-4 snow-license">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="snow-license-title">',
-			'after_title' => '</h1>'
-		),
-		'contact' => array(
-			'name' => __( 'Contact Information', 'contact' ),
-			'id' => 'contact',
-			'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="snow-contact-title">',
-			'after_title' => '</h1>'
-		),
-		'partners' => array(
-			'name' => __( 'Partners', 'partners' ),
-			'id' => 'partners',
-			'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="snow-partners-title">',
-			'after_title' => '</h1>'
-		)
+	'snow-home' => array(
+		'name' => __( 'Snow Home', 'snow' ),
+		'id' => 'snow-home',
+		'before_widget' => '<div id="snow-home" class="snow-home">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="snow-title">',
+		'after_title' => '</h1>'
+	),
+	'access-site' => array(
+		'name' => __( 'Accessing the Site', 'access' ),
+		'id' => 'access-site',
+		'before_widget' => '<div id="snow-access" class="snow-access">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="snow-access-title">',
+		'after_title' => '</h1>'
+	),
+	'snow-experiences' => array(
+		'name' => __( 'Experiences', 'experiences' ),
+		'id' => 'snow-experiences',
+		'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="snow-experiences-title">',
+		'after_title' => '</h1>'
+	),
+	'license-info' => array(
+		'name' => __( 'License Information', 'license-info' ),
+		'id' => 'license-info',
+		'before_widget' => '<div id="snow-license" class="small-12 medium-4 snow-license">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="snow-license-title">',
+		'after_title' => '</h1>'
+	),
+	'contact' => array(
+		'name' => __( 'Contact Information', 'contact' ),
+		'id' => 'contact',
+		'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="snow-contact-title">',
+		'after_title' => '</h1>'
+	),
+	'partners' => array(
+		'name' => __( 'Partners', 'partners' ),
+		'id' => 'partners',
+		'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="snow-partners-title">',
+		'after_title' => '</h1>'
+	),
+	'post',
+	'page'
 );
 
 /* Register post/page sidebars */
@@ -74,10 +76,10 @@ function snow_front_panel_sticky( $atts = array() ) {
  
  	/* Default Parameters */
 	extract(shortcode_atts(array(
-	  'category__and' => 7,
-	  'posts_per_page' => 1,
-	  'post__in' => get_option( 'sticky_posts' ),
-	  'ignore_sticky_posts' => 1
+		'category__and' => 7,
+		'posts_per_page' => 1,
+		'post__in' => get_option( 'sticky_posts' ),
+		'ignore_sticky_posts' => 1
 	), $atts));
 	 
 	/* Query the posts */
@@ -151,18 +153,7 @@ foreach ($snow_panels as $panel) {
 /* Enable shortcodes */
 add_filter('widget_text', 'do_shortcode');
 
-
-/* Centralised array for sidebar types */
-$sidebar = array(
-		"post",
-		"page"
-	);
-
-/* Register post/page sidebars */
-foreach ($sidebar as $value) {
-	register_sidebar($value);
-}
-
+/* Create sidebar menus for posts or pages */
 function create_sidebar($post_type) {
     $category_current = get_the_category();
     $category_link =  get_term_link ($category_current[0]->slug, "category");
