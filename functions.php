@@ -235,7 +235,7 @@ function allow_pages_tags_categories() {
 		"post_tag",
 		"category"
 	);
-	foreach ($taxonomy as &$value) {
+	foreach ($taxonomy as $value) {
 		register_taxonomy_for_object_type($value, 'page');
 	}
 }
@@ -247,7 +247,7 @@ function add_queries_tags_categories($wp_query) {
 		"tag",
 		"category_name"
 	);
-	foreach ($query_parameters as &$value) {
+	foreach ($query_parameters as $value) {
 		if ($wp_query->get($value))
 			$wp_query->set('post_type', 'any');
 	}
