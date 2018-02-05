@@ -124,76 +124,45 @@ class snow_panel_widget extends WP_Widget {
 	}
 }
 
+/* Centralised array for the SNOW panel information */
 $snow_panels = array(
-    "snow_upcoming_workshops" => array(
-        "id" => "snow_upcoming_workshops",
-        "title" => "Upcoming Workshops",
-        "category" => "8"
+    'snow_upcoming_workshops' => array(
+        'id' => 'snow_upcoming_workshops',
+        'title' => 'Upcoming Workshops',
+        'category' => '8'
     ),
-    "snow_feature_article" => array(
-        "id" => "snow_feature_article",
-        "title" => "Feature Article",
-        "category" => "22"
+    'snow_feature_article' => array(
+        'id' => 'snow_feature_article',
+        'title' => 'Feature Article',
+        'category' => '22'
     ),
-    "snow_featured_content" => array(
-        "id" => "snow_featured_content",
-        "title" => "Featured Content",
-        "category" => "23"
-    ),
+    'snow_featured_content' => array(
+        'id' => 'snow_featured_content',
+        'title' => 'Featured Content',
+        'category' => '23'
+    )
 );
 
-
-// function snow_upcoming_workshops() { 
-//   register_widget( new snow_panel_widget('snow_upcoming_workshops','Upcoming Workshops','8'));
-// }
-// add_action('widgets_init', 'snow_upcoming_workshops');
-// function snow_feature_article() { 
-// 	register_widget( new snow_panel_widget('snow_feature_article','Feature Article','22'));
-// }
-// add_action('widgets_init', 'snow_feature_article');
-// function snow_featured_content() { 
-// 	register_widget( new snow_panel_widget('snow_featured_content','Featured Content','23'));
-// }
-// add_action('widgets_init', 'snow_featured_content');
-
-// $all_panels = array(
-// 	"snow_upcoming_workshops",
-// 	"snow_feature_article",
-// 	"snow_featured_content"
-// 	);
-
+/* Register and initialise all panels in $snow_panels */
 foreach ($snow_panels as $panel) {
-	register_widget( new snow_panel_widget($panel[0], $panel[1], $panel[2]) );
-	// add_action('widgets_init', $panel[0]);
+	register_widget( new snow_panel_widget($panel['id'], $panel['title'], $panel['category']) );
+	add_action('widgets_init', $panel['id']);
 }
-
-
-add_action('widgets_init', 'snow_upcoming_workshops');
-add_action('widgets_init', 'snow_feature_article');
-add_action('widgets_init', 'snow_featured_content');
-
 
 /* Enable shortcodes */
 add_filter('widget_text', 'do_shortcode');
 
 
-/* Register post/page sidebars */
+/* Centralised array for sidebar types */
 $sidebar = array(
 		"post",
 		"page"
 	);
 
+/* Register post/page sidebars */
 foreach ($sidebar as $value) {
 	register_sidebar($value);
 }
-
-// if (function_exists('register_sidebar')) { 
-//     register_sidebar('post'); 
-// }
-
-// if (function_exists('register_sidebar')) { 
-//     register_sidebar('page'); 
-// }
 
 function create_sidebar($post_type) {
     $category_current = get_the_category();
