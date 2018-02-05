@@ -107,7 +107,7 @@ class snow_panel_widget extends WP_Widget {
 	public $category;
 
 	/* Set up the widget name and description */
-	public function __construct( $id, $title, $category ) {
+	public function __construct( array $snow_panels ) {
 		$widget_options = array();
 		$this->title = $title;
 		$this->category = $category;
@@ -144,13 +144,16 @@ $snow_panels = array(
     ),
 );
 
-register_widget( new snow_panel_widget($snow_panels["snow_upcoming_workshops"]));
-register_widget( new snow_panel_widget($snow_panels["snow_feature_article"]));
-register_widget( new snow_panel_widget($snow_panels["snow_featured_content"]));
+$all_panels = array(
+	"snow_upcoming_workshops",
+	"snow_feature_article",
+	"snow_featured_content"
+	);
 
-add_action('widgets_init', 'snow_upcoming_workshops');
-add_action('widgets_init', 'snow_feature_article');
-add_action('widgets_init', 'snow_featured_content');
+foreach ($all_panels as $panel) {
+	register_widget( new snow_panel_widget($snow_panels[$panel]));
+	add_action('widgets_init', $panel);
+}
 
 /* Enable shortcodes */
 add_filter('widget_text', 'do_shortcode');
