@@ -28,4 +28,4 @@ See: [wp-a11y Theme Readme](https://github.com/jhung/wp-a11y-theme/blob/foundati
 
 # About
 
-The BIG IDeA theme is created and maintained by the [FLOE Project](http://www.floeproject.org/).
+The SNOW theme is created and maintained by the [FLOE Project](http://www.floeproject.org/).
