@@ -56,6 +56,7 @@ html {
 }
 .a11y-site-header {
   padding: 0;
+  margin-top: 0;
 }
 .dropdown {
   border: 0.02rem solid;
@@ -186,6 +187,7 @@ html {
   flex: 1 1 auto;
   margin: 0 !important;
   align-self: auto;
+  margin: 0rem !important;
   text-align: center;
 }
 .a11y-main-nav-items ul li.current-menu-item:before {
@@ -230,7 +232,7 @@ html {
 .home .a11y-site-main {
   background-color: front-main-content-background;
   padding: 0;
-  border: 0;
+  border: 0 !important;
   overflow-x: hidden;
 }
 .snow-intro {
@@ -460,10 +462,6 @@ h1.snow-title {
 }
 h1.entry-title {
   margin-top: 0 !important;
-}
-h2.a11y-entry-content:after {
-  content: "";
-  border-bottom: 0.8rem solid #000;
 }
 h3.comment-reply-title {
   color: #000;
