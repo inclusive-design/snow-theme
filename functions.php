@@ -225,7 +225,6 @@ function create_sidebar($post_type) {
     }
 }
 
-
 // Find out what is the post/page's main category and turn on menu indicator for that category
 function make_current_menu_item( $classes, $item ) {
 
@@ -263,5 +262,5 @@ function add_queries_tags_categories($wp_query) {
 }
 add_action('pre_get_posts', 'add_queries_tags_categories');
 
-?>
 
+?>
