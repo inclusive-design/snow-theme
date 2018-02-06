@@ -25,7 +25,6 @@ Tags: accessibility
 /* Front Page Footer */
 /* Sub Page Footer */
 /* Site description */
-/* Mixins */
 /* Styles for specific SVG images. */
 #corner-flourish {
   display: none;
@@ -532,12 +531,6 @@ h3.comment-reply-title {
 .fl-theme-wb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-wb .a11y-site-header {
-  border-bottom: 0.2rem solid #fff;
-}
-.fl-theme-wb .a11y-site-header h1 a {
-  background-image: url("./images/logo-WHITE.svg");
-}
 .fl-theme-wb .a11y-site-footer {
   border-top: 0.2rem solid;
 }
@@ -570,12 +563,6 @@ h3.comment-reply-title {
 }
 .fl-theme-bw .a11y-site-aside {
   border-top: 1.6rem solid #fff !important;
-}
-.fl-theme-bw .a11y-site-header {
-  border-bottom: 0.2rem solid #000;
-}
-.fl-theme-bw .a11y-site-header h1 a {
-  background-image: url("./images/logo-GREY.svg");
 }
 .fl-theme-bw .a11y-site-footer {
   border-top: 0.2rem solid;
@@ -610,12 +597,6 @@ h3.comment-reply-title {
 .fl-theme-yb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-yb .a11y-site-header {
-  border-bottom: 0.2rem solid #ff0;
-}
-.fl-theme-yb .a11y-site-header h1 a {
-  background-image: url("./images/logo-YELLOW.svg");
-}
 .fl-theme-yb .a11y-site-footer {
   border-top: 0.2rem solid;
 }
@@ -649,12 +630,6 @@ h3.comment-reply-title {
 .fl-theme-by .a11y-site-aside {
   border-top: 1.6rem solid #ff0 !important;
 }
-.fl-theme-by .a11y-site-header {
-  border-bottom: 0.2rem solid #000;
-}
-.fl-theme-by .a11y-site-header h1 a {
-  background-image: url("./images/logo-GREY.svg");
-}
 .fl-theme-by .a11y-site-footer {
   border-top: 0.2rem solid;
 }
@@ -687,12 +662,6 @@ h3.comment-reply-title {
 }
 .fl-theme-lgdg .a11y-site-aside {
   border-top: 1.6rem solid #555 !important;
-}
-.fl-theme-lgdg .a11y-site-header {
-  border-bottom: 0.2rem solid #bdbdbb;
-}
-.fl-theme-lgdg .a11y-site-header h1 a {
-  background-image: url("./images/logo-WHITE.svg");
 }
 .fl-theme-lgdg .a11y-site-footer {
   border-top: 0.2rem solid;
@@ -744,7 +713,6 @@ h3.comment-reply-title {
   }
   .a11y-site-aside {
     padding: 3rem 1rem 25rem 1.6rem !important;
-    background-image: url("./images/sidebar-graphic-COLOUR-01.svg");
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 18rem auto;
@@ -761,11 +729,10 @@ h3.comment-reply-title {
     background-position: 0 -10rem;
   }
   .a11y-site-footer {
-    background-image: url("./images/sidebar-graphic-COLOUR-02.svg");
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 18rem auto;
+    background-image: none;
+!important
   }
+!important
   .single .a11y-site-main,
   .category .a11y-site-main,
   .page .a11y-site-main {
@@ -774,48 +741,45 @@ h3.comment-reply-title {
     border-right: 1.6rem solid #fff;
     padding-bottom: 4rem;
   }
+  .fl-theme-wb {
+    apply-contrast-sidebar-images: #fff "WHITE";
+  }
+  .fl-theme-bw {
+    apply-contrast-sidebar-images: #000 "GREY";
+  }
+  .fl-theme-yb {
+    apply-contrast-sidebar-images: #ff0 "YELLOW";
+  }
+  .fl-theme-by {
+    apply-contrast-sidebar-images: #000 "GREY";
+  }
+  .fl-theme-lgdg {
+    apply-contrast-sidebar-images: #bdbdbb "WHITE";
+  }
 }
 /* Large screens and bigger */
 @media screen and (min-width: 64em) {
   .a11y-site-tagline {
-    background: url("./images/logo-COLOUR.svg") no-repeat, url("./images/banner.jpg") no-repeat, #274d5d;
-    background-position: 83% 3.6rem, 9rem -5rem;
-    background-size: 14% auto, 82% auto;
     padding: 3rem 15rem 3rem 15rem;
     min-height: 25rem;
   }
   .a11y-site-aside ul ul {
     margin-left: 2rem;
   }
-  .fl-theme-wb .a11y-site-tagline {
-    background: url("./images/logo-WHITE.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
-    background-repeat: no-repeat;
+  .fl-theme-wb {
+    apply-contrast-tagline-background: "WHITE";
   }
-  .fl-theme-bw .a11y-site-tagline {
-    background: url("./images/logo-GREY.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
-    background-repeat: no-repeat;
+  .fl-theme-bw {
+    apply-contrast-tagline-background: "GREY";
   }
-  .fl-theme-yb .a11y-site-tagline {
-    background: url("./images/logo-YELLOW.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
-    background-repeat: no-repeat;
+  .fl-theme-yb {
+    apply-contrast-tagline-background: "YELLOW";
   }
-  .fl-theme-by .a11y-site-tagline {
-    background: url("./images/logo-GREY.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
-    background-repeat: no-repeat;
+  .fl-theme-by {
+    apply-contrast-tagline-background: "GREY";
   }
-  .fl-theme-lgdg .a11y-site-tagline {
-    background: url("./images/logo-WHITE.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
-    background-repeat: no-repeat;
+  .fl-theme-lgdg {
+    apply-contrast-tagline-background: "WHITE";
   }
 }
 /* Styles specific for Font Awesome */

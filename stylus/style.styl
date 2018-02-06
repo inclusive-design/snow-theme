@@ -98,27 +98,6 @@ site-tagline-color ?= #fff;
 site-tagline-emphasis ?= #F7AC82;
 site-tagline-background-image ?= "./images/banner.jpg";
 
-/* Mixins */
-apply-contrast-sidebar-images(foreground fileSuffix) {
-/*    .a11y-site-aside {
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-01.svg");
-    }
-
-    .a11y-site-footer {
-        border-top: 0.2rem solid foreground;
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-02.svg");
-    }*/
-}
-
-apply-contrast-tagline-background(fileSuffix) {
-    .a11y-site-tagline {
-        background: url("./images/logo-"+fileSuffix+".svg");
-        background-position: 83% 3.6rem;
-        background-size: 14% auto;
-        background-repeat: no-repeat;
-    }
-}
-
 apply-contrast-colours(foreground background fileSuffix) {
     #corner-flourish {
         fill: foreground;
@@ -153,13 +132,6 @@ apply-contrast-colours(foreground background fileSuffix) {
 
     .a11y-site-aside {
         border-top: 1.6rem solid background !important;
-    }
-
-    .a11y-site-header {
-        border-bottom: 0.2rem solid foreground;
-        h1 a {
-            background-image: url("./images/logo-"+fileSuffix+".svg");
-        }
     }
 
     .a11y-site-footer {
@@ -826,7 +798,6 @@ h3.comment-reply-title {
 
       .a11y-site-aside {
           padding: 3rem 1rem 25rem 1.6rem !important;
-          background-image: url("./images/sidebar-graphic-COLOUR-01.svg");
           background-position: left bottom;
           background-repeat: no-repeat;
           background-size: 18rem auto;
@@ -846,11 +817,7 @@ h3.comment-reply-title {
       }
 
       .a11y-site-footer {
-          background-image: url("./images/sidebar-graphic-COLOUR-02.svg");
-          background-position: left top;
-          background-repeat: no-repeat;
-
-          background-size: 18rem auto;
+          background-image: none; !important;
       }
 
       .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main {
@@ -885,12 +852,6 @@ h3.comment-reply-title {
 /* Large screens and bigger */
 @media screen and (min-width: 64em) {
       .a11y-site-tagline {
-          background: url("./images/logo-COLOUR.svg") no-repeat,
-                      url(site-tagline-background-image) no-repeat,
-                      #274D5D;
-          background-position: 83% 3.6rem, 9rem -5rem;
-          background-size: 14% auto, 82% auto;
-
           padding: 3rem 15rem 3rem 15rem;
           min-height: 25rem;
       }
