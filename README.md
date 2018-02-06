@@ -22,7 +22,7 @@ This theme is still under development.
 
 # Content Structure
 
-The structure of the content for the BIG IDeA site follows the content structure outlined in the wp-a11y theme.
+The structure of the content for the SNOW site follows the content structure outlined in the wp-a11y theme.
 
 See: [wp-a11y Theme Readme](https://github.com/jhung/wp-a11y-theme/blob/foundation/README.md)
 

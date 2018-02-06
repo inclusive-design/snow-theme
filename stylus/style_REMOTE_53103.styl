@@ -1,11 +1,11 @@
 /*!
-Theme Name: snow 0.0.1
+Theme Name: a11y-0.0.3
 Theme URI:
 Author: Floe Project
 Author URI: http://floeproject.org/
 Description: Accessible theme <code>a11y</code>
 Template: wp-a11y-theme
-Version: 0.0.5
+Version: 0.0.3
 License:
 License URI:
 Text Domain: a11y
@@ -191,7 +191,6 @@ html {
 .a11y-theme {
     font-family: primary-font;
     background-color: body-background;
-    display: block !important;
 
     h1, h2, h3 {
         font-family: header-font;
@@ -203,7 +202,6 @@ html {
 
 .a11y-site-header {
     padding: 0;
-    margin-top: 0;
 }
 
 .dropdown {
@@ -272,6 +270,7 @@ html {
 /* Site Header */
 .a11y-site-header {
     background-color: masthead-background;
+    margin-top: 1.2rem;
     padding: 0;
 
     .a11y-site-title {
@@ -354,7 +353,7 @@ html {
             width: 100%;
             flex: 1 1 auto;
             align-self: auto;
-            margin: 0rem !important;
+            margin: 0rem 0rem 0.1rem 0rem !important;
             text-align: center;
         }
 
@@ -523,7 +522,7 @@ h1.snow-title {
     p {
         width: 100%;
     }
-
+    
     span {
         font-size: 6rem;
         font-weight: bold;
@@ -678,9 +677,9 @@ h1.snow-title {
     }
 }
 
-.a11y-entry-content h2 {
-    color: #000;
-    border-bottom: 0.2rem solid #000;
+h2.a11y-entry-content:after {
+    content: "";
+    border-bottom: 0.8rem solid #000;
 }
 
 /* Footer */
@@ -912,7 +911,6 @@ span.fa {
         font-size: 1.2rem;
         text-transform: none;
         padding: 1rem 1.5rem;
-        margin: 0;
     }
 
     section {
@@ -926,3 +924,20 @@ span.fa {
     border-color: #eceded;
 }
 
+#breadcrumbs{
+    list-style:none;
+    margin:10px 0;
+    overflow:hidden;
+}
+  
+#breadcrumbs li{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:15px;
+}
+  
+#breadcrumbs .separator{
+    font-size:18px;
+    font-weight:100;
+    color:#ccc;
+}
