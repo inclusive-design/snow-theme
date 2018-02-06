@@ -1,8 +1,6 @@
-# BIG IDeA Wordpress Theme
+# SNOW Wordpress Theme
 
-This is an accessible, responsive Wordpress theme created by the Floe Project. The BIG IDeA is a child theme of the [Floe wp-a11y theme](https://github.com/jhung/wp-a11y-theme/).
-
-[http://bigidea.one](http://bigidea.one) is an example of a site using this theme.
+This is an accessible, responsive Wordpress theme created by the Floe Project for the [SNOW website](https://snow.idrc.ocadu.ca/). The SNOW theme is a child theme of the [Floe wp-a11y theme](https://github.com/jhung/wp-a11y-theme/).
 
 ## Under Development
 
@@ -20,7 +18,7 @@ This theme is still under development.
 
 1. Ensure the above requirements are met.
 2. Copy this theme into a sub-directory in your Wordpress `themes` directory.
-3. Activate the `BIG IDeA` theme.
+3. Activate the `SNOW` theme.
 
 # Content Structure
 
