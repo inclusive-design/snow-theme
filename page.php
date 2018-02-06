@@ -13,7 +13,7 @@
  */
 
 get_header();
-get_sidebar();
+get_sidebar('page');
 ?>
 
     <main id="content" class="a11y-site-main columns">

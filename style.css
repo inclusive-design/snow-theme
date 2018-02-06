@@ -44,6 +44,7 @@ html {
 .a11y-theme {
   font-family: "Roboto", sans-serif;
   background-color: #fff;
+  display: block !important;
 }
 .a11y-theme h1,
 .a11y-theme h2,
@@ -55,6 +56,7 @@ html {
 }
 .a11y-site-header {
   padding: 0;
+  margin-top: 0;
 }
 .dropdown {
   border: 0.01rem solid;
@@ -115,7 +117,6 @@ html {
 /* Site Header */
 .a11y-site-header {
   background-color: #fff;
-  margin-top: 1.2rem;
   padding: 0;
 }
 .a11y-site-header .a11y-site-title {
@@ -182,7 +183,7 @@ html {
   width: 100%;
   flex: 1 1 auto;
   align-self: auto;
-  margin: 0rem 0rem 0.1rem 0rem !important;
+  margin: 0rem !important;
   text-align: center;
 }
 .a11y-main-nav-items ul li.current-menu-item:before {
@@ -446,9 +447,9 @@ h1.snow-title {
   color: #000;
   border-left: 0.2rem solid #000;
 }
-h2.a11y-entry-content:after {
-  content: "";
-  border-bottom: 0.8rem solid #000;
+.a11y-entry-content h2 {
+  color: #000;
+  border-bottom: 0.2rem solid #000;
 }
 /* Footer */
 .a11y-site-footer {
@@ -809,6 +810,7 @@ span.fa {
   font-size: 1.2rem;
   text-transform: none;
   padding: 1rem 1.5rem;
+  margin: 0;
 }
 .a11y-front-panel section {
   padding: 0.5rem 1.5rem 1.5rem 1.5rem;
