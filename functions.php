@@ -225,6 +225,7 @@ function create_sidebar($post_type) {
     }
 }
 
+// Find out what is the post/page's main category and turn on menu indicator for that category
 function make_current_menu_item( $classes, $item ) {
 
     if (in_array('current-post-ancestor', $classes) || in_array('current-page-ancestor', $classes) || in_array('current-menu-item', $classes) ) {
@@ -235,5 +236,31 @@ function make_current_menu_item( $classes, $item ) {
 add_filter( 'nav_menu_css_class', 'make_current_menu_item', 10, 2 );
 
 
-?>
+// Add tag and category support to pages
+function allow_pages_tags_categories() {
+    $taxonomy = array(
+        "post_tag",
+        "category"
+    );
+    foreach ($taxonomy as $value) {
+        register_taxonomy_for_object_type($value, 'page');
+    }
+}
+add_action('init', 'allow_pages_tags_categories');
 
+
+// Ensure all tags and categories are included in queries
+function add_queries_tags_categories($wp_query) {
+    $query_parameters = array(
+        "tag",
+        "category_name"
+    );
+    foreach ($query_parameters as $value) {
+        if ($wp_query->get($value))
+            $wp_query->set('post_type', 'any');
+    }
+}
+add_action('pre_get_posts', 'add_queries_tags_categories');
+
+
+?>
