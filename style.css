@@ -722,10 +722,8 @@ h3.comment-reply-title {
     background-position: 0 -10rem;
   }
   .a11y-site-footer {
-    background-image: none;
-!important
+    background-image: none !important;
   }
-!important
   .single .a11y-site-main,
   .category .a11y-site-main,
   .page .a11y-site-main {
