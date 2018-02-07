@@ -43,7 +43,6 @@ html {
 .a11y-theme {
   font-family: "Roboto", sans-serif;
   background-color: #fff;
-  display: block !important;
 }
 .a11y-theme h1,
 .a11y-theme h2,
@@ -61,7 +60,6 @@ html {
   border: 0.02rem solid;
   height: 5.5rem;
   padding: 0;
-  z-index: 10;
 }
 /* Skip links */
 #skip {
@@ -97,26 +95,25 @@ html {
   padding: 1rem;
 }
 /* UI Options. */
-.fl-prefsEditor-separatedPanel .fl-panelBar {
+.fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen {
   flex-flow: row wrap;
-  display: flex;
+  display: flex !important;
   justify-content: flex-end;
   background-color: inherit;
   border-bottom: none;
 }
-.fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
+.fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen .fl-prefsEditor-buttons {
   margin-right: 5em;
 }
-.fl-prefsEditor-separatedPanel .fl-panelBar button:focus {
+.fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen button:focus {
   outline: 0.2rem solid #000;
 }
-.fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-showHide {
+.fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen .fl-prefsEditor-showHide {
   min-width: 7em;
 }
 /* Site Header */
 .a11y-site-header {
   background-color: #fff;
-  margin-top: 0;
   padding: 0;
 }
 .a11y-site-header .a11y-site-title {
@@ -147,7 +144,6 @@ html {
 .a11y-main-nav .title-bar {
   display: inline-block;
   background-color: inherit;
-  z-index: 10;
 }
 .a11y-main-nav .menu-icon {
   width: 2.5rem;
@@ -158,7 +154,6 @@ html {
 }
 .a11y-main-nav .menu-icon:focus {
   outline: 0.2rem solid #00303c;
-  z-index: 10;
 }
 .a11y-main-nav .menu-icon:before {
   font-size: 1.8rem;
@@ -186,7 +181,6 @@ html {
   flex: 1 1 auto;
   margin: 0 !important;
   align-self: auto;
-  margin: 0rem !important;
   text-align: center;
 }
 .a11y-main-nav-items ul li.current-menu-item:before {
@@ -202,7 +196,6 @@ html {
   color: #0f191d;
   text-transform: uppercase;
   font-weight: bold;
-  z-index: -10;
 }
 .a11y-main-nav-items ul a:hover {
   background-color: #7ec9bc;

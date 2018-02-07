@@ -163,7 +163,6 @@ html {
 .a11y-theme {
     font-family: primary-font;
     background-color: body-background;
-    display: block !important;
 
     h1, h2, h3 {
         font-family: header-font;
@@ -182,7 +181,6 @@ html {
     border: 0.02rem solid;
     height: 5.5rem;
     padding: 0;
-    z-index: 10;
 }
 
 
@@ -221,9 +219,9 @@ html {
 }
 
 /* UI Options. */
-.fl-prefsEditor-separatedPanel .fl-panelBar {
+.fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen {
     flex-flow: row wrap;
-    display: flex;
+    display: flex !important;
     justify-content: flex-end;
     background-color: inherit;
     border-bottom: none;
@@ -244,7 +242,6 @@ html {
 /* Site Header */
 .a11y-site-header {
     background-color: masthead-background;
-    margin-top: 0;
     padding: 0;
 
     .a11y-site-title {
@@ -284,7 +281,6 @@ html {
     .title-bar {
         display: inline-block;
         background-color: inherit;
-        z-index: 10;
     }
 
     .menu-icon {
@@ -296,7 +292,6 @@ html {
 
         &:focus {
             outline: main-nav-link-focus;
-            z-index: 10;
         }
 
         &:before {
@@ -331,7 +326,6 @@ html {
             flex: 1 1 auto;
             margin: 0 !important;
             align-self: auto;
-            margin: 0rem !important;
             text-align: center;
         }
 
@@ -349,7 +343,6 @@ html {
             color: main-nav-link-color;
             text-transform: uppercase;
             font-weight: bold;
-            z-index: -10;
 
             &:hover {
                 background-color: main-nav-link-background-hover;
@@ -640,7 +633,6 @@ h1.snow-title {
     }
 
     h1 {
-
         font-size: 2rem;
     }
 
