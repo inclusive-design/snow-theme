@@ -47,7 +47,7 @@ if ( ! empty( $category_current ) ) {
 get_header();
 get_sidebar('post');
 ?>
-    <main id="content" class="a11y-site-main columns">
+    <main id="content" class="a11y-site-main small-12 columns">
         <h1><?php echo $category_name ?></h1>
         <section>
             <article>
