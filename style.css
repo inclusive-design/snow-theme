@@ -729,9 +729,9 @@ h3.comment-reply-title {
   .single .a11y-site-main,
   .category .a11y-site-main,
   .page .a11y-site-main {
-    border-top: 1.6rem solid #fff;
-    border-left: 1.6rem solid #fff;
-    border-right: 1.6rem solid #fff;
+    border-top: 1.6rem;
+    border-left: 1.6rem;
+    border-right: 1.6rem;
     padding-bottom: 4rem;
   }
   .fl-theme-wb {
