@@ -144,8 +144,11 @@ $snow_panels = array(
 
 /* Register and initialise all panels in $snow_panels */
 foreach ($snow_panels as $panel) {
-    register_widget( new snow_panel_widget($panel['id'], $panel['title'], $panel['category']) );
-    add_action('widgets_init', $panel['id']);
+    $new_widget = new snow_panel_widget($panel['id'], $panel['title'], $panel['category']);
+    $register_panel = function() use ($new_widget) {
+        register_widget( $new_widget );
+    };
+    add_action('widgets_init', $register_panel);
 }
 
 /* Enable shortcodes */
