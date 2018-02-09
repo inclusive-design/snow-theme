@@ -71,28 +71,29 @@ foreach ($snow_widgets as $value) {
 }
 
 
-/* Begin extending widget for Upcoming Workshops front panel */
+/* Begin extending widget for front panels */
 function snow_front_panel_sticky( $atts = array() ) {
     /* Default Parameters */
-    extract(shortcode_atts(array(
-        'category__and' => 7,
-        'posts_per_page' => 1,
-        'post__in' => get_option( 'sticky_posts' ),
-        'ignore_sticky_posts' => 1
-    ), $atts));
-    
+    $myatts = array(
+      'post__in'  => get_option( 'sticky_posts' ),
+      'posts_per_page' => 1
+    );
+    $allatts = array_merge($atts, $myatts);
+
     /* Query the posts */
-    $the_query = new WP_Query($atts);
+    $the_query = new WP_Query($allatts);
     if ( $the_query->have_posts() ) {
-        $the_query->the_post();
-        $return .= '<p><a href="' .get_permalink(). '" title="' . get_the_title() . '">' . get_the_title() . '</a></p>' . '<p>' . get_the_excerpt() . '</p>';
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+            $return .= '<p><a href="' .get_permalink(). '" title="' . get_the_title() . '">' . get_the_title() . '</a></p>' . '<p>' . get_the_excerpt() . '</p>';
+        }
     } else {
         // No posts found
     }
 
     /* Restore original Post Data */
     wp_reset_postdata();
-    
+
     return $return;
 }
 add_shortcode('snow_front_panel_sticky', 'snow_front_panel_sticky');
@@ -102,7 +103,7 @@ class snow_panel_widget extends WP_Widget {
 
     public $title;
     public $category;
-    
+
     /* Set up the widget name and description */
     public function __construct( $id, $title, $category ) {
         $widget_options = array();
@@ -110,12 +111,12 @@ class snow_panel_widget extends WP_Widget {
         $this->category = $category;
         parent::__construct( $id, $title, $widget_options );
     }
-    
+
     /* Create the widget output */
     public function widget( $args ) {
         echo $args['before_widget'] . $args['before_title'] . $this->title . $args['after_title']; ?>
         <div class="snow-widget">
-            <?php echo do_shortcode('[snow_front_panel_sticky category__and=' . $this->category . ']'); ?>
+            <?php echo do_shortcode('[snow_front_panel_sticky cat=' . $this->category . ']'); ?>
         </div>
         <?php echo $args['after_widget'];
     }
