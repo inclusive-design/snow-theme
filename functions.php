@@ -75,9 +75,10 @@ foreach ($snow_widgets as $value) {
 function snow_front_panel_sticky( $atts = array() ) {
     /* Default Parameters */
     $myatts = array(
-      'post__in'  => get_option( 'sticky_posts' ),
-      'posts_per_page' => 1
+        'post__in'  => get_option( 'sticky_posts' ),
+        'posts_per_page' => 1
     );
+    /* Merge category__and with the above parameters */
     $allatts = array_merge($atts, $myatts);
 
     /* Query the posts */
