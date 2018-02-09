@@ -73,6 +73,7 @@ foreach ($snow_widgets as $value) {
 
 /* Begin extending widget for Upcoming Workshops front panel */
 function snow_front_panel_sticky( $atts = array() ) {
+    $sticky = get_option( 'sticky_posts' );
     /* Default Parameters */
     extract(shortcode_atts(array(
         'category__and' => 7,
@@ -83,13 +84,8 @@ function snow_front_panel_sticky( $atts = array() ) {
     
     /* Query the posts */
     $the_query = new WP_Query($atts);
-    if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            $return .= '<p><a href="' .get_permalink(). '" title="' . get_the_title() . '">' . get_the_title() . '</a></p>' . '<p>' . get_the_excerpt() . '</p>';
-        }
-    } else {
-        // No posts found
+    if ( isset($sticky[0]) )  {
+        $return .= '<p><a href="' .get_permalink(). '" title="' . get_the_title() . '">' . get_the_title() . '</a></p>' . '<p>' . get_the_excerpt() . '</p>';
     }
 
     /* Restore original Post Data */
