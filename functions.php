@@ -85,7 +85,7 @@ function snow_front_panel_sticky( $atts = array() ) {
     $the_query = new WP_Query($atts);
     if ( $the_query->have_posts() ) {
         $the_query->the_post();
-            $return .= '<p><a href="' .get_permalink(). '" title="' . get_the_title() . '">' . get_the_title() . '</a></p>' . '<p>' . get_the_excerpt() . '</p>';
+        $return .= '<p><a href="' .get_permalink(). '" title="' . get_the_title() . '">' . get_the_title() . '</a></p>' . '<p>' . get_the_excerpt() . '</p>';
     } else {
         // No posts found
     }
