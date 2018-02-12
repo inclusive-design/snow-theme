@@ -67,8 +67,8 @@ html {
   height: 0rem;
 }
 #skip a {
-  color: #006274;
-  background: #eceded;
+  color: #7ec9bc;
+  background: #fff;
   margin-top: 1rem;
 }
 #skip a,
@@ -80,18 +80,18 @@ html {
   position: absolute;
   top: auto;
   width: 1px;
-  color: #eceded;
-  background: #006274;
+  color: #0f191d;
+  background: #7ec9bc;
 }
 #skip a:active,
 #skip a:focus {
   height: auto;
   width: auto;
   left: auto;
-  border: 0.5rem solid #eceded;
-  outline: 0.2rem solid #006274;
-  color: #eceded;
-  background: #006274;
+  border: 0.5rem solid #fff;
+  outline: 0.2rem solid #7ec9bc;
+  color: #0f191d;
+  background: #7ec9bc;
   padding: 1rem;
 }
 /* UI Options. */
@@ -712,11 +712,7 @@ h3.comment-reply-title {
     background-position: 0 -10rem;
   }
   .a11y-site-footer {
-<<<<<<< HEAD
-    background-image: none !important;
-=======
     background-image: none;
->>>>>>> 151a5b62ebfc6c4c1eb30e0d792bbe948dcf70e1
   }
   .single .a11y-site-main,
   .category .a11y-site-main,
