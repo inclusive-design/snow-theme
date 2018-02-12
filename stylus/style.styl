@@ -96,7 +96,7 @@ footer-link-focus ?= 0.2rem solid #0F191D;
 /* Site description */
 site-tagline-color ?= #fff;
 site-tagline-emphasis ?= #F7AC82;
-site-tagline-background-image ?= "./images/banner.jpg";
+site-tagline-background-image ?= "./images/banner-COLOUR.jpg";
 
 /* Mixins */
 apply-contrast-sidebar-images(foreground fileSuffix) {
@@ -112,23 +112,22 @@ apply-contrast-sidebar-images(foreground fileSuffix) {
 
 apply-contrast-tagline-background(fileSuffix) {
     .a11y-site-tagline {
-        background: url("./images/logo-"+fileSuffix+".svg");
-        background-position: 83% 3.6rem;
-        background-size: 14% auto;
+        background: url("./images/banner-"+fileSuffix+".jpg");
+        background-position: 9rem -5rem;
+        background-size: 82% auto;
         background-repeat: no-repeat;
-    }
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+
+/*        background-position: 83% 3.6rem, 9rem -5rem;
+        background-size: 14% auto, 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+*/    }
 }
 
 apply-contrast-colours(foreground background fileSuffix) {
-    #corner-flourish {
-        fill: foreground;
-        background-color: initial !important;
-    }
-
-    #ontario-logo {
-        fill: foreground;
-    }
-
     a:hover {
         color: background !important;
         background-color: foreground !important;
@@ -156,9 +155,8 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 
     .a11y-site-header {
-        border-bottom: 0.2rem solid foreground;
         h1 a {
-            background-image: url("./images/logo-"+fileSuffix+".svg");
+            background-image: url("./images/logo-"+fileSuffix+".png");
         }
     }
 
@@ -176,11 +174,7 @@ apply-contrast-colours(foreground background fileSuffix) {
 }
 
 #ontario-logo {
-    width: 8rem;
-    fill: #fff;
-    margin: 0 auto;
-    display: block;
-    height: 2.2rem;
+    display: none;
 }
 
 /* General styles */
@@ -278,7 +272,6 @@ html {
         margin: 0;
         display: inline-block;
         text-transform: none;
-        font-size: none;
     }
 
     .a11y-site-title a {
@@ -286,7 +279,7 @@ html {
         display:flex;
         align-items:flex-end;
 
-        background: url("./images/snow_logo.png") -0.1rem/10.5rem 4rem no-repeat;
+        background: url("./images/logo-COLOUR.png") -0.1rem/10.5rem 4rem no-repeat;
         background-size: 15rem 6rem;
         width: 15rem;
         height: 5rem;
@@ -513,8 +506,8 @@ h1.snow-title {
 
 /* Site Tagline (appears on front page only) */
 .a11y-site-tagline {
-    background-color: #274D5D;
-    background: url(site-tagline-background-image) 0 -3rem/100% auto no-repeat,#274D5D;
+    background-color: #fff;
+    background: url(site-tagline-background-image) 0 -3rem/100% auto no-repeat,#fff;
     padding: 1rem 2rem;
 
     display: flex;
@@ -806,7 +799,6 @@ h1.snow-title {
 
       .a11y-site-aside {
           padding: 3rem 1rem 25rem 1.6rem !important;
-          background-image: url("./images/sidebar-graphic-COLOUR-01.svg");
           background-position: left bottom;
           background-repeat: no-repeat;
           background-size: 18rem auto;
@@ -826,7 +818,6 @@ h1.snow-title {
       }
 
       .a11y-site-footer {
-          background-image: url("./images/sidebar-graphic-COLOUR-02.svg");
           background-position: left top;
           background-repeat: no-repeat;
 
@@ -865,11 +856,9 @@ h1.snow-title {
 /* Large screens and bigger */
 @media screen and (min-width: 64em) {
       .a11y-site-tagline {
-          background: url("./images/logo-COLOUR.svg") no-repeat,
-                      url(site-tagline-background-image) no-repeat,
-                      #274D5D;
-          background-position: 83% 3.6rem, 9rem -5rem;
-          background-size: 14% auto, 82% auto;
+          background: url(site-tagline-background-image) no-repeat, #fff;
+          background-position: 9rem -5rem;
+          background-size: 82% auto;
 
           padding: 3rem 15rem 3rem 15rem;
           min-height: 25rem;

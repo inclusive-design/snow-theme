@@ -31,11 +31,7 @@ Tags: accessibility
   display: none;
 }
 #ontario-logo {
-  width: 8rem;
-  fill: #fff;
-  margin: 0 auto;
-  display: block;
-  height: 2.2rem;
+  display: none;
 }
 /* General styles */
 html {
@@ -123,13 +119,12 @@ html {
   margin: 0;
   display: inline-block;
   text-transform: none;
-  font-size: none;
 }
 .a11y-site-header .a11y-site-title a {
   color: #7ec9bc;
   display: flex;
   align-items: flex-end;
-  background: url("./images/snow_logo.png") -0.1rem/10.5rem 4rem no-repeat;
+  background: url("./images/logo-COLOUR.png") -0.1rem/10.5rem 4rem no-repeat;
   background-size: 15rem 6rem;
   width: 15rem;
   height: 5rem;
@@ -310,8 +305,8 @@ h1.snow-title {
 }
 /* Site Tagline (appears on front page only) */
 .a11y-site-tagline {
-  background-color: #274d5d;
-  background: url("./images/banner.jpg") 0 -3rem/100% auto no-repeat, #274d5d;
+  background-color: #fff;
+  background: url("./images/banner-COLOUR.jpg") 0 -3rem/100% auto no-repeat, #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: flex-end;
@@ -490,13 +485,6 @@ h1.snow-title {
   outline: 0.2rem solid #fff;
 }
 /* Contrast Themes */
-.fl-theme-wb #corner-flourish {
-  fill: #fff;
-  background-color: initial !important;
-}
-.fl-theme-wb #ontario-logo {
-  fill: #fff;
-}
 .fl-theme-wb a:hover {
   color: #000 !important;
   background-color: #fff !important;
@@ -517,24 +505,14 @@ h1.snow-title {
 .fl-theme-wb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-wb .a11y-site-header {
-  border-bottom: 0.2rem solid #fff;
-}
 .fl-theme-wb .a11y-site-header h1 a {
-  background-image: url("./images/logo-WHITE.svg");
+  background-image: url("./images/logo-WHITE.png");
 }
 .fl-theme-wb .a11y-site-footer {
   border-top: 0.2rem solid;
 }
 .fl-theme-wb .a11y-site-footer p {
   background: none !important;
-}
-.fl-theme-bw #corner-flourish {
-  fill: #000;
-  background-color: initial !important;
-}
-.fl-theme-bw #ontario-logo {
-  fill: #000;
 }
 .fl-theme-bw a:hover {
   color: #fff !important;
@@ -556,24 +534,14 @@ h1.snow-title {
 .fl-theme-bw .a11y-site-aside {
   border-top: 1.6rem solid #fff !important;
 }
-.fl-theme-bw .a11y-site-header {
-  border-bottom: 0.2rem solid #000;
-}
 .fl-theme-bw .a11y-site-header h1 a {
-  background-image: url("./images/logo-GREY.svg");
+  background-image: url("./images/logo-GREY.png");
 }
 .fl-theme-bw .a11y-site-footer {
   border-top: 0.2rem solid;
 }
 .fl-theme-bw .a11y-site-footer p {
   background: none !important;
-}
-.fl-theme-yb #corner-flourish {
-  fill: #ff0;
-  background-color: initial !important;
-}
-.fl-theme-yb #ontario-logo {
-  fill: #ff0;
 }
 .fl-theme-yb a:hover {
   color: #000 !important;
@@ -595,24 +563,14 @@ h1.snow-title {
 .fl-theme-yb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-yb .a11y-site-header {
-  border-bottom: 0.2rem solid #ff0;
-}
 .fl-theme-yb .a11y-site-header h1 a {
-  background-image: url("./images/logo-YELLOW.svg");
+  background-image: url("./images/logo-YELLOW.png");
 }
 .fl-theme-yb .a11y-site-footer {
   border-top: 0.2rem solid;
 }
 .fl-theme-yb .a11y-site-footer p {
   background: none !important;
-}
-.fl-theme-by #corner-flourish {
-  fill: #000;
-  background-color: initial !important;
-}
-.fl-theme-by #ontario-logo {
-  fill: #000;
 }
 .fl-theme-by a:hover {
   color: #ff0 !important;
@@ -634,24 +592,14 @@ h1.snow-title {
 .fl-theme-by .a11y-site-aside {
   border-top: 1.6rem solid #ff0 !important;
 }
-.fl-theme-by .a11y-site-header {
-  border-bottom: 0.2rem solid #000;
-}
 .fl-theme-by .a11y-site-header h1 a {
-  background-image: url("./images/logo-GREY.svg");
+  background-image: url("./images/logo-GREY.png");
 }
 .fl-theme-by .a11y-site-footer {
   border-top: 0.2rem solid;
 }
 .fl-theme-by .a11y-site-footer p {
   background: none !important;
-}
-.fl-theme-lgdg #corner-flourish {
-  fill: #bdbdbb;
-  background-color: initial !important;
-}
-.fl-theme-lgdg #ontario-logo {
-  fill: #bdbdbb;
 }
 .fl-theme-lgdg a:hover {
   color: #555 !important;
@@ -673,11 +621,8 @@ h1.snow-title {
 .fl-theme-lgdg .a11y-site-aside {
   border-top: 1.6rem solid #555 !important;
 }
-.fl-theme-lgdg .a11y-site-header {
-  border-bottom: 0.2rem solid #bdbdbb;
-}
 .fl-theme-lgdg .a11y-site-header h1 a {
-  background-image: url("./images/logo-WHITE.svg");
+  background-image: url("./images/logo-WHITE.png");
 }
 .fl-theme-lgdg .a11y-site-footer {
   border-top: 0.2rem solid;
@@ -729,7 +674,6 @@ h1.snow-title {
   }
   .a11y-site-aside {
     padding: 3rem 1rem 25rem 1.6rem !important;
-    background-image: url("./images/sidebar-graphic-COLOUR-01.svg");
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 18rem auto;
@@ -746,7 +690,6 @@ h1.snow-title {
     background-position: 0 -10rem;
   }
   .a11y-site-footer {
-    background-image: url("./images/sidebar-graphic-COLOUR-02.svg");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 18rem auto;
@@ -762,9 +705,9 @@ h1.snow-title {
 /* Large screens and bigger */
 @media screen and (min-width: 64em) {
   .a11y-site-tagline {
-    background: url("./images/logo-COLOUR.svg") no-repeat, url("./images/banner.jpg") no-repeat, #274d5d;
-    background-position: 83% 3.6rem, 9rem -5rem;
-    background-size: 14% auto, 82% auto;
+    background: url("./images/banner-COLOUR.jpg") no-repeat, #fff;
+    background-position: 9rem -5rem;
+    background-size: 82% auto;
     padding: 3rem 15rem 3rem 15rem;
     min-height: 25rem;
   }
@@ -772,34 +715,74 @@ h1.snow-title {
     margin-left: 2rem;
   }
   .fl-theme-wb .a11y-site-tagline {
-    background: url("./images/logo-WHITE.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
+    background: url("./images/banner-WHITE.jpg");
+    background-position: 9rem -5rem;
+    background-size: 82% auto;
     background-repeat: no-repeat;
+    padding: 3rem 15rem 3rem 15rem;
+    min-height: 25rem;
+/*        background-position: 83% 3.6rem, 9rem -5rem;
+        background-size: 14% auto, 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+*/
   }
   .fl-theme-bw .a11y-site-tagline {
-    background: url("./images/logo-GREY.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
+    background: url("./images/banner-GREY.jpg");
+    background-position: 9rem -5rem;
+    background-size: 82% auto;
     background-repeat: no-repeat;
+    padding: 3rem 15rem 3rem 15rem;
+    min-height: 25rem;
+/*        background-position: 83% 3.6rem, 9rem -5rem;
+        background-size: 14% auto, 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+*/
   }
   .fl-theme-yb .a11y-site-tagline {
-    background: url("./images/logo-YELLOW.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
+    background: url("./images/banner-YELLOW.jpg");
+    background-position: 9rem -5rem;
+    background-size: 82% auto;
     background-repeat: no-repeat;
+    padding: 3rem 15rem 3rem 15rem;
+    min-height: 25rem;
+/*        background-position: 83% 3.6rem, 9rem -5rem;
+        background-size: 14% auto, 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+*/
   }
   .fl-theme-by .a11y-site-tagline {
-    background: url("./images/logo-GREY.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
+    background: url("./images/banner-GREY.jpg");
+    background-position: 9rem -5rem;
+    background-size: 82% auto;
     background-repeat: no-repeat;
+    padding: 3rem 15rem 3rem 15rem;
+    min-height: 25rem;
+/*        background-position: 83% 3.6rem, 9rem -5rem;
+        background-size: 14% auto, 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+*/
   }
   .fl-theme-lgdg .a11y-site-tagline {
-    background: url("./images/logo-WHITE.svg");
-    background-position: 83% 3.6rem;
-    background-size: 14% auto;
+    background: url("./images/banner-WHITE.jpg");
+    background-position: 9rem -5rem;
+    background-size: 82% auto;
     background-repeat: no-repeat;
+    padding: 3rem 15rem 3rem 15rem;
+    min-height: 25rem;
+/*        background-position: 83% 3.6rem, 9rem -5rem;
+        background-size: 14% auto, 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+*/
   }
 }
 /* Styles specific for Font Awesome */
