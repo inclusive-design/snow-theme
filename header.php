@@ -35,9 +35,9 @@
             ?>
 
             <div class="a11y-site-header small-12 columns">
-                <h1 class="a11y-site-title">
+                <div class="a11y-site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
-                </h1>
+                </div>
 
                 <nav class="a11y-main-nav">
                     

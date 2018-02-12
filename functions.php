@@ -26,40 +26,40 @@ $snow_widgets = array(
         'id' => 'access-site',
         'before_widget' => '<div id="snow-access" class="snow-access">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-access-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-access-title">',
+        'after_title' => '</h2>'
     ),
     'snow-experiences' => array(
         'name' => __( 'Experiences', 'experiences' ),
         'id' => 'snow-experiences',
         'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-experiences-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-experiences-title">',
+        'after_title' => '</h2>'
     ),
     'license-info' => array(
         'name' => __( 'License Information', 'license-info' ),
         'id' => 'license-info',
         'before_widget' => '<div id="snow-license" class="small-12 medium-4 snow-license">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-license-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-license-title">',
+        'after_title' => '</h2>'
     ),
     'contact' => array(
         'name' => __( 'Contact Information', 'contact' ),
         'id' => 'contact',
         'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-contact-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-contact-title">',
+        'after_title' => '</h2>'
     ),
     'partners' => array(
         'name' => __( 'Partners', 'partners' ),
         'id' => 'partners',
         'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-partners-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-partners-title">',
+        'after_title' => '</h2>'
     ),
     'post',
     'page'

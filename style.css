@@ -228,6 +228,8 @@ html {
   position: relative;
   z-index: 10;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 2rem;
   box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 }
@@ -263,13 +265,13 @@ html {
   z-index: 10;
   box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 }
-h1.snow-experiences-title {
+h2.snow-experiences-title {
   text-transform: uppercase;
   text-align: center;
   color: #0f191d;
   font-size: 1.3rem !important;
 }
-h1.snow-title {
+h2.snow-title {
   color: #0f191d;
   font-weight: bold;
   font-size: 1.5rem !important;
@@ -310,6 +312,7 @@ h1.snow-title {
   padding: 1rem 2rem;
   display: flex;
   justify-content: flex-end;
+/*box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;*/
 }
 .a11y-site-tagline p {
   width: 100%;
@@ -350,11 +353,11 @@ h1.snow-title {
 .a11y-front-panel.columns {
   padding: 0;
 }
-.a11y-front-panel h1 {
+.a11y-front-panel h2 {
   font-size: 1.2rem;
   text-transform: none;
 }
-.a11y-front-panel h1,
+.a11y-front-panel h2,
 .a11y-front-panel section,
 .a11y-front-panel .snow-widget {
   padding: 0.5rem 1.5rem;
@@ -505,7 +508,7 @@ h1.snow-title {
 .fl-theme-wb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-wb .a11y-site-header h1 a {
+.fl-theme-wb .a11y-site-header a {
   background-image: url("./images/logo-WHITE.png");
 }
 .fl-theme-wb .a11y-site-footer {
@@ -534,7 +537,7 @@ h1.snow-title {
 .fl-theme-bw .a11y-site-aside {
   border-top: 1.6rem solid #fff !important;
 }
-.fl-theme-bw .a11y-site-header h1 a {
+.fl-theme-bw .a11y-site-header a {
   background-image: url("./images/logo-GREY.png");
 }
 .fl-theme-bw .a11y-site-footer {
@@ -563,7 +566,7 @@ h1.snow-title {
 .fl-theme-yb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-yb .a11y-site-header h1 a {
+.fl-theme-yb .a11y-site-header a {
   background-image: url("./images/logo-YELLOW.png");
 }
 .fl-theme-yb .a11y-site-footer {
@@ -592,7 +595,7 @@ h1.snow-title {
 .fl-theme-by .a11y-site-aside {
   border-top: 1.6rem solid #ff0 !important;
 }
-.fl-theme-by .a11y-site-header h1 a {
+.fl-theme-by .a11y-site-header a {
   background-image: url("./images/logo-GREY.png");
 }
 .fl-theme-by .a11y-site-footer {
@@ -621,7 +624,7 @@ h1.snow-title {
 .fl-theme-lgdg .a11y-site-aside {
   border-top: 1.6rem solid #555 !important;
 }
-.fl-theme-lgdg .a11y-site-header h1 a {
+.fl-theme-lgdg .a11y-site-header a {
   background-image: url("./images/logo-WHITE.png");
 }
 .fl-theme-lgdg .a11y-site-footer {
@@ -794,7 +797,7 @@ p {
 span.fa {
   font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
 }
-.a11y-front-panel h1 {
+.a11y-front-panel h2 {
   font-size: 1.2rem;
   text-transform: none;
   padding: 1rem 1.5rem;

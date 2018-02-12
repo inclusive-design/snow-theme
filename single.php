@@ -11,6 +11,7 @@ get_header();
 get_sidebar('post');
 ?>
     <main id="content" class="a11y-site-main columns">
+    <div class="flc-toc-tocContainer"></div>
 
     <?php
     while ( have_posts() ) : the_post();

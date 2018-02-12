@@ -12,6 +12,9 @@ get_header(); ?>
             </span>
         </div>
 
+        <div class="snow-intro">
+            <div class="flc-toc-tocContainer"></div>
+
         <?php
 
             $sections = array(

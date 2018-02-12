@@ -155,7 +155,7 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 
     .a11y-site-header {
-        h1 a {
+        a {
             background-image: url("./images/logo-"+fileSuffix+".png");
         }
     }
@@ -411,6 +411,8 @@ html {
     position: relative;
     z-index: 10;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding: 2rem;
     box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 }
@@ -453,14 +455,14 @@ html {
 
 }
 
-h1.snow-experiences-title {
+h2.snow-experiences-title {
     text-transform: uppercase;
     text-align: center;
     color: #0F191D;
     font-size: 1.3rem !important;
 }
 
-h1.snow-title {
+h2.snow-title {
     color: front-main-content-link-color;
     font-weight: bold;
     font-size: 1.5rem !important;
@@ -512,6 +514,7 @@ h1.snow-title {
 
     display: flex;
     justify-content: flex-end;
+    /*box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;*/
 
     p {
         width: 100%;
@@ -562,12 +565,12 @@ h1.snow-title {
         padding: 0;
     }
 
-    h1 {
+    h2 {
         font-size: 1.2rem;
         text-transform: none;
     }
 
-    h1, section, .snow-widget {
+    h2, section, .snow-widget {
         padding: 0.5rem 1.5rem;
     }
 
@@ -900,7 +903,7 @@ span.fa {
 }
 
 .a11y-front-panel {
-    h1 {
+    h2 {
         font-size: 1.2rem;
         text-transform: none;
         padding: 1rem 1.5rem;
