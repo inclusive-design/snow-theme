@@ -32,16 +32,14 @@ body-background ?= #fff;
 corner-flourish-color ?= #fff;
 
 /* Masthead colours */
-masthead-background ?= #fff;
 masthead-color ?= #7EC9BC;
-masthead-color-hover ?= #fff;
 masthead-background-hover ?= #7EC9BC;
 masthead-border ?= 0.8rem solid #7EC9BC;
 
 main-nav-link-color ?= #0F191D;
 main-nav-link-color-hover ?= #0F191D;
 main-nav-link-background-hover ?= #7EC9BC;
-main-nav-link-focus ?= 0.2rem solid #00303C;
+main-nav-link-focus ?= 0.2rem solid #0F191D;
 
 /* Sidebar */
 sidebar-color ?= #DCDE70;
@@ -53,19 +51,12 @@ sidebar-link-focus ?= 0.2rem solid #0F191D;
 
 /* Front Main Content Area */
 front-main-content-link-color ?= #0F191D;
-front-main-content-link-hover-background ?= #006274;
-front-main-content-link-hover ?= #fff;
-front-main-content-link-focus ?= 0.2rem solid #006274;
 
 /* Main Content Area for all other pages */
-main-content-border ?= 1.6rem solid #fff;
-main-content-background ?= #fff;
-main-content-color ?= #000;
 main-content-link-color ?= #385c8a;
 
 /* Front Page Panels */
 front-panel-container-background ?= #F7AC82;
-front-panel-background ?= #fff;
 front-panel-header ?= #DCDE70;
 front-panel-text ?= #0F191D;
 
@@ -324,7 +315,7 @@ html {
         li {
             width: 100%;
             flex: 1 1 auto;
-            margin: 0 !important;
+            margin: 0;
             align-self: auto;
             text-align: center;
         }
@@ -382,7 +373,7 @@ html {
 .home .a11y-site-main {
     background-color: front-main-content-background;
     padding: 0;
-    border: 0 !important;
+    border: 0;
     overflow-x: hidden;
 }
 
@@ -412,12 +403,12 @@ html {
 }
 
 .snow-access-title {
-    color: front-main-content-link-color !important;
+    color: front-main-content-link-color;
     font-weight: bold;
     text-align: center;
     border-bottom: 1px solid #DCDE70;
     padding-bottom: 0.5rem;
-    font-size: 1.2rem !important;
+    text-transform: capitalize;
 }
 
 .snow-experiences {
@@ -426,22 +417,8 @@ html {
     padding: 1rem 1rem;
     margin: 0;
     position: relative;
-    z-index: 10;
     box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 
-}
-
-h1.snow-experiences-title {
-    text-transform: uppercase;
-    text-align: center;
-    color: #0F191D;
-    font-size: 1.3rem !important;
-}
-
-h1.snow-title {
-    color: front-main-content-link-color;
-    font-weight: bold;
-    font-size: 1.5rem !important;
 }
 
 .snow-license   {
@@ -456,19 +433,14 @@ h1.snow-title {
     float: right;
 }
 
-.column, .columns {
-    padding: 0 !important;
-}
-
-
 
 // Main - All other pages.
 .category,
 .single {
     main {
         border: none;
-        background: main-content-background;
-        padding: 1.6rem;
+        background: none;
+        padding: 1.6rem 1.6rem 4rem 1.6rem;
 
         a {
             text-decoration: underline;
@@ -509,8 +481,8 @@ h1.snow-title {
     }
 }
 
-.a11y-tagline-emphasis {
-    color: site-tagline-emphasis !important;
+.a11y-site-tagline .a11y-tagline-emphasis {
+    color: site-tagline-emphasis;
 }
 
 /* The Three Panels that appear on the front page. */
@@ -561,10 +533,7 @@ h1.snow-title {
 .a11y-site-aside {
     color: sidebar-color;
     font-size: 1.1rem;
-    box-shadow: 0.4rem 0.2rem 0.6rem -0.3rem #c0c0c0;
     background: sidebar-background;
-    padding-top: 5rem;
-    z-index: 1;
 
     ul {
         list-style: none;
@@ -613,11 +582,26 @@ h1.snow-title {
 }
 
 /* Main Content Area Styles */
+.a11y-site-main .snow-access-title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.a11y-site-main .snow-title {
+    font-size: 1.5rem;
+}
+
+.a11y-site-main .snow-experiences-title {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #0F191D;
+}
+
 .a11y-site-main h1, .a11y-entry-header h1 {
     font-size: 2rem;
     text-transform: uppercase;
     color: #0F191D;
-    background-color: none !important;
+    background-color: none;
 }
 
 .a11y-panel-header {
@@ -660,7 +644,7 @@ h1.snow-title {
 }
 
 h1.entry-title {
-    margin-top: 0 !important;
+    margin-top: 0;
 }
 
 h3.comment-reply-title {
@@ -697,7 +681,7 @@ h3.comment-reply-title {
     }
 
     h1 {
-        font-size: 0.9rem !important;
+        font-size: 0.9rem;
         color: footer-color;
     }
 }
@@ -757,7 +741,7 @@ h3.comment-reply-title {
       }
 
       .column, .columns {
-        padding: 0 !important;
+        padding: 0;
       }
 
       .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
@@ -790,10 +774,7 @@ h3.comment-reply-title {
       }
 
       .a11y-site-aside {
-          padding: 3rem 1rem 25rem 1.6rem !important;
-          background-position: left bottom;
-          background-repeat: no-repeat;
-          background-size: 18rem auto;
+          padding: 3rem 1rem 25rem 1.6rem;
 
           ul ul {
               margin-left: 1rem;
@@ -810,14 +791,16 @@ h3.comment-reply-title {
       }
 
       .a11y-site-footer {
-          background-image: none !important;
+          background-image: none;
       }
 
-      .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main {
-          border-top: main-content-border;
-          border-left: main-content-border;
-          border-right: main-content-border;
-          padding-bottom: 4rem;
+      .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main, .columns .a11y-site-main {
+          border: 0;
+          padding: 1.6rem 1.6rem 4rem 1.6rem;
+      }
+
+      .home .a11y-site-main {
+        padding: 0;
       }
 
       .fl-theme-wb {
