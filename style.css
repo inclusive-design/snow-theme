@@ -785,6 +785,11 @@ h1.snow-title {
 */
   }
 }
+/* Overriding Foundation to work with UIO */
+label,
+p {
+  line-height: inherit;
+}
 /* Styles specific for Font Awesome */
 span.fa {
   font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
