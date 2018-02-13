@@ -324,6 +324,9 @@ h2.snow-title {
   text-align: center;
   background: #dcde70;
 }
+.a11y-front-panel section {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
 .a11y-front-panel .snow-widget {
   padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 }
@@ -926,15 +929,6 @@ p {
 /* Styles specific for Font Awesome */
 span.fa {
   font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
-}
-.a11y-front-panel h1 {
-  font-size: 1.2rem;
-  text-transform: none;
-  padding: 1rem 1.5rem;
-  margin: 0;
-}
-.a11y-front-panel section {
-  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 }
 /* Styles for Social media feeds */
 /*.bi-social-feeds .a11y-front-panel:focus,
