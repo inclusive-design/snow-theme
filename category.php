@@ -48,6 +48,8 @@ get_header();
 get_sidebar('post');
 ?>
     <main id="content" class="a11y-site-main columns">
+        <div class="flc-toc-tocContainer"></div>
+        
         <h1><?php echo $category_name ?></h1>
         <section>
             <article>

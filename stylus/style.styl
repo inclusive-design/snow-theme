@@ -27,7 +27,7 @@ black ?= #0F191D;
 
 primary-font ?= "Roboto", sans-serif;
 header-font ?= "Roboto";
-header-color ?= #F9C981;
+header-color ?= #0F191D;
 body-background ?= #fff;
 corner-flourish-color ?= #fff;
 
@@ -87,7 +87,36 @@ footer-link-focus ?= 0.2rem solid #0F191D;
 /* Site description */
 site-tagline-color ?= #fff;
 site-tagline-emphasis ?= #F7AC82;
-site-tagline-background-image ?= "./images/banner.jpg";
+site-tagline-background-image ?= "./images/banner-COLOUR.jpg";
+
+/* Mixins */
+apply-contrast-sidebar-images(foreground fileSuffix) {
+/*    .a11y-site-aside {
+        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-01.svg");
+    }
+
+    .a11y-site-footer {
+        border-top: 0.2rem solid foreground;
+        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-02.svg");
+    }*/
+}
+
+apply-contrast-tagline-background(fileSuffix) {
+    .a11y-site-tagline {
+        background: url("./images/banner-"+fileSuffix+".jpg");
+        background-position: 9rem -5rem;
+        background-size: 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+
+/*        background-position: 83% 3.6rem, 9rem -5rem;
+        background-size: 14% auto, 82% auto;
+        background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
+*/    }
+}
 
 apply-contrast-colours(foreground background fileSuffix) {
     #corner-flourish {
@@ -162,6 +191,11 @@ html {
         color: header-color;
         text-transform: capitalize;
         font-weight: bold;
+    }
+
+    a {
+        text-decoration: underline;
+        color: main-content-link-color;
     }
 }
 
@@ -299,6 +333,7 @@ html {
             display: inline-block;
             color: main-nav-link-color;
             text-transform: uppercase;
+            text-decoration: none;
             font-weight: bold;
 
             &:hover {
@@ -346,12 +381,13 @@ html {
 .snow-container {
     display: flex;
     flex-direction: column;
+    padding: 2rem 2rem 0rem 2rem;
 }
 
 .snow-intro {
     position: relative;
     display: flex;
-    padding: 2rem;
+    padding: 0rem 2rem;
 }
 
 .snow-home {
@@ -373,7 +409,6 @@ html {
 }
 
 .snow-access-title {
-    color: front-main-content-link-color;
     font-weight: bold;
     text-align: center;
     border-bottom: 1px solid #DCDE70;
@@ -419,11 +454,10 @@ h2.snow-title {
 
 // Main - All other pages.
 .category,
-.single {
+.single,
+.page {
     main {
         border: none;
-/*        background: none;
-        padding: 1.6rem 1.6rem 4rem 1.6rem;*/
         background: main-content-background;
         padding: 1.6rem;
 
@@ -432,10 +466,6 @@ h2.snow-title {
             color: main-content-link-color;
         }
 
-        a:focus,
-        a:hover {
-            text-decoration: underline;
-        }
     }
 
 }
@@ -546,6 +576,7 @@ h2.snow-title {
         color: sidebar-link-color;
         padding: 0.4rem;
         margin-bottom: 0.2rem;
+        text-decoration: none;
         width: 100%;
         display: inline-block;
 
@@ -673,6 +704,8 @@ h3.comment-reply-title {
     h2 {
         font-size: 0.9rem;
         color: footer-color;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -781,7 +814,7 @@ h3.comment-reply-title {
       }
 
       .a11y-site-footer {
-          background: none;
+          background-image: none;
       }
 
       .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main, .columns .a11y-site-main {
