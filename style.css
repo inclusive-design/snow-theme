@@ -230,7 +230,7 @@ html {
 }
 .snow-experiences {
   text-align: center;
-  background-color: #dcde70;
+  background-color: #fff;
   padding: 1rem 1rem;
   margin: 0;
   position: relative;
@@ -239,12 +239,12 @@ h2.snow-experiences-title {
   text-transform: uppercase;
   text-align: center;
   color: #0f191d;
-  font-size: 1.3rem !important;
+  font-size: 1.3rem;
 }
 h2.snow-title {
   color: #0f191d;
   font-weight: bold;
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
 }
 .snow-license {
   float: left;
@@ -259,7 +259,7 @@ h2.snow-title {
 .single main,
 .page main {
   border: none;
-  background: main-content-background;
+  background: #fff;
   padding: 1.6rem;
 }
 .category main a,
@@ -399,11 +399,6 @@ h2.snow-title {
   color: #0f191d;
   background-color: none;
 }
-.a11y-panel-header h2 {
-  text-align: center;
-  background-color: #dcde70;
-  color: #0f191d;
-}
 .a11y-site-main article h1,
 .a11y-site-main article h2,
 .a11y-site-main article h3 {
@@ -420,7 +415,7 @@ h2.snow-title {
   font-size: 1.2rem;
 }
 .a11y-site-main article blockquote {
-  color: main-content-color;
+  color: #0f191d;
   border-left: 0.2rem solid #000;
 }
 .a11y-entry-content h2 {

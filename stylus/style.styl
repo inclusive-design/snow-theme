@@ -13,10 +13,6 @@ Tags: accessibility
 */
 
 /* Colours */
-peach ?= #F7AC82;
-orange ?= #F9C981;
-limegreen ?= #DCDE70;
-seagreen ?= #7EC9BC;
 black ?= #0F191D;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
@@ -54,6 +50,9 @@ front-main-content-link-color ?= #0F191D;
 
 /* Main Content Area for all other pages */
 main-content-link-color ?= #385c8a;
+main-content-accent ?= #DCDE70;
+main-content-background ?= #fff;
+main-content-color ?= #0F191D;
 
 /* Front Page Panels */
 front-panel-container-background ?= #F7AC82;
@@ -419,7 +418,7 @@ html {
 
 .snow-access {
     width: 90rem;
-    border: 1px solid #DCDE70;
+    border: 1px solid main-content-accent;
     margin: auto;
     padding: 2rem;
     vertical-align: middle;
@@ -432,7 +431,7 @@ html {
 .snow-access-title {
     font-weight: bold;
     text-align: center;
-    border-bottom: 1px solid #DCDE70;
+    border-bottom: 1px solid main-content-accent;
     padding-bottom: 0.5rem;
     text-transform: capitalize;
     font-size: 1.2rem;
@@ -440,7 +439,7 @@ html {
 
 .snow-experiences {
     text-align: center;
-    background-color: #DCDE70;
+    background-color: main-content-background;
     padding: 1rem 1rem;
     margin: 0;
     position: relative;
@@ -450,14 +449,14 @@ html {
 h2.snow-experiences-title {
     text-transform: uppercase;
     text-align: center;
-    color: #0F191D;
-    font-size: 1.3rem !important;
+    color: front-main-content-link-color;
+    font-size: 1.3rem;
 }
 
 h2.snow-title {
     color: front-main-content-link-color;
     font-weight: bold;
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
 }
 
 .snow-license   {
@@ -554,9 +553,9 @@ h2.snow-title {
         text-transform: none;
         padding: 1rem 1.5rem;
         margin: 0;
-        color: #0F191D;
+        color: front-main-content-link-color;
         text-align: center;
-        background: #DCDE70;
+        background: front-panel-header;
     }
 
     section {
@@ -640,20 +639,14 @@ h2.snow-title {
 .a11y-site-main .snow-experiences-title {
     font-size: 1.3rem;
     text-align: center;
-    color: #0F191D;
+    color: main-content-color;
 }
 
 .a11y-site-main h1, .a11y-entry-header h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    color: #0F191D;
+    color: main-content-color;
     background-color: none;
-}
-
-.a11y-panel-header h2 {
-    text-align: center;
-    background-color: front-panel-header;
-    color: #0F191D;
 }
 
 .a11y-site-main article {
