@@ -91,14 +91,14 @@ site-tagline-background-image ?= "./images/banner-COLOUR.jpg";
 
 /* Mixins */
 apply-contrast-sidebar-images(foreground fileSuffix) {
-/*    .a11y-site-aside {
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-01.svg");
+    .a11y-site-aside {
+        background-image: none;
     }
 
     .a11y-site-footer {
-        border-top: 0.2rem solid foreground;
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-02.svg");
-    }*/
+        border-top: none;
+        background-image: none;
+    }
 }
 
 apply-contrast-tagline-background(fileSuffix) {
@@ -141,13 +141,28 @@ apply-contrast-colours(foreground background fileSuffix) {
         border: 0.2rem solid foreground;
     }
 
+    .a11y-site-header {
+        border-bottom: none;
+    }
+
     .a11y-site-tagline {
         text-shadow: none;
         background: none;
     }
 
+    .a11y-site-tagline p {
+        background: none !important;
+    }
+
     .a11y-panel-container {
-        background: foreground !important;
+        background: none !important;
+    }
+
+    .a11y-front-panel {
+        border-bottom-color: background !important;
+        border-top-color: background !important;
+        border-left-color: background !important;
+        border-right-color: background !important;
     }
 
     .a11y-site-aside {
@@ -157,6 +172,12 @@ apply-contrast-colours(foreground background fileSuffix) {
     .a11y-site-title {
         a {
             background-image: url("./images/logo-"+fileSuffix+".png");
+        }
+    }
+
+    .a11y-main-nav-items {
+        li.current-menu-item:before {
+            border-top: 0.6rem solid foreground;
         }
     }
 
@@ -678,6 +699,7 @@ h3.comment-reply-title {
     display: flex;
     padding: 2rem 2rem;
     background-color: footer-background;
+    background-image: none;
     color: footer-color;
     font-size: 0.9rem;
 
