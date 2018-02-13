@@ -32,16 +32,14 @@ body-background ?= #fff;
 corner-flourish-color ?= #fff;
 
 /* Masthead colours */
-masthead-background ?= #fff;
 masthead-color ?= #7EC9BC;
-masthead-color-hover ?= #fff;
 masthead-background-hover ?= #7EC9BC;
 masthead-border ?= 0.8rem solid #7EC9BC;
 
 main-nav-link-color ?= #0F191D;
 main-nav-link-color-hover ?= #0F191D;
 main-nav-link-background-hover ?= #7EC9BC;
-main-nav-link-focus ?= 0.2rem solid #00303C;
+main-nav-link-focus ?= 0.2rem solid #0F191D;
 
 /* Sidebar */
 sidebar-color ?= #DCDE70;
@@ -53,29 +51,22 @@ sidebar-link-focus ?= 0.2rem solid #0F191D;
 
 /* Front Main Content Area */
 front-main-content-link-color ?= #0F191D;
-front-main-content-link-hover-background ?= #006274;
-front-main-content-link-hover ?= #fff;
-front-main-content-link-focus ?= 0.2rem solid #006274;
 
 /* Main Content Area for all other pages */
-main-content-border ?= 1.6rem solid #fff;
-main-content-background ?= #fff;
-main-content-color ?= #000;
-main-content-link-color ?= #AD3362;
+main-content-link-color ?= #385c8a;
 
 /* Front Page Panels */
 front-panel-container-background ?= #F7AC82;
-front-panel-background ?= #fff;
 front-panel-header ?= #DCDE70;
 front-panel-text ?= #0F191D;
 
 /* Skip Links */
-skip-color ?= #006274;
-skip-background ?= #ECEDED;
-skip-focus-outer-border ?= #006274;
-skip-focus-inner-border ?= #ECEDED;
-skip-hover-color ?= #ECEDED;
-skip-hover-background ?= #006274;
+skip-color ?= #7EC9BC;
+skip-background ?= #fff;
+skip-focus-outer-border ?= #7EC9BC;
+skip-focus-inner-border ?= #fff;
+skip-hover-color ?= #0F191D;
+skip-hover-background ?= #7EC9BC;
 
 /* Front Page Footer */
 front-footer-background ?= #7EC9BC;
@@ -96,38 +87,18 @@ footer-link-focus ?= 0.2rem solid #0F191D;
 /* Site description */
 site-tagline-color ?= #fff;
 site-tagline-emphasis ?= #F7AC82;
-site-tagline-background-image ?= "./images/banner-COLOUR.jpg";
-
-/* Mixins */
-apply-contrast-sidebar-images(foreground fileSuffix) {
-/*    .a11y-site-aside {
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-01.svg");
-    }
-
-    .a11y-site-footer {
-        border-top: 0.2rem solid foreground;
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-02.svg");
-    }*/
-}
-
-apply-contrast-tagline-background(fileSuffix) {
-    .a11y-site-tagline {
-        background: url("./images/banner-"+fileSuffix+".jpg");
-        background-position: 9rem -5rem;
-        background-size: 82% auto;
-        background-repeat: no-repeat;
-        padding: 3rem 15rem 3rem 15rem;
-        min-height: 25rem;
-
-/*        background-position: 83% 3.6rem, 9rem -5rem;
-        background-size: 14% auto, 82% auto;
-        background-repeat: no-repeat;
-        padding: 3rem 15rem 3rem 15rem;
-        min-height: 25rem;
-*/    }
-}
+site-tagline-background-image ?= "./images/banner.jpg";
 
 apply-contrast-colours(foreground background fileSuffix) {
+    #corner-flourish {
+        fill: foreground;
+        background-color: initial !important;
+    }
+
+    #ontario-logo {
+        fill: foreground;
+    }
+
     a:hover {
         color: background !important;
         background-color: foreground !important;
@@ -185,7 +156,6 @@ html {
 .a11y-theme {
     font-family: primary-font;
     background-color: body-background;
-    display: block !important;
 
     h1, h2, h3 {
         font-family: header-font;
@@ -201,51 +171,15 @@ html {
 }
 
 .dropdown {
-    border: 0.01rem solid;
+    border: 0.02rem solid;
     height: 5.5rem;
     padding: 0;
 }
 
-
-/* Skip links */
-#skip {
-    float: left;
-    height: 0rem;
-}
-
-#skip a {
-    color: skip-color;
-    background: skip-background;
-    margin-top: 1rem;
-
-    &, &:hover, &:visited {
-        height: 1px;
-        left: -10000px;
-        overflow: hidden;
-        position: absolute;
-        top: auto;
-        width: 1px;
-        color: skip-hover-color;
-        background: skip-hover-background;
-    }
-
-    &:active, &:focus {
-        height: auto;
-        width: auto;
-        left: auto;
-        border: 0.5rem solid skip-focus-inner-border;
-        outline: 0.2rem solid skip-focus-outer-border;
-        color: skip-hover-color;
-        background: skip-hover-background;
-        padding: 1rem;
-        z-index: 1;
-    }
-}
-
 /* UI Options. */
-.fl-prefsEditor-separatedPanel .fl-panelBar {
+.fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen {
     flex-flow: row wrap;
-    display: flex;
+    display: flex !important;
     justify-content: flex-end;
     background-color: inherit;
     border-bottom: none;
@@ -334,6 +268,7 @@ html {
 
 /* Shared navigation styles for all screen sizes. */
 .a11y-main-nav-items {
+
     ul {
         display: flex;
         justify-content: flex-start;
@@ -346,8 +281,8 @@ html {
         li {
             width: 100%;
             flex: 1 1 auto;
+            margin: 0;
             align-self: auto;
-            margin: 0rem !important;
             text-align: center;
         }
 
@@ -404,6 +339,7 @@ html {
 .home .a11y-site-main {
     background-color: front-main-content-background;
     padding: 0;
+    border: 0;
     overflow-x: hidden;
 }
 
@@ -437,12 +373,13 @@ html {
 }
 
 .snow-access-title {
-    color: front-main-content-link-color !important;
+    color: front-main-content-link-color;
     font-weight: bold;
     text-align: center;
     border-bottom: 1px solid #DCDE70;
     padding-bottom: 0.5rem;
-    font-size: 1.2rem !important;
+    text-transform: capitalize;
+    font-size: 1.2rem;
 }
 
 .snow-experiences {
@@ -479,21 +416,19 @@ h2.snow-title {
     float: right;
 }
 
-.column, .columns {
-    padding: 0 !important;
-}
-
-
 
 // Main - All other pages.
 .category,
 .single {
     main {
         border: none;
+/*        background: none;
+        padding: 1.6rem 1.6rem 4rem 1.6rem;*/
         background: main-content-background;
         padding: 1.6rem;
 
         a {
+            text-decoration: underline;
             color: main-content-link-color;
         }
 
@@ -513,7 +448,6 @@ h2.snow-title {
 
     display: flex;
     justify-content: flex-end;
-    /*box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;*/
 
     p {
         width: 100%;
@@ -532,8 +466,8 @@ h2.snow-title {
     }
 }
 
-.a11y-tagline-emphasis {
-    color: site-tagline-emphasis !important;
+.a11y-site-tagline .a11y-tagline-emphasis {
+    color: site-tagline-emphasis;
 }
 
 /* The Three Panels that appear on the front page. */
@@ -589,10 +523,7 @@ h2.snow-title {
 .a11y-site-aside {
     color: sidebar-color;
     font-size: 1.1rem;
-    box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
     background: sidebar-background;
-    padding-top: 5rem;
-    z-index: 1;
 
     ul {
         list-style: none;
@@ -641,11 +572,26 @@ h2.snow-title {
 }
 
 /* Main Content Area Styles */
+.a11y-site-main .snow-access-title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.a11y-site-main .snow-title {
+    font-size: 1.5rem;
+}
+
+.a11y-site-main .snow-experiences-title {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #0F191D;
+}
+
 .a11y-site-main h1, .a11y-entry-header h1 {
     font-size: 2rem;
     text-transform: uppercase;
     color: #0F191D;
-    background-color: none !important;
+    background-color: none;
 }
 
 .a11y-panel-header h2 {
@@ -683,6 +629,18 @@ h2.snow-title {
     border-bottom: 0.2rem solid #000;
 }
 
+.a11y-entry-content h3 {
+    color: #000;
+}
+
+h1.entry-title {
+    margin-top: 0;
+}
+
+h3.comment-reply-title {
+    color: #000;
+}
+
 /* Footer */
 .a11y-site-footer {
 
@@ -700,8 +658,9 @@ h2.snow-title {
 
     a {
         color: footer-link-color;
+
         &:hover {
-            background-color: footer-link-hover-background
+            background-color: footer-link-hover-background;
             color: footer-link-hover;
         }
 
@@ -721,9 +680,9 @@ h2.snow-title {
 .home .a11y-site-footer {
     background-color: front-footer-background;
 
-    a{
+    a {
         &:hover {
-            background-color: front-footer-link-hover-background
+            background-color: front-footer-link-hover-background;
             color: front-footer-link-hover;
         }
 
@@ -772,7 +731,7 @@ h2.snow-title {
       }
 
       .column, .columns {
-        padding: 0 !important;
+        padding: 0;
       }
 
       .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
@@ -805,10 +764,7 @@ h2.snow-title {
       }
 
       .a11y-site-aside {
-          padding: 3rem 1rem 25rem 1.6rem !important;
-          background-position: left bottom;
-          background-repeat: no-repeat;
-          background-size: 18rem auto;
+          padding: 3rem 1rem 25rem 1.6rem;
 
           ul ul {
               margin-left: 1rem;
@@ -825,17 +781,16 @@ h2.snow-title {
       }
 
       .a11y-site-footer {
-          background-position: left top;
-          background-repeat: no-repeat;
-
-          background-size: 18rem auto;
+          background: none;
       }
 
-      .single .a11y-site-main, .category .a11y-site-main {
-          border-top: main-content-border;
-          border-left: main-content-border;
-          border-right: main-content-border;
-          padding-bottom: 4rem;
+      .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main, .columns .a11y-site-main {
+          border: 0;
+          padding: 1.6rem 1.6rem 4rem 1.6rem;
+      }
+
+      .home .a11y-site-main {
+        padding: 0;
       }
 
       .fl-theme-wb {
@@ -866,7 +821,6 @@ h2.snow-title {
           background: url(site-tagline-background-image) no-repeat, #fff;
           background-position: 9rem -5rem;
           background-size: 82% auto;
-
           padding: 3rem 15rem 3rem 15rem;
           min-height: 25rem;
       }
@@ -905,3 +859,23 @@ label, p {
 span.fa {
     font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
 }
+
+.a11y-front-panel {
+    h1 {
+        font-size: 1.2rem;
+        text-transform: none;
+        padding: 1rem 1.5rem;
+        margin: 0;
+    }
+
+    section {
+        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+
+/* Styles for Social media feeds */
+/*.bi-social-feeds .a11y-front-panel:focus,
+.bi-social-feeds .a11y-front-panel:hover {
+    border-color: #eceded;
+}
+*/

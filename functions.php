@@ -251,7 +251,6 @@ function allow_pages_tags_categories() {
 }
 add_action('init', 'allow_pages_tags_categories');
 
-
 // Ensure all tags and categories are included in queries
 function add_queries_tags_categories($wp_query) {
     $query_parameters = array(
