@@ -8,8 +8,7 @@ get_header(); ?>
 
     <main id="content" class="a11y-site-main small-12 columns">
         <div class="a11y-site-tagline">
-            <p><span>Welcome to</span><br /> <span class="a11y-tagline-emphasis">SNOW</span></p>
-            </span>
+            <h1><span>Welcome to</span><br /> <span class="a11y-tagline-emphasis">SNOW</span></h1>
         </div>
 
         <div class="snow-container">

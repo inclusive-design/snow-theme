@@ -18,8 +18,8 @@ $snow_widgets = array(
         'id' => 'snow-home',
         'before_widget' => '<div id="snow-home" class="snow-home">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-title">',
+        'after_title' => '</h2>'
     ),
     'access-site' => array(
         'name' => __( 'Accessing the Site', 'access' ),

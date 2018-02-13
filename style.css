@@ -34,9 +34,6 @@ Tags: accessibility
   display: none;
 }
 /* General styles */
-html {
-  font-size: 16px;
-}
 .a11y-theme {
   font-family: "Roboto", sans-serif;
   background-color: #fff;
@@ -86,7 +83,6 @@ html {
 }
 .a11y-site-header .a11y-site-title {
   margin: 0;
-  display: inline-block;
   text-transform: none;
 }
 .a11y-site-header .a11y-site-title a {
@@ -230,7 +226,7 @@ html {
 }
 .snow-experiences {
   text-align: center;
-  background-color: #fff;
+  background-color: #dcde70;
   padding: 1rem 1rem;
   margin: 0;
   position: relative;
@@ -497,7 +493,7 @@ h3.comment-reply-title {
   text-shadow: none;
   background: none;
 }
-.fl-theme-wb .a11y-site-tagline p {
+.fl-theme-wb .a11y-site-tagline h1 {
   background: none !important;
 }
 .fl-theme-wb .a11y-panel-container {
@@ -548,7 +544,7 @@ h3.comment-reply-title {
   text-shadow: none;
   background: none;
 }
-.fl-theme-bw .a11y-site-tagline p {
+.fl-theme-bw .a11y-site-tagline h1 {
   background: none !important;
 }
 .fl-theme-bw .a11y-panel-container {
@@ -599,7 +595,7 @@ h3.comment-reply-title {
   text-shadow: none;
   background: none;
 }
-.fl-theme-yb .a11y-site-tagline p {
+.fl-theme-yb .a11y-site-tagline h1 {
   background: none !important;
 }
 .fl-theme-yb .a11y-panel-container {
@@ -650,7 +646,7 @@ h3.comment-reply-title {
   text-shadow: none;
   background: none;
 }
-.fl-theme-by .a11y-site-tagline p {
+.fl-theme-by .a11y-site-tagline h1 {
   background: none !important;
 }
 .fl-theme-by .a11y-panel-container {
@@ -701,7 +697,7 @@ h3.comment-reply-title {
   text-shadow: none;
   background: none;
 }
-.fl-theme-lgdg .a11y-site-tagline p {
+.fl-theme-lgdg .a11y-site-tagline h1 {
   background: none !important;
 }
 .fl-theme-lgdg .a11y-panel-container {
@@ -780,7 +776,6 @@ h3.comment-reply-title {
     margin: 0 -10rem;
     padding: 3rem 15rem;
     min-height: 16rem;
-    font-size: 1.6rem;
     text-align: right;
     background-position: 0 -10rem;
   }
