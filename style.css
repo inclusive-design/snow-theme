@@ -224,14 +224,14 @@ html {
   padding: 0;
   overflow-x: hidden;
 }
-.snow-intro {
-  position: relative;
-  z-index: 10;
+.snow-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+}
+.snow-intro {
+  position: relative;
+  display: flex;
   padding: 2rem;
-  box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 }
 .snow-home {
   flex-grow: 1;
@@ -262,8 +262,6 @@ html {
   padding: 1rem 1rem;
   margin: 0;
   position: relative;
-  z-index: 10;
-  box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 }
 h2.snow-experiences-title {
   text-transform: uppercase;
@@ -356,11 +354,11 @@ h2.snow-title {
 .a11y-front-panel h2 {
   font-size: 1.2rem;
   text-transform: none;
-}
-.a11y-front-panel h2,
-.a11y-front-panel section,
-.a11y-front-panel .snow-widget {
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  color: #0f191d;
+  text-align: center;
+  background: #dcde70;
 }
 .a11y-front-panel .snow-widget a {
   color: #0f191d;
@@ -421,7 +419,7 @@ h2.snow-title {
   color: #0f191d;
   background-color: none !important;
 }
-.a11y-panel-header {
+.a11y-panel-header h2 {
   text-align: center;
   background-color: #dcde70;
   color: #0f191d;
@@ -508,7 +506,7 @@ h2.snow-title {
 .fl-theme-wb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-wb .a11y-site-header a {
+.fl-theme-wb .a11y-site-title a {
   background-image: url("./images/logo-WHITE.png");
 }
 .fl-theme-wb .a11y-site-footer {
@@ -537,7 +535,7 @@ h2.snow-title {
 .fl-theme-bw .a11y-site-aside {
   border-top: 1.6rem solid #fff !important;
 }
-.fl-theme-bw .a11y-site-header a {
+.fl-theme-bw .a11y-site-title a {
   background-image: url("./images/logo-GREY.png");
 }
 .fl-theme-bw .a11y-site-footer {
@@ -566,7 +564,7 @@ h2.snow-title {
 .fl-theme-yb .a11y-site-aside {
   border-top: 1.6rem solid #000 !important;
 }
-.fl-theme-yb .a11y-site-header a {
+.fl-theme-yb .a11y-site-title a {
   background-image: url("./images/logo-YELLOW.png");
 }
 .fl-theme-yb .a11y-site-footer {
@@ -595,7 +593,7 @@ h2.snow-title {
 .fl-theme-by .a11y-site-aside {
   border-top: 1.6rem solid #ff0 !important;
 }
-.fl-theme-by .a11y-site-header a {
+.fl-theme-by .a11y-site-title a {
   background-image: url("./images/logo-GREY.png");
 }
 .fl-theme-by .a11y-site-footer {
@@ -624,7 +622,7 @@ h2.snow-title {
 .fl-theme-lgdg .a11y-site-aside {
   border-top: 1.6rem solid #555 !important;
 }
-.fl-theme-lgdg .a11y-site-header a {
+.fl-theme-lgdg .a11y-site-title a {
   background-image: url("./images/logo-WHITE.png");
 }
 .fl-theme-lgdg .a11y-site-footer {
@@ -796,18 +794,4 @@ p {
 /* Styles specific for Font Awesome */
 span.fa {
   font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
-}
-.a11y-front-panel h2 {
-  font-size: 1.2rem;
-  text-transform: none;
-  padding: 1rem 1.5rem;
-  margin: 0;
-}
-.a11y-front-panel section {
-  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-}
-/* Styles for Social media feeds */
-.bi-social-feeds .a11y-front-panel:focus,
-.bi-social-feeds .a11y-front-panel:hover {
-  border-color: #eceded;
 }

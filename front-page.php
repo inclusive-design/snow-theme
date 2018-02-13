@@ -12,9 +12,10 @@ get_header(); ?>
             </span>
         </div>
 
-        <div class="snow-intro">
+        <div class="snow-container">
             <div class="flc-toc-tocContainer"></div>
-
+        </div>
+        
         <?php
 
             $sections = array(

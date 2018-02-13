@@ -154,7 +154,7 @@ apply-contrast-colours(foreground background fileSuffix) {
         border-top: 1.6rem solid background !important;
     }
 
-    .a11y-site-header {
+    .a11y-site-title {
         a {
             background-image: url("./images/logo-"+fileSuffix+".png");
         }
@@ -407,14 +407,15 @@ html {
     overflow-x: hidden;
 }
 
-.snow-intro {
-    position: relative;
-    z-index: 10;
+.snow-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+}
+
+.snow-intro {
+    position: relative;
+    display: flex;
     padding: 2rem;
-    box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 }
 
 .snow-home {
@@ -450,8 +451,6 @@ html {
     padding: 1rem 1rem;
     margin: 0;
     position: relative;
-    z-index: 10;
-    box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
 
 }
 
@@ -568,10 +567,11 @@ h2.snow-title {
     h2 {
         font-size: 1.2rem;
         text-transform: none;
-    }
-
-    h2, section, .snow-widget {
-        padding: 0.5rem 1.5rem;
+        padding: 1rem 1.5rem;
+        margin: 0;
+        color: #0F191D;
+        text-align: center;
+        background: #DCDE70;
     }
 
     .snow-widget a {
@@ -644,7 +644,7 @@ h2.snow-title {
     background-color: none !important;
 }
 
-.a11y-panel-header {
+.a11y-panel-header h2 {
     text-align: center;
     background-color: front-panel-header;
     color: #0F191D;
@@ -901,23 +901,3 @@ label, p {
 span.fa {
     font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
 }
-
-.a11y-front-panel {
-    h2 {
-        font-size: 1.2rem;
-        text-transform: none;
-        padding: 1rem 1.5rem;
-        margin: 0;
-    }
-
-    section {
-        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-    }
-}
-
-/* Styles for Social media feeds */
-.bi-social-feeds .a11y-front-panel:focus,
-.bi-social-feeds .a11y-front-panel:hover {
-    border-color: #eceded;
-}
-
