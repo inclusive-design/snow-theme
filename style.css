@@ -360,6 +360,9 @@ h2.snow-title {
   text-align: center;
   background: #dcde70;
 }
+.a11y-front-panel .snow-widget {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
 .a11y-front-panel .snow-widget a {
   color: #0f191d;
   text-decoration: underline;
@@ -470,8 +473,8 @@ h2.snow-title {
   outline: 0.2rem solid #0f191d;
   color: #0f191d;
 }
-.a11y-site-footer h1 {
-  font-size: 0.9rem !important;
+.a11y-site-footer h2 {
+  font-size: 0.9rem;
   color: #0f191d;
 }
 /* Footer styles for the home page only. */
