@@ -100,9 +100,6 @@ Tags: accessibility
 .a11y-site-header .a11y-site-title a:focus {
   outline: 0.2rem solid #0f191d;
 }
-.a11y-site-header nav {
-  display: inline;
-}
 .a11y-main-nav .title-bar {
   display: inline-block;
   background-color: inherit;
@@ -134,9 +131,6 @@ Tags: accessibility
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.a11y-main-nav-items ul li {
-  width: 100%;
-}
 .a11y-main-nav-items ul a {
   color: #0f191d;
   text-transform: uppercase;
@@ -152,18 +146,19 @@ Tags: accessibility
 }
 /* Navigation for medium screens and larger. */
 @media screen and (min-width: 40em) {
-  .a11y-main-nav-items {
-    border: 0.02rem solid;
-  }
   .a11y-main-nav-items ul {
+    border: 0.02rem solid;
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
-/*            display: flex;
-            flex-wrap: nowrap;
-            width: 100%;
-            align-items: normal;
-            align-content: center;*/
+    justify-content: center;
+    flex-direction: row;
+    align-items: normal;
+    align-content: center;
+  }
+  .a11y-main-nav-items ul li {
+    margin: 0;
+    flex: 1 1 0;
   }
   .a11y-main-nav-items .menu-item {
     border-right: none;
@@ -177,12 +172,14 @@ Tags: accessibility
     width: 100%;
     height: 100%;
   }
+  .a11y-main-nav-items li {
+    align-self: auto;
+    margin: auto;
+  }
   .a11y-main-nav-items li.current-menu-item:before {
     border-top: 0.6rem solid #0f191d;
     width: calc(40rem / 7);
     margin: 0 2.5rem;
-    display: flex;
-    flex-shrink: 1;
     position: absolute;
     content: "";
   }

@@ -270,10 +270,6 @@ apply-contrast-colours(foreground background fileSuffix) {
             outline: main-nav-link-focus;
         }
     }
-
-    nav {
-        display: inline;
-    }
 }
 
 .a11y-main-nav {
@@ -317,10 +313,6 @@ apply-contrast-colours(foreground background fileSuffix) {
         justify-content: space-between;
         flex-wrap: wrap;
 
-        li {
-            width: 100%;
-        }
-
         a {
             color: main-nav-link-color;
             text-transform: uppercase;
@@ -343,19 +335,21 @@ apply-contrast-colours(foreground background fileSuffix) {
 /* Navigation for medium screens and larger. */
 @media screen and (min-width: 40em) {
     .a11y-main-nav-items {
-
-        border: 0.02rem solid;
-
+        
         ul {
-
+            border: 0.02rem solid;
             display: flex;
             width: 100%;
             flex-wrap: nowrap;
-/*            display: flex;
-            flex-wrap: nowrap;
-            width: 100%;
+            justify-content: center;
+            flex-direction: row;
             align-items: normal;
-            align-content: center;*/
+            align-content: center;
+        }
+
+        ul li {
+            margin: 0;
+            flex: 1 1 0;
         }
 
         .menu-item {
@@ -373,12 +367,15 @@ apply-contrast-colours(foreground background fileSuffix) {
             height: 100%;
         }
 
+        li {
+            align-self: auto;
+            margin: auto;
+        }
+
         li.current-menu-item:before {
             border-top: 0.6rem solid main-nav-link-color;
             width: calc(40rem / 7);
             margin: 0 2.5rem;
-            display: flex;
-            flex-shrink: 1;
             position: absolute;
             content: "";
         }
