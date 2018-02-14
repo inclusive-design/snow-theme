@@ -155,6 +155,7 @@ Tags: accessibility
     flex-direction: row;
     align-items: normal;
     align-content: center;
+    flex-flow: row wrap;
   }
   .a11y-main-nav-items a {
     justify-content: center;
