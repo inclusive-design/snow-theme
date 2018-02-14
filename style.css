@@ -132,8 +132,6 @@ Tags: accessibility
   flex-wrap: wrap;
 }
 .a11y-main-nav-items ul a {
-  justify-content: center;
-  align-content: center;
   color: #0f191d;
   text-transform: uppercase;
   text-decoration: none;
@@ -156,6 +154,10 @@ Tags: accessibility
     justify-content: center;
     flex-direction: row;
     align-items: normal;
+    align-content: center;
+  }
+  .a11y-main-nav-items a {
+    justify-content: center;
     align-content: center;
   }
   .a11y-main-nav-items ul li {
