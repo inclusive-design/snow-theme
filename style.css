@@ -151,7 +151,7 @@ Tags: accessibility
   outline: 0.2rem solid #0f191d;
 }
 /* Navigation for medium screens and larger. */
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 40em) {
   .a11y-main-nav-items {
     border: 0.02rem solid;
   }
@@ -271,13 +271,13 @@ h2.snow-title {
 /* Site Tagline (appears on front page only) */
 .a11y-site-tagline {
   background-color: #fff;
-  background: url("./images/banner-COLOUR.jpg") 0 -3rem/100% auto no-repeat, #fff;
+  background-image: url("./images/banner-COLOUR.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
   padding: 1rem 2rem;
+  min-height: 15rem;
   display: flex;
-  justify-content: flex-end;
-}
-.a11y-site-tagline p {
-  width: 100%;
 }
 .a11y-site-tagline span {
   font-weight: bold;
@@ -286,7 +286,6 @@ h2.snow-title {
   color: #fff;
   background: #0f191d;
   background: rgba(15,25,29,0.7);
-  display: inline;
 }
 .a11y-site-tagline .a11y-tagline-emphasis {
   color: #f7ac82;
@@ -727,7 +726,7 @@ h3.comment-reply-title {
   background: none !important;
 }
 /* Styles for Medium resolution and larger */
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 40em) {
   #corner-flourish {
     position: absolute;
     top: -4rem;
@@ -777,15 +776,17 @@ h3.comment-reply-title {
   .a11y-site-tagline {
     margin: 0 -10rem;
     padding: 3rem 15rem;
-    min-height: 16rem;
     text-align: right;
-    background-position: 0 -10rem;
+    background-position: 0% 0%;
+    justify-content: flex-end;
+    min-height: 35rem;
   }
   .a11y-site-tagline span {
     font-size: 6rem;
     font-weight: bold;
     line-height: 8rem;
     display: inline;
+    align-items: flex-start;
   }
   .a11y-site-footer {
     background-image: none;
@@ -858,12 +859,6 @@ h3.comment-reply-title {
     background-repeat: no-repeat;
     padding: 3rem 15rem 3rem 15rem;
     min-height: 25rem;
-/*        background-position: 83% 3.6rem, 9rem -5rem;
-        background-size: 14% auto, 82% auto;
-        background-repeat: no-repeat;
-        padding: 3rem 15rem 3rem 15rem;
-        min-height: 25rem;
-*/
   }
   .fl-theme-bw .a11y-site-tagline {
     background: url("./images/banner-GREY.jpg");
@@ -872,12 +867,6 @@ h3.comment-reply-title {
     background-repeat: no-repeat;
     padding: 3rem 15rem 3rem 15rem;
     min-height: 25rem;
-/*        background-position: 83% 3.6rem, 9rem -5rem;
-        background-size: 14% auto, 82% auto;
-        background-repeat: no-repeat;
-        padding: 3rem 15rem 3rem 15rem;
-        min-height: 25rem;
-*/
   }
   .fl-theme-yb .a11y-site-tagline {
     background: url("./images/banner-YELLOW.jpg");
@@ -886,12 +875,6 @@ h3.comment-reply-title {
     background-repeat: no-repeat;
     padding: 3rem 15rem 3rem 15rem;
     min-height: 25rem;
-/*        background-position: 83% 3.6rem, 9rem -5rem;
-        background-size: 14% auto, 82% auto;
-        background-repeat: no-repeat;
-        padding: 3rem 15rem 3rem 15rem;
-        min-height: 25rem;
-*/
   }
   .fl-theme-by .a11y-site-tagline {
     background: url("./images/banner-GREY.jpg");
@@ -900,12 +883,6 @@ h3.comment-reply-title {
     background-repeat: no-repeat;
     padding: 3rem 15rem 3rem 15rem;
     min-height: 25rem;
-/*        background-position: 83% 3.6rem, 9rem -5rem;
-        background-size: 14% auto, 82% auto;
-        background-repeat: no-repeat;
-        padding: 3rem 15rem 3rem 15rem;
-        min-height: 25rem;
-*/
   }
   .fl-theme-lgdg .a11y-site-tagline {
     background: url("./images/banner-WHITE.jpg");
@@ -914,12 +891,6 @@ h3.comment-reply-title {
     background-repeat: no-repeat;
     padding: 3rem 15rem 3rem 15rem;
     min-height: 25rem;
-/*        background-position: 83% 3.6rem, 9rem -5rem;
-        background-size: 14% auto, 82% auto;
-        background-repeat: no-repeat;
-        padding: 3rem 15rem 3rem 15rem;
-        min-height: 25rem;
-*/
   }
 }
 /* Overriding Foundation to work with UIO */
