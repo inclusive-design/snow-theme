@@ -19,7 +19,7 @@ get_header(); ?>
 
             $sections = array(
                 'introduction' => array(
-                    'section_class' => 'snow-intro',
+                    'section_class' => 'row snow-intro',
                     'widgets' => array(
                         'home' => 'snow-home',
                         'access' => 'access-site'

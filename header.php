@@ -40,12 +40,12 @@
                 </div>
 
                 <nav class="a11y-main-nav">
-                    
-
+                    <div class="title-bar float-right" data-responsive-toggle="site-menu" data-hide-for="medium">
+                        <button class="menu-icon" type="button" data-toggle="site-menu"></button>
+                    </div>
                     <div id="site-menu">
                         <div class="top-bar-left a11y-main-nav-items">
                             <ul class="dropdown menu" data-dropdown-menu>
-                                <li class="show-for-small-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Home</a></li>
                                 <?php echo $nav_menu;
                                 /*
                                 Check that the Feedback Post plugin is installed.

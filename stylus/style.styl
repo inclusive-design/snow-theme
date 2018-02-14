@@ -181,7 +181,7 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 
     .a11y-site-footer {
-        border-top: 0.2rem solid;
+        border-top: none;
         p {
             background: none !important;
         }
@@ -199,6 +199,7 @@ apply-contrast-colours(foreground background fileSuffix) {
 
 /* General styles */
 .a11y-theme {
+    display: block;
     font-family: primary-font;
     background-color: body-background;
 
@@ -221,15 +222,13 @@ apply-contrast-colours(foreground background fileSuffix) {
 }
 
 .dropdown {
-    border: 0.02rem solid;
-    height: 5.5rem;
     padding: 0;
 }
 
 /* UI Options. */
 .fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen {
     flex-flow: row wrap;
-    display: flex !important;
+    display: flex;
     justify-content: flex-end;
     background-color: inherit;
     border-bottom: none;
@@ -320,32 +319,14 @@ apply-contrast-colours(foreground background fileSuffix) {
 
     ul {
         display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: normal;
-        align-content: center;
-        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
         li {
             width: 100%;
-            flex: 1 1 auto;
-            margin: 0;
-            align-self: auto;
-            text-align: center;
-        }
-
-        li.current-menu-item:before {
-            border-top: 0.6rem solid #000;
-            width: calc(40rem / 7);
-            margin: 0 2.5rem;
-            display: inline-block;
-            position: absolute;
-            content: "";
         }
 
         a {
-            display: inline-block;
             color: main-nav-link-color;
             text-transform: uppercase;
             text-decoration: none;
@@ -367,7 +348,20 @@ apply-contrast-colours(foreground background fileSuffix) {
 /* Navigation for medium screens and larger. */
 @media screen and (min-width: 40em) {
     .a11y-main-nav-items {
-        width: 100%;
+
+        border: 0.02rem solid;
+
+        ul {
+
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+/*            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            align-items: normal;
+            align-content: center;*/
+        }
 
         .menu-item {
             border-right: none;
@@ -378,9 +372,20 @@ apply-contrast-colours(foreground background fileSuffix) {
         }
 
         .menu li a {
+            text-align: center;
             padding: 1.6rem 2rem;
             width: 100%;
             height: 100%;
+        }
+
+        li.current-menu-item:before {
+            border-top: 0.6rem solid main-nav-link-color;
+            width: calc(40rem / 7);
+            margin: 0 2.5rem;
+            display: flex;
+            flex-shrink: 1;
+            position: absolute;
+            content: "";
         }
     }
 }
@@ -402,7 +407,7 @@ apply-contrast-colours(foreground background fileSuffix) {
 .snow-intro {
     position: relative;
     display: flex;
-    padding: 0rem 2rem;
+    padding: 0rem 2rem 2rem 2rem;
 }
 
 .snow-home {
@@ -499,14 +504,12 @@ h2.snow-title {
     }
 
     span {
-        font-size: 6rem;
         font-weight: bold;
         text-transform: uppercase;
         text-shadow: none;
         color: site-tagline-color;
         background: rgb(15,25,29);
         background: rgba(15,25,29,.7);
-        line-height: 8rem;
         display: inline;
     }
 }
@@ -824,6 +827,13 @@ h3.comment-reply-title {
           min-height: 16rem;
           text-align: right;
           background-position: 0 -10rem;
+
+          span {
+            font-size: 6rem;
+            font-weight: bold;
+            line-height: 8rem;
+            display: inline;
+        }
       }
 
       .a11y-site-footer {
