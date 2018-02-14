@@ -132,6 +132,8 @@ Tags: accessibility
   flex-wrap: wrap;
 }
 .a11y-main-nav-items ul a {
+  justify-content: center;
+  align-content: center;
   color: #0f191d;
   text-transform: uppercase;
   text-decoration: none;
