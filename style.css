@@ -151,7 +151,7 @@ Tags: accessibility
   outline: 0.2rem solid #0f191d;
 }
 /* Navigation for medium screens and larger. */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 20em) {
   .a11y-main-nav-items {
     border: 0.02rem solid;
   }
@@ -195,21 +195,23 @@ Tags: accessibility
 }
 .snow-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 2rem 2rem 0rem 2rem;
 }
 .snow-intro {
   position: relative;
   display: flex;
+  flex-direction: column;
   padding: 0rem 2rem 2rem 2rem;
 }
 .snow-home {
-  flex-grow: 1;
+  flex: auto;
   padding: 2rem 2rem 2rem 0;
   float: left;
 }
 .snow-access {
-  width: 90rem;
+  flex: auto;
+  width: 100%;
   border: 1px solid #dcde70;
   margin: auto;
   padding: 2rem;
@@ -725,7 +727,7 @@ h3.comment-reply-title {
   background: none !important;
 }
 /* Styles for Medium resolution and larger */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 20em) {
   #corner-flourish {
     position: absolute;
     top: -4rem;
@@ -797,6 +799,9 @@ h3.comment-reply-title {
   }
   .home .a11y-site-main {
     padding: 0;
+  }
+  .snow-intro {
+    flex-direction: row;
   }
   .fl-theme-wb .a11y-site-aside {
     background-image: none;
