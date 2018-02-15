@@ -332,8 +332,34 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 }
 
+@media screen and (min-width: 40em) and (max-width: 65.999em) {
+    .a11y-main-nav-items {
+
+        width: 100%;
+
+        ul {
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: left;
+            width: 100%;
+        }
+        
+        .menu-item {
+            border-right: none;
+
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+
+        .menu li a {
+            padding: 0.7rem 0.8rem;
+        }
+    }
+}
+
 /* Navigation for medium screens and larger. */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 66em) {
     .a11y-main-nav-items {
         
         ul {
@@ -341,7 +367,7 @@ apply-contrast-colours(foreground background fileSuffix) {
             display: flex;
             width: 100%;
             flex-wrap: nowrap;
-            justify-content: center;
+            justify-content: flex-start;
             flex-direction: row;
             align-items: normal;
             align-content: center;
