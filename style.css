@@ -204,9 +204,7 @@ Tags: accessibility
     border: 0.07rem solid;
     display: flex;
     width: 100%;
-    flex-wrap: nowrap;
     justify-content: flex-start;
-    flex-direction: row;
     align-items: normal;
     align-content: center;
     flex-flow: row wrap;
