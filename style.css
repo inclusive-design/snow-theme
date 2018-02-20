@@ -148,9 +148,9 @@ Tags: accessibility
   .a11y-main-nav-items {
     width: 100%;
   }
-  .a11y-main-nav-items ul {
+  .a11y-main-nav-items ul li {
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: space-between;
     text-align: left;
     width: 100%;
   }
