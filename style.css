@@ -57,6 +57,9 @@ Tags: accessibility
   padding-left: 0px;
   padding-right: 0px;
 }
+.a11y-site-header nav {
+  display: inline;
+}
 .dropdown {
   padding: 0;
 }
@@ -115,6 +118,9 @@ Tags: accessibility
 .a11y-site-header {
   background-color: masthead-background;
   padding: 0;
+}
+.a11y-site-header nav {
+  display: inline;
 }
 .a11y-site-header .a11y-site-title {
   margin: 0;
@@ -324,6 +330,10 @@ h2.snow-title {
 .page main a {
   text-decoration: underline;
   color: #385c8a;
+}
+.column,
+.columns {
+  padding: 0;
 }
 /* Site Tagline (appears on front page only) */
 .a11y-site-tagline {
