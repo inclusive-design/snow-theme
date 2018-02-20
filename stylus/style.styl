@@ -220,6 +220,41 @@ apply-contrast-colours(foreground background fileSuffix) {
     padding: 0;
 }
 
+/* Skip links */
+#skip {
+    float: left;
+    height: 0rem;
+}
+
+#skip a {
+    color: skip-color;
+    background: skip-background;
+    margin-top: 1rem;
+
+    &, &:hover, &:visited {
+        height: 1px;
+        left: -10000px;
+        overflow: hidden;
+        position: absolute;
+        top: auto;
+        width: 1px;
+        color: skip-hover-color;
+        background: skip-hover-background;
+    }
+
+    &:active, &:focus {
+        height: auto;
+        width: auto;
+        left: auto;
+        border: 0.5rem solid skip-focus-inner-border;
+        outline: 0.2rem solid skip-focus-outer-border;
+        color: skip-hover-color;
+        background: skip-hover-background;
+        padding: 1rem;
+        z-index: 1;
+    }
+}
+
 /* UI Options. */
 .fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen {
     flex-flow: row wrap;

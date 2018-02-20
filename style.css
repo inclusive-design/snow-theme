@@ -58,6 +58,40 @@ Tags: accessibility
 .dropdown {
   padding: 0;
 }
+/* Skip links */
+#skip {
+  float: left;
+  height: 0rem;
+}
+#skip a {
+  color: #7ec9bc;
+  background: #fff;
+  margin-top: 1rem;
+}
+#skip a,
+#skip a:hover,
+#skip a:visited {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  color: #0f191d;
+  background: #7ec9bc;
+}
+#skip a:active,
+#skip a:focus {
+  height: auto;
+  width: auto;
+  left: auto;
+  border: 0.5rem solid #fff;
+  outline: 0.2rem solid #7ec9bc;
+  color: #0f191d;
+  background: #7ec9bc;
+  padding: 1rem;
+  z-index: 1;
+}
 /* UI Options. */
 .fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen {
   flex-flow: row wrap;
