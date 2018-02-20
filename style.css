@@ -215,7 +215,7 @@ Tags: accessibility
   }
   .a11y-main-nav-items ul li {
     margin: 0;
-    flex: 1 1 0;
+    flex: 1 1;
   }
   .a11y-main-nav-items .menu-item {
     border-right: none;
