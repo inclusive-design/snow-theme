@@ -35,9 +35,9 @@
             ?>
 
             <div class="small-12 columns">
-                <div class="a11y-site-title">
+                <h1 class="a11y-site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
-                </div>
+                </h1>
 
                 <nav class="a11y-main-nav">
                     <div class="title-bar float-right" data-responsive-toggle="site-menu" data-hide-for="medium">
