@@ -34,7 +34,7 @@
                 $nav_menu = wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'container' => '','echo' => false, 'items_wrap' => '%3$s' ) );
             ?>
 
-            <!-- <div class="a11y-site-header small-12 columns"> -->
+            <div class="small-12 columns">
                 <div class="a11y-site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
                 </div>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </nav>
-           <!--  </div> -->
+            </div>
 
         </header>
 
