@@ -116,6 +116,7 @@ Tags: accessibility
 }
 .a11y-site-header .a11y-site-title {
   margin: 0;
+  display: inline-block;
   text-transform: none;
 }
 .a11y-site-header .a11y-site-title a {
@@ -135,7 +136,7 @@ Tags: accessibility
   outline: 0.2rem solid #0f191d;
 }
 .a11y-main-nav .title-bar {
-  display: inline-block;
+  display: block;
   background-color: inherit;
 }
 .a11y-main-nav .menu-icon {
