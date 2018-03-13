@@ -213,8 +213,8 @@ apply-contrast-colours(foreground background fileSuffix) {
 .a11y-site-header {
     margin-top: 1.2rem;
     padding-bottom: 1rem;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 
     nav {
         display: inline;
@@ -314,6 +314,17 @@ apply-contrast-colours(foreground background fileSuffix) {
         &:focus {
             outline: main-nav-link-focus;
         }
+    }
+
+    .snow-header {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .snow-search {
+        float: right;
     }
 }
 
@@ -866,6 +877,7 @@ h3.comment-reply-title {
          margin-bottom: 0;
          position: relative;
          padding-bottom: 0;
+         padding-top: 2rem;
 
          h1 {
              font-size: 2rem;
@@ -997,11 +1009,11 @@ span.fa {
 
 /* Search bar */
 #search {
-                width: 20rem;
-                margin: 1rem auto;
-                padding: 8px 15px;
-                border: 0.15rem solid #000000;
-                border-radius: 0.9rem;
+    width: 20rem;
+    margin: 1rem auto;
+    padding: 8px 15px;
+    border: 0.15rem solid #000000;
+    border-radius: 0.9rem;
 }
 
 /* Styles for Social media feeds */

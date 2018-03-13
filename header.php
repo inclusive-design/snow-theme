@@ -35,11 +35,15 @@
             ?>
 
             <div class="a11y-site-header small-12 columns">
-                <div class="snow-search">
-                    <input type="text" value="" name="search" id="search" /><input type="submit" id="searchsubmit" value="Search" />
-                </div>
-                <div class="a11y-site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
+                <div class="snow-header">
+                    <div class="small-12 large-8 a11y-site-title">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
+                    </div>
+                    <div class="small-12 large-4 snow-search">
+                        <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+                            <div><input type="text" value="" name="s" id="search" /><button type="submit" id="searchsubmit" value="Search"></button></div>
+                        </form>
+                    </div>
                 </div>
 
                 <nav class="a11y-main-nav">

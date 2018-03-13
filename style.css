@@ -54,8 +54,8 @@ Tags: accessibility
 .a11y-site-header {
   margin-top: 1.2rem;
   padding-bottom: 1rem;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .a11y-site-header nav {
   display: inline;
@@ -142,6 +142,15 @@ Tags: accessibility
 }
 .a11y-site-header .a11y-site-title a:focus {
   outline: 0.2rem solid #0f191d;
+}
+.a11y-site-header .snow-header {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  margin-right: 0;
+}
+.a11y-site-header .snow-search {
+  float: right;
 }
 .a11y-main-nav .title-bar {
   display: inline-block;
@@ -820,6 +829,7 @@ h3.comment-reply-title {
     margin-bottom: 0;
     position: relative;
     padding-bottom: 0;
+    padding-top: 2rem;
   }
   .a11y-site-header h1 {
     font-size: 2rem;
