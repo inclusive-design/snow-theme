@@ -131,7 +131,7 @@ Tags: accessibility
   color: #7ec9bc;
   display: flex;
   align-items: flex-end;
-  background: url("./images/logo-COLOUR.png") -0.1rem/10.5rem 4rem no-repeat;
+  background: url("./images/logo-COLOUR.svg") -0.1rem/10.5rem 4rem no-repeat;
   background-size: 15rem 6rem;
   width: 15rem;
   height: 5rem;
@@ -577,7 +577,7 @@ h3.comment-reply-title {
   border-top: 1.6rem solid #000 !important;
 }
 .fl-theme-wb .a11y-site-title a {
-  background-image: url("./images/logo-WHITE.png");
+  background-image: url("./images/logo-WHITE.svg");
 }
 .fl-theme-wb .a11y-main-nav-items li.current-menu-item:before {
   border-top: 0.6rem solid #fff;
@@ -628,7 +628,7 @@ h3.comment-reply-title {
   border-top: 1.6rem solid #fff !important;
 }
 .fl-theme-bw .a11y-site-title a {
-  background-image: url("./images/logo-GREY.png");
+  background-image: url("./images/logo-GREY.svg");
 }
 .fl-theme-bw .a11y-main-nav-items li.current-menu-item:before {
   border-top: 0.6rem solid #000;
@@ -679,7 +679,7 @@ h3.comment-reply-title {
   border-top: 1.6rem solid #000 !important;
 }
 .fl-theme-yb .a11y-site-title a {
-  background-image: url("./images/logo-YELLOW.png");
+  background-image: url("./images/logo-YELLOW.svg");
 }
 .fl-theme-yb .a11y-main-nav-items li.current-menu-item:before {
   border-top: 0.6rem solid #ff0;
@@ -730,7 +730,7 @@ h3.comment-reply-title {
   border-top: 1.6rem solid #ff0 !important;
 }
 .fl-theme-by .a11y-site-title a {
-  background-image: url("./images/logo-GREY.png");
+  background-image: url("./images/logo-GREY.svg");
 }
 .fl-theme-by .a11y-main-nav-items li.current-menu-item:before {
   border-top: 0.6rem solid #000;
@@ -781,7 +781,7 @@ h3.comment-reply-title {
   border-top: 1.6rem solid #555 !important;
 }
 .fl-theme-lgdg .a11y-site-title a {
-  background-image: url("./images/logo-WHITE.png");
+  background-image: url("./images/logo-WHITE.svg");
 }
 .fl-theme-lgdg .a11y-main-nav-items li.current-menu-item:before {
   border-top: 0.6rem solid #bdbdbb;
@@ -969,6 +969,14 @@ p {
 /* Styles specific for Font Awesome */
 span.fa {
   font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
+}
+/* Search bar */
+#search {
+  width: 20rem;
+  margin: 1rem auto;
+  padding: 8px 15px;
+  border: 0.15rem solid #000;
+  border-radius: 0.9rem;
 }
 /* Styles for Social media feeds */
 /*.bi-social-feeds .a11y-front-panel:focus,

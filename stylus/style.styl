@@ -164,7 +164,7 @@ apply-contrast-colours(foreground background fileSuffix) {
 
     .a11y-site-title {
         a {
-            background-image: url("./images/logo-"+fileSuffix+".png");
+            background-image: url("./images/logo-"+fileSuffix+".svg");
         }
     }
 
@@ -301,7 +301,7 @@ apply-contrast-colours(foreground background fileSuffix) {
         display:flex;
         align-items:flex-end;
 
-        background: url("./images/logo-COLOUR.png") -0.1rem/10.5rem 4rem no-repeat;
+        background: url("./images/logo-COLOUR.svg") -0.1rem/10.5rem 4rem no-repeat;
         background-size: 15rem 6rem;
         width: 15rem;
         height: 5rem;
@@ -993,6 +993,15 @@ label, p {
 /* Styles specific for Font Awesome */
 span.fa {
     font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
+}
+
+/* Search bar */
+#search {
+                width: 20rem;
+                margin: 1rem auto;
+                padding: 8px 15px;
+                border: 0.15rem solid #000000;
+                border-radius: 0.9rem;
 }
 
 /* Styles for Social media feeds */

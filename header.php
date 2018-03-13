@@ -35,6 +35,9 @@
             ?>
 
             <div class="a11y-site-header small-12 columns">
+                <div class="snow-search">
+                    <input type="text" value="" name="search" id="search" /><input type="submit" id="searchsubmit" value="Search" />
+                </div>
                 <div class="a11y-site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
                 </div>
