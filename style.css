@@ -444,14 +444,14 @@ h2.snow-title {
   font-size: 1.2rem;
 }
 /* Main Content Area Styles */
-.a11y-site-main .snow-access-title {
+.snow-access-title {
   font-size: 1.5rem;
   text-transform: capitalize;
 }
-.a11y-site-main .snow-title {
+.snow-title {
   font-size: 1.5rem;
 }
-.a11y-site-main .snow-experiences-title {
+.snow-experiences-title {
   font-size: 1.3rem;
   text-align: center;
   color: #0f191d;

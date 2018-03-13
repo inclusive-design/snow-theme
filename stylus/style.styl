@@ -13,7 +13,6 @@ Tags: accessibility
 */
 
 /* Colours */
-black ?= #0F191D;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
@@ -21,73 +20,73 @@ black ?= #0F191D;
     font-family: "Roboto";
 }
 
-primary-font ?= "Roboto", sans-serif;
-header-font ?= "Roboto";
-header-color ?= #0F191D;
-body-background ?= #fff;
-corner-flourish-color ?= #fff;
-foreground ?= #fff;
+primary-font = "Roboto", sans-serif;
+header-font = "Roboto";
+header-color = #0F191D;
+body-background = #fff;
+corner-flourish-color = #fff;
+foreground = #fff;
 
 /* Masthead colours */
-masthead-color ?= #7EC9BC;
-masthead-background-hover ?= #7EC9BC;
-masthead-border ?= 0.8rem solid #7EC9BC;
+masthead-color = #7EC9BC;
+masthead-background-hover = #7EC9BC;
+masthead-border = 0.8rem solid #7EC9BC;
 
-main-nav-link-color ?= #0F191D;
-main-nav-link-color-hover ?= #0F191D;
-main-nav-link-background-hover ?= #7EC9BC;
-main-nav-link-focus ?= 0.2rem solid #0F191D;
+main-nav-link-color = #0F191D;
+main-nav-link-color-hover = #0F191D;
+main-nav-link-background-hover = #7EC9BC;
+main-nav-link-focus = 0.2rem solid #0F191D;
 
 /* Sidebar */
-sidebar-color ?= #DCDE70;
-sidebar-background ?= #DCDE70;
-sidebar-link-color ?= #0F191D;
-sidebar-link-background-hover ?= #0F191D;
-sidebar-link-color-hover ?= #0F191D;
-sidebar-link-focus ?= 0.2rem solid #0F191D;
+sidebar-color = #DCDE70;
+sidebar-background = #DCDE70;
+sidebar-link-color = #0F191D;
+sidebar-link-background-hover = #0F191D;
+sidebar-link-color-hover = #0F191D;
+sidebar-link-focus = 0.2rem solid #0F191D;
 
 /* Front Main Content Area */
-front-main-content-link-color ?= #0F191D;
+front-main-content-link-color = #0F191D;
 
 /* Main Content Area for all other pages */
-main-content-link-color ?= #385c8a;
-main-content-accent ?= #DCDE70;
-main-content-background ?= #fff;
-main-content-color ?= #0F191D;
+main-content-link-color = #385c8a;
+main-content-accent = #DCDE70;
+main-content-background = #fff;
+main-content-color = #0F191D;
 
 /* Front Page Panels */
-front-panel-container-background ?= #F7AC82;
-front-panel-header ?= #DCDE70;
-front-panel-text ?= #0F191D;
+front-panel-container-background = #F7AC82;
+front-panel-header = #DCDE70;
+front-panel-text = #0F191D;
 
 /* Skip Links */
-skip-color ?= #7EC9BC;
-skip-background ?= #fff;
-skip-focus-outer-border ?= #7EC9BC;
-skip-focus-inner-border ?= #fff;
-skip-hover-color ?= #0F191D;
-skip-hover-background ?= #7EC9BC;
+skip-color = #7EC9BC;
+skip-background = #fff;
+skip-focus-outer-border = #7EC9BC;
+skip-focus-inner-border = #fff;
+skip-hover-color = #0F191D;
+skip-hover-background = #7EC9BC;
 
 /* Front Page Footer */
-front-footer-background ?= #7EC9BC;
-front-footer-color ?= #fff;
-front-footer-link-color ?= #fff;
-front-footer-link-hover-background ?= #fff;
-front-footer-link-hover ?= #006274;
-front-footer-link-focus ?= 0.2rem solid #fff;
+front-footer-background = #7EC9BC;
+front-footer-color = #fff;
+front-footer-link-color = #fff;
+front-footer-link-hover-background = #fff;
+front-footer-link-hover = #006274;
+front-footer-link-focus = 0.2rem solid #fff;
 
 /* Sub Page Footer */
-footer-background ?= #7EC9BC;
-footer-color ?= #0F191D;
-footer-link-color ?= #0F191D;
-footer-link-hover-background ?= #0F191D;
-footer-link-hover ?= #fff;
-footer-link-focus ?= 0.2rem solid #0F191D;
+footer-background = #7EC9BC;
+footer-color = #0F191D;
+footer-link-color = #0F191D;
+footer-link-hover-background = #0F191D;
+footer-link-hover = #fff;
+footer-link-focus = 0.2rem solid #0F191D;
 
 /* Site description */
-site-tagline-color ?= #fff;
-site-tagline-emphasis ?= #F7AC82;
-site-tagline-background-image ?= "./images/banner-COLOUR.jpg";
+site-tagline-color = #fff;
+site-tagline-emphasis = #F7AC82;
+site-tagline-background-image = "./images/banner-COLOUR.jpg";
 
 /* Mixins */
 apply-contrast-sidebar-images(foreground fileSuffix) {
@@ -698,16 +697,16 @@ h2.snow-title {
 }
 
 /* Main Content Area Styles */
-.a11y-site-main .snow-access-title {
+.snow-access-title {
     font-size: 1.5rem;
     text-transform: capitalize;
 }
 
-.a11y-site-main .snow-title {
+.snow-title {
     font-size: 1.5rem;
 }
 
-.a11y-site-main .snow-experiences-title {
+.snow-experiences-title {
     font-size: 1.3rem;
     text-align: center;
     color: main-content-color;
