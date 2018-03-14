@@ -35,7 +35,7 @@
             ?>
 
             <div class="a11y-site-header small-12 columns">
-                <div class="snow-header">
+                <div class="row snow-header">
                     <div class="small-12 large-8 a11y-site-title">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
                     </div>

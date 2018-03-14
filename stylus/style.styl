@@ -326,9 +326,7 @@ apply-contrast-colours(foreground background fileSuffix) {
 
     .snow-search {
         display: flex;
-        align-content: flex-end;
-        align-self: flex-end;
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 }
 
@@ -416,6 +414,14 @@ apply-contrast-colours(foreground background fileSuffix) {
             padding: 0.7rem 0.8rem;
         }
     }
+
+    .a11y-site-header {
+        .snow-search {
+            align-content: flex-end;
+            align-self: flex-end;
+            justify-content: flex-end;
+        }
+    }
 }
 
 /* Navigation for medium screens and larger. */
@@ -470,7 +476,14 @@ apply-contrast-colours(foreground background fileSuffix) {
             position: absolute;
             content: "";
         }
+    }
 
+    .a11y-site-header {
+        .snow-search {
+            align-content: flex-end;
+            align-self: flex-end;
+            justify-content: flex-end;
+        }
     }
 }
 

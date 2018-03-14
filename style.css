@@ -152,9 +152,7 @@ Tags: accessibility
 }
 .a11y-site-header .snow-search {
   display: flex;
-  align-content: flex-end;
-  align-self: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .a11y-main-nav .title-bar {
   display: inline-block;
@@ -219,6 +217,11 @@ Tags: accessibility
   .a11y-main-nav-items .menu li a {
     padding: 0.7rem 0.8rem;
   }
+  .a11y-site-header .snow-search {
+    align-content: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
 }
 /* Navigation for medium screens and larger. */
 @media screen and (min-width: 66em) {
@@ -261,6 +264,11 @@ Tags: accessibility
     margin: 0 2.5rem;
     position: absolute;
     content: "";
+  }
+  .a11y-site-header .snow-search {
+    align-content: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
   }
 }
 .home .a11y-site-main {
