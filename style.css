@@ -124,6 +124,7 @@ Tags: accessibility
 }
 .a11y-site-header .a11y-site-title {
   margin: 0;
+  padding: 0.5rem;
   display: inline-block;
   text-transform: none;
 }
@@ -150,7 +151,10 @@ Tags: accessibility
   margin-right: 0;
 }
 .a11y-site-header .snow-search {
-  float: right;
+  display: flex;
+  align-content: flex-end;
+  align-self: flex-end;
+  justify-content: flex-end;
 }
 .a11y-main-nav .title-bar {
   display: inline-block;
@@ -981,9 +985,13 @@ span.fa {
   font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
 }
 /* Search bar */
+#searchform {
+  margin: 0;
+  padding: 0;
+}
 #search {
   width: 20rem;
-  margin: 1rem auto;
+  margin: 0;
   padding: 8px 15px;
   border: 0.15rem solid #000;
   border-radius: 0.9rem;

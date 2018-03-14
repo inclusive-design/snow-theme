@@ -292,6 +292,7 @@ apply-contrast-colours(foreground background fileSuffix) {
 
     .a11y-site-title {
         margin: 0;
+        padding: 0.5rem;
         display: inline-block;
         text-transform: none;
     }
@@ -324,7 +325,10 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 
     .snow-search {
-        float: right;
+        display: flex;
+        align-content: flex-end;
+        align-self: flex-end;
+        justify-content: flex-end;
     }
 }
 
@@ -1008,9 +1012,15 @@ span.fa {
 }
 
 /* Search bar */
+
+#searchform {
+    margin: 0;
+    padding: 0;
+}
+
 #search {
     width: 20rem;
-    margin: 1rem auto;
+    margin: 0;
     padding: 8px 15px;
     border: 0.15rem solid #000000;
     border-radius: 0.9rem;
