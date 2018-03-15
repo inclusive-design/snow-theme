@@ -41,7 +41,7 @@
                     </div>
                     <div class="small-12 large-4 snow-search">
                         <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-                            <input type="text" value="" name="s" id="search" /><button type="submit" id="searchsubmit" value="Search"></button>
+                            <input type="text" value="" name="s" id="search" /><button type="submit" id="searchsubmit">Search</button>
                         </form>
                     </div>
                 </div>

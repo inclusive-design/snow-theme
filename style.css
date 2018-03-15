@@ -994,15 +994,20 @@ span.fa {
 }
 /* Search bar */
 #searchform {
-  margin: 0;
-  padding: 0;
+  margin: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  border: 0.15rem solid #000;
+  border-radius: 0.7rem;
+  padding: 0.1rem 0.8rem;
+  width: 20rem;
 }
 #search {
-  width: 20rem;
+  flex-grow: 2;
+  border: none;
+  padding: 0;
   margin: 0;
-  padding: 8px 15px;
-  border: 0.15rem solid #000;
-  border-radius: 0.9rem;
+  box-shadow: none;
 }
 /* Styles for Social media feeds */
 /*.bi-social-feeds .a11y-front-panel:focus,
