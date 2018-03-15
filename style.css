@@ -153,6 +153,8 @@ Tags: accessibility
 .a11y-site-header .snow-search {
   display: flex;
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 .a11y-main-nav .title-bar {
   display: inline-block;
@@ -994,12 +996,12 @@ span.fa {
 }
 /* Search bar */
 #searchform {
-  margin: 0.2rem;
+  margin: 0.5rem 0;
   display: flex;
   flex-direction: row;
-  border: 0.15rem solid #000;
-  border-radius: 0.7rem;
-  padding: 0.1rem 0.8rem;
+  border: 0.1rem solid;
+  border-color: #000;
+  padding: 0 0.8rem;
   width: 20rem;
 }
 #search {
@@ -1010,8 +1012,7 @@ span.fa {
   box-shadow: none;
 }
 /* Styles for Social media feeds */
-/*.bi-social-feeds .a11y-front-panel:focus,
+.bi-social-feeds .a11y-front-panel:focus,
 .bi-social-feeds .a11y-front-panel:hover {
-    border-color: #eceded;
+  border-color: #dcde70;
 }
-*/
