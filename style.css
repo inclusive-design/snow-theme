@@ -58,7 +58,7 @@ Tags: accessibility
   padding-right: 0;
 }
 .a11y-site-header nav {
-  display: inline;
+  display: inline-flex;
 }
 .dropdown {
   padding: 0;
@@ -120,7 +120,7 @@ Tags: accessibility
   padding: 0;
 }
 .a11y-site-header nav {
-  display: inline;
+  display: inline-flex;
 }
 .a11y-site-header .a11y-site-title {
   margin: 0;
@@ -152,7 +152,7 @@ Tags: accessibility
 }
 .a11y-site-header .snow-search {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .a11y-main-nav .title-bar {
   display: inline-block;
@@ -220,7 +220,7 @@ Tags: accessibility
   .a11y-site-header .snow-search {
     align-content: flex-end;
     align-self: flex-end;
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 /* Navigation for medium screens and larger. */
