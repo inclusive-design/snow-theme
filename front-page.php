@@ -38,15 +38,43 @@ get_header(); ?>
                     'widgets' => array(
                         'snow-experiences' => 'snow-experiences'
                     )
-                ),
-                'empty' => array(
-                    'section_class' => 'row a11y-panel-container',
-                    'widgets' => array()
                 )
             );
-
             add_widgets($sections, 'section');
         ?>
+
+        <div class="row a11y-panel-container bi-social-feeds">
+            <div class="small-12 medium-4 columns a11y-front-panel">
+                <h2>Twitter</h2>
+                <section>
+                    <?php
+                    // Shortcode for Custom Twitter Feeds plugin
+                    // https://wordpress.org/plugins/custom-twitter-feeds/
+                    echo do_shortcode("[custom-twitter-feeds]");
+                    ?>
+                </section>
+            </div>
+            <div class="small-12 medium-4 columns a11y-front-panel">
+                <h2>Facebook</h2>
+                <section>
+                    <?php
+                    // Shortcode for Custom Facebook Feed plugin
+                    // https://wordpress.org/plugins/custom-facebook-feed/
+                    echo do_shortcode("[custom-facebook-feed]");
+                    ?>
+                </section>
+            </div>
+            <div class="small-12 medium-4 columns a11y-front-panel">
+                <h2>Instagram</h2>
+                <section>
+                    <?php
+                    // Shortcode for Instagram Feed plugin
+                    // https://wordpress.org/plugins/instagram-feed/
+                    echo do_shortcode("[instagram-feed]");
+                    ?>
+                </section>
+            </div>
+        </section>
 
     </main>
 
