@@ -32,12 +32,6 @@ get_header(); ?>
                         'panel2' => 'a11y-front-panel2',
                         'panel3' => 'a11y-front-panel3',
                     )
-                ),
-                'experiences' => array(
-                    'section_class' => '',
-                    'widgets' => array(
-                        'snow-experiences' => 'snow-experiences'
-                    )
                 )
             );
             add_widgets($sections, 'section');

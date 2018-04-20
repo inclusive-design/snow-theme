@@ -37,6 +37,14 @@ $snow_widgets = array(
         'before_title' => '<h2 class="snow-experiences-title">',
         'after_title' => '</h2>'
     ),
+    'social-feeds' => array(
+        'name' => __( 'Social Feeds', 'social-feeds' ),
+        'id' => 'social-feeds',
+        'before_widget' => '<div id="social-feeds" class="snow-experiences">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="snow-experiences-title">',
+        'after_title' => '</h2>'
+    ),
     'license-info' => array(
         'name' => __( 'License Information', 'license-info' ),
         'id' => 'license-info',

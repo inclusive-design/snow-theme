@@ -15,6 +15,13 @@
 
     <?php
         $sections = array(
+            'experiences' => array(
+                'section_class' => '',
+                'widgets' => array(
+                    'snow-experiences' => 'snow-experiences',
+                    'social-feeds' => 'social-feeds'
+                )
+            ),
             'footer' => array(
                 'section_class' => 'row a11y-site-footer',
                 'widgets' => array(
@@ -27,6 +34,11 @@
 
         add_widgets($sections, 'footer');
     ?>
+
+    <footer class="a11y-site-footer">
+        Snow is a project of the Inclusive Design Research Centre, OCAD University, funded by Provincial Schools Branch, Ontario Ministry of Education.
+    </footer>
+
 </div>
 
 <?php wp_footer(); ?>
