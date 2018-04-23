@@ -16,7 +16,7 @@
     <?php
         $sections = array(
             'experiences' => array(
-                'section_class' => '',
+                'section_class' => 'snow-section',
                 'widgets' => array(
                     'snow-experiences' => 'snow-experiences',
                     'social-feeds' => 'social-feeds'

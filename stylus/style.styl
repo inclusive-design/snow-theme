@@ -17,11 +17,11 @@ Tags: accessibility
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
 @font-face {
-    font-family: "Roboto";
+    font-family: verdana, sans-serif;
 }
 
-primary-font = "Roboto", sans-serif;
-header-font = "Roboto";
+primary-font = verdana, sans-serif;
+header-font = verdana;
 header-color = #0F191D;
 body-background = #fff;
 corner-flourish-color = #fff;
@@ -38,8 +38,8 @@ main-nav-link-background-hover = #7EC9BC;
 main-nav-link-focus = 0.2rem solid #0F191D;
 
 /* Sidebar */
-sidebar-color = #DCDE70;
-sidebar-background = #DCDE70;
+sidebar-color = #E8ECB2;
+sidebar-background = #E8ECB2;
 sidebar-link-color = #0F191D;
 sidebar-link-background-hover = #0F191D;
 sidebar-link-color-hover = #0F191D;
@@ -50,13 +50,13 @@ front-main-content-link-color = #0F191D;
 
 /* Main Content Area for all other pages */
 main-content-link-color = #385c8a;
-main-content-accent = #DCDE70;
+main-content-accent = #D4DB7C;
 main-content-background = #fff;
 main-content-color = #0F191D;
 
 /* Front Page Panels */
 front-panel-container-background = #F7AC82;
-front-panel-header = #DCDE70;
+front-panel-header = #D4DB7C;
 front-panel-text = #0F191D;
 
 /* Skip Links */
@@ -223,6 +223,7 @@ apply-contrast-colours(foreground background fileSuffix) {
 
 .dropdown {
     padding: 0;
+    background-color: main-content-accent;
 }
 
 /* Skip links */
@@ -538,13 +539,16 @@ apply-contrast-colours(foreground background fileSuffix) {
     font-size: 1.2rem;
 }
 
+.snow-section {
+    padding: 2.5rem 6rem;
+    background-color: main-content-accent;
+}
+
 .snow-experiences {
     text-align: center;
-    background-color: main-content-accent;
-    padding: 1rem 1rem;
+    padding: 0;
     margin: 0;
     position: relative;
-
 }
 
 h2.snow-experiences-title {
@@ -611,8 +615,6 @@ h2.snow-title {
         text-transform: uppercase;
         text-shadow: none;
         color: site-tagline-color;
-        background: rgb(15,25,29);
-        background: rgba(15,25,29,.7);
     }
 }
 
@@ -625,7 +627,6 @@ h2.snow-title {
     padding: 2rem 2rem;
     background-color: front-panel-container-background;
 
-
     &.row {
         // override Foundation margins.
         margin-left: 0;
@@ -637,10 +638,8 @@ h2.snow-title {
     background-color: front-panel-background;
     border: 1rem solid front-panel-container-background;
 
-    color: inherit;
-
     &:focus, &:hover {
-        color: inherit;
+        color: none;
         border-color: front-panel-header;
     }
 
