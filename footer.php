@@ -35,8 +35,16 @@
         add_widgets($sections, 'footer');
     ?>
 
-    <footer class="a11y-site-footer">
-        Snow is a project of the Inclusive Design Research Centre, OCAD University, funded by Provincial Schools Branch, Ontario Ministry of Education.
+    <footer class="row snow-footer-logo">
+        <div class="small-12 medium-4 idrc-logo">
+            <a href="http://idrc.ocadu.ca/" class="idrc-logo" title="Inclusive Design Research Centre"></a>
+        </div>
+        <div class="small-12 medium-4 ontario-logo">
+            <a class="ontario-logo" title="Ontario"></a>
+        </div>
+        <div class="footer-copy">
+            SNOW is a project of the Inclusive Design Research Centre, funded by Provincial Schools Branch, Ontario Ministry of Education.
+        </div>
     </footer>
 
 </div>

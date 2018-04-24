@@ -50,7 +50,7 @@ $snow_widgets = array(
         'id' => 'license-info',
         'before_widget' => '<div id="snow-license" class="small-12 medium-4 snow-license">',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class="a11y-site-footer">',
+        'before_title' => '<h2>',
         'after_title' => '</h2>'
     ),
     'contact' => array(
@@ -58,7 +58,7 @@ $snow_widgets = array(
         'id' => 'contact',
         'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class="a11y-site-footer">',
+        'before_title' => '<h2">',
         'after_title' => '</h2>'
     ),
     'partners' => array(
@@ -66,7 +66,7 @@ $snow_widgets = array(
         'id' => 'partners',
         'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class="a11y-site-footer">',
+        'before_title' => '<h2">',
         'after_title' => '</h2>'
     ),
     'post',

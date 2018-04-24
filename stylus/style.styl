@@ -798,6 +798,7 @@ h3.comment-reply-title {
     background-image: none;
     color: footer-color;
     font-size: 0.9rem;
+    text-align: center;
 
     &.row {
         // override Foundation margins.
@@ -825,7 +826,58 @@ h3.comment-reply-title {
         padding: 0;
         margin: 0;
     }
+
+    .snow-license, .snow-contact, .snow-partners {
+        border: 1rem solid footer-background;
+    }
 }
+
+.snow-footer-logo {
+    padding: 2rem 2rem;
+    background: #fff;
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.row {
+        // override Foundation margins.
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-copy {
+        padding-top: 2rem;
+        text-align: center;
+    }
+}
+
+.idrc-logo {
+    background-image: url("images/logo-idrc.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    width: 290px;
+    height: 80px;
+    position: relative;
+    margin-top: 0;
+    resize: both;
+}
+
+.ontario-logo {
+    background-image: url("images/logo-ontario.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    width: 290px;
+    height: 80px;
+    position: relative;
+    margin-top: 0;
+    resize: both;
+}
+
 
 /* Footer styles for the home page only. */
 .home .a11y-site-footer {
