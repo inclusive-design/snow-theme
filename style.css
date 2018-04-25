@@ -260,12 +260,9 @@ Tags: accessibility
     align-self: auto;
     margin: auto;
   }
-  .a11y-main-nav-items li.current-menu-item:before {
+  .a11y-main-nav-items li.current-menu-item {
     border-top: 0.6rem solid #0f191d;
-    width: calc(40rem / 7);
-    margin: 0 2.5rem;
-    position: absolute;
-    content: "";
+    margin-top: -0.25rem;
   }
   .a11y-site-header .snow-search {
     align-content: flex-end;
