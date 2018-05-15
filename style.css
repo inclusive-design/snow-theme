@@ -374,6 +374,7 @@ h2.snow-title {
   text-transform: uppercase;
   text-shadow: none;
   color: #fff;
+  background: rgba(15,25,29,0.7);
 }
 .a11y-site-tagline .a11y-tagline-emphasis {
   color: #f7ac82;
