@@ -424,7 +424,7 @@ h2.snow-title {
 /* Site Sidebar (appears on all other pages, except front page) */
 .a11y-site-aside {
   color: #e8ecb2;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   background: #e8ecb2;
 }
 .a11y-site-aside ul {
@@ -482,7 +482,7 @@ h2.snow-title {
 }
 .a11y-site-main h1,
 .a11y-entry-header h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-transform: capitalize;
   color: #dd535b;
   background-color: none;
@@ -499,18 +499,19 @@ h2.snow-title {
   font-size: 2rem;
 }
 .a11y-site-main article h2 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
 }
 .a11y-site-main article h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .a11y-site-main article blockquote {
   color: #0f191d;
-  border-left: 0.2rem solid #000;
+  border-left: 0.1rem solid #000;
 }
 .a11y-entry-content h2 {
   color: #000;
-  border-bottom: 0.2rem solid #000;
+  border-bottom: 0.1rem solid #000;
 }
 .a11y-entry-content h3 {
   color: #000;
@@ -596,7 +597,7 @@ h3.comment-reply-title {
 .ontario-logo {
   background-image: url("images/logo-ontario.svg");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: 65% bottom;
   background-size: contain;
   width: 290px;
   height: 80px;
