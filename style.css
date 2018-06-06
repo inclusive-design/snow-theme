@@ -596,7 +596,7 @@ h3.comment-reply-title {
 .ontario-logo {
   background-image: url("images/logo-ontario.svg");
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: right bottom;
   background-size: contain;
   width: 290px;
   height: 80px;
