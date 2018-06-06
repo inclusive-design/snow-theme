@@ -132,10 +132,11 @@ Tags: accessibility
   color: #7ec9bc;
   display: flex;
   align-items: flex-end;
-  background: url("./images/logo-COLOUR.svg") -0.1rem/10.5rem 4rem no-repeat;
-  background-size: 15rem 6rem;
-  width: 15rem;
-  height: 5rem;
+  background: url("./images/logo-COLOUR.svg") no-repeat;
+  background-size: auto 8rem;
+  background-position: 20% 25%;
+  width: 35rem;
+  height: 11rem;
 }
 .a11y-site-header .a11y-site-title a:hover {
   background-color: #7ec9bc;
@@ -192,6 +193,7 @@ Tags: accessibility
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 .a11y-main-nav-items ul a:hover {
   background-color: #7ec9bc;
@@ -897,7 +899,7 @@ h3.comment-reply-title {
     margin-bottom: 0;
     position: relative;
     padding-bottom: 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .a11y-site-header h1 {
     font-size: 2rem;
