@@ -51,12 +51,13 @@ get_sidebar('post');
         <div class="flc-toc-tocContainer"></div>
 
 
-        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-            <?php if(function_exists('bcn_display'))
-            {
-            bcn_display();
-            }?>
-        </div>
+        <?php
+if ( function_exists('yoast_breadcrumb') ) {
+yoast_breadcrumb('
+<p id="breadcrumbs">','</p>
+');
+}
+?>
 
         <h1><?php echo $category_name ?></h1>
         <section>
