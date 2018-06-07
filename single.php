@@ -13,6 +13,8 @@ get_sidebar('post');
     <main id="content" class="a11y-site-main columns">
     <div class="flc-toc-tocContainer"></div>
 
+    <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"><span property="name">%htitle%</span></a><meta property="position" content="%position%"></span>
+
     <?php
     while ( have_posts() ) : the_post();
 
