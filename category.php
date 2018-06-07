@@ -51,7 +51,12 @@ get_sidebar('post');
         <div class="flc-toc-tocContainer"></div>
 
 
-        <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"><span property="name">%htitle%</span></a><meta property="position" content="%position%"></span>
+        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+            <?php if(function_exists('bcn_display'))
+            {
+            bcn_display();
+            }?>
+        </div>
 
         <h1><?php echo $category_name ?></h1>
         <section>
