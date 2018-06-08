@@ -55,9 +55,9 @@ Tags: accessibility
   padding-bottom: 1rem;
   padding-left: 0;
   padding-right: 0;
-}
-.a11y-site-header nav {
-  display: inline-flex;
+/*    nav {
+        display: inline-flex;
+    }*/
 }
 .dropdown {
   padding: 0;
@@ -118,9 +118,9 @@ Tags: accessibility
 .a11y-site-header {
   background-color: masthead-background;
   padding: 0;
-}
-.a11y-site-header nav {
-  display: inline-flex;
+/*    nav {
+        display: inline-flex;
+    }*/
 }
 .a11y-site-header .a11y-site-title {
   margin: 0;
@@ -156,6 +156,10 @@ Tags: accessibility
   justify-content: center;
   padding: 0;
   margin: 0;
+}
+.a11y-main-nav {
+  display: flex;
+  flex-direction: row;
 }
 .a11y-main-nav .title-bar {
   display: inline-block;
@@ -203,6 +207,9 @@ Tags: accessibility
 .a11y-main-nav-items ul a:focus {
   outline: 0.2rem solid #0f191d;
 }
+.second-menu {
+  background: #7ec9bc;
+}
 @media screen and (min-width: 40em) and (max-width: 65.999em) {
   .a11y-main-nav-items {
     width: 100%;
@@ -231,7 +238,6 @@ Tags: accessibility
 /* Navigation for medium screens and larger. */
 @media screen and (min-width: 66em) {
   .a11y-main-nav-items ul {
-    border: 0.07rem solid;
     display: flex;
     width: 100%;
     justify-content: flex-start;

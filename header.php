@@ -69,6 +69,17 @@
                             </ul>
                         </div>
                     </div>
+                    <?php
+                        $sections = array(
+                            'second-menu' => array(
+                                'section_class' => '',
+                                'widgets' => array(
+                                    'second-menu' => 'second-menu'
+                                )
+                            )
+                        );
+                        add_widgets($sections, 'section');
+                    ?>
                 </nav>
             </div>
 

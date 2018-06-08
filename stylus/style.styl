@@ -216,9 +216,9 @@ apply-contrast-colours(foreground background fileSuffix) {
     padding-left: 0;
     padding-right: 0;
 
-    nav {
+/*    nav {
         display: inline-flex;
-    }
+    }*/
 }
 
 .dropdown {
@@ -287,9 +287,9 @@ apply-contrast-colours(foreground background fileSuffix) {
     background-color: masthead-background;
     padding: 0;
 
-    nav {
+/*    nav {
         display: inline-flex;
-    }
+    }*/
 
     .a11y-site-title {
         margin: 0;
@@ -335,6 +335,9 @@ apply-contrast-colours(foreground background fileSuffix) {
 }
 
 .a11y-main-nav {
+
+    display: flex;
+    flex-direction: row;
 
     .title-bar {
         display: inline-block;
@@ -396,6 +399,10 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 }
 
+.second-menu {
+    background: masthead-color;
+}
+
 @media screen and (min-width: 40em) and (max-width: 65.999em) {
     .a11y-main-nav-items {
 
@@ -435,7 +442,6 @@ apply-contrast-colours(foreground background fileSuffix) {
     .a11y-main-nav-items {
 
         ul {
-            border: 0.07rem solid;
             display: flex;
             width: 100%;
             justify-content: flex-start;

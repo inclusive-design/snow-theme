@@ -58,7 +58,7 @@ $snow_widgets = array(
         'id' => 'contact',
         'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
         'after_widget' => '</div>',
-        'before_title' => '<h2">',
+        'before_title' => '<h2>',
         'after_title' => '</h2>'
     ),
     'partners' => array(
@@ -66,8 +66,16 @@ $snow_widgets = array(
         'id' => 'partners',
         'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
         'after_widget' => '</div>',
-        'before_title' => '<h2">',
+        'before_title' => '<h2>',
         'after_title' => '</h2>'
+    ),
+    'menu' => array(
+        'name' => __( 'Second Menu', 'second-menu' ),
+        'id' => 'second-menu',
+        'before_widget' => '<div class="a11y-main-nav-items second-menu">',
+        'after_widget' => '</div>',
+        'before_title' => '',
+        'after_title' => ''
     ),
     'post',
     'page'
