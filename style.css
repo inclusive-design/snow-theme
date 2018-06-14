@@ -118,9 +118,6 @@ Tags: accessibility
 .a11y-site-header {
   background-color: masthead-background;
   padding: 0;
-/*    nav {
-        display: inline-flex;
-    }*/
 }
 .a11y-site-header .a11y-site-title {
   margin: 0;
@@ -133,10 +130,10 @@ Tags: accessibility
   display: flex;
   align-items: flex-end;
   background: url("./images/logo-COLOUR.svg") no-repeat;
-  background-size: auto 8rem;
-  background-position: 20% 25%;
-  width: 35rem;
-  height: 11rem;
+  background-size: auto 6rem;
+  background-position: 10% 24%;
+  width: 23rem;
+  height: 6rem;
 }
 .a11y-site-header .a11y-site-title a:hover {
   background-color: #7ec9bc;
@@ -472,7 +469,7 @@ h2.snow-title {
 .a11y-site-aside h3 {
   color: #e8ecb2;
   font-size: 1.2rem;
-  text-transform: capitalize;
+  text-transform: none;
 }
 /* Main Content Area Styles */
 .snow-access-title {
@@ -490,7 +487,7 @@ h2.snow-title {
 .a11y-site-main h1,
 .a11y-entry-header h1 {
   font-size: 2.2rem;
-  text-transform: capitalize;
+  text-transform: none;
   color: #dd535b;
   background-color: none;
   margin-top: 0;
@@ -507,7 +504,7 @@ h2.snow-title {
 }
 .a11y-site-main article h2 {
   font-size: 1.3rem;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .a11y-site-main article h3 {
   font-size: 1.1rem;
@@ -531,7 +528,7 @@ h1.entry-title {
   margin-top: 0;
   margin-bottom: 2rem;
   color: #dd535b;
-  text-transform: capitalize;
+  text-transform: none;
 }
 h3.comment-reply-title {
   color: #000;
@@ -894,6 +891,12 @@ h3.comment-reply-title {
     width: 4.1rem;
     height: 5.2rem;
   }
+  .a11y-site-header .a11y-site-title a {
+    background-size: auto 8rem;
+    background-position: 20% 25%;
+    width: 35rem;
+    height: 11rem;
+  }
   .column,
   .columns {
     padding: 0;
@@ -1007,6 +1010,12 @@ h3.comment-reply-title {
   }
   .a11y-site-aside ul ul {
     margin-left: 2rem;
+  }
+  .a11y-site-header .a11y-site-title a {
+    background-size: auto 8rem;
+    background-position: 20% 25%;
+    width: 35rem;
+    height: 11rem;
   }
   .fl-theme-wb .a11y-site-tagline {
     background: url("./images/banner-WHITE.jpg");
