@@ -405,6 +405,7 @@ h2.snow-title {
 }
 .a11y-front-panel.columns {
   padding: 0;
+  background-color: #fff;
 }
 .a11y-front-panel h2 {
   font-size: 1.2rem;
