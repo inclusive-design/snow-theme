@@ -321,13 +321,13 @@ Tags: accessibility
   padding: 2.5rem 6rem;
   background-color: #d4db7c;
 }
-.snow-experiences {
+.snow-prefooter {
   text-align: center;
   padding: 0;
   margin: 0;
   position: relative;
 }
-h2.snow-experiences-title {
+h2.snow-prefooter-title {
   text-transform: uppercase;
   text-align: center;
   color: #0f191d;
@@ -480,7 +480,7 @@ h2.snow-title {
 .snow-title {
   font-size: 1.5rem;
 }
-.snow-experiences-title {
+.snow-prefooter-title {
   font-size: 1.3rem;
   text-align: center;
   color: #0f191d;

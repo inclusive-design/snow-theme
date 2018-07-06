@@ -29,20 +29,20 @@ $snow_widgets = array(
         'before_title' => '<h2 class="snow-access-title">',
         'after_title' => '</h2>'
     ),
-    'snow-experiences' => array(
-        'name' => __( 'Experiences', 'experiences' ),
-        'id' => 'snow-experiences',
-        'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
+    'snow-prefooter' => array(
+        'name' => __( 'Prefooter', 'snow-prefooter' ),
+        'id' => 'snow-prefooter',
+        'before_widget' => '<div id="snow-prefooter" class="snow-prefooter">',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class="snow-experiences-title">',
+        'before_title' => '<h2 class="snow-prefooter-title">',
         'after_title' => '</h2>'
     ),
     'social-feeds' => array(
         'name' => __( 'Social Feeds', 'social-feeds' ),
         'id' => 'social-feeds',
-        'before_widget' => '<div id="social-feeds" class="snow-experiences">',
+        'before_widget' => '<div id="social-feeds" class="snow-prefooter">',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class="snow-experiences-title">',
+        'before_title' => '<h2 class="snow-prefooter-title">',
         'after_title' => '</h2>'
     ),
     'license-info' => array(

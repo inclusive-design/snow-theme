@@ -18,7 +18,7 @@
             'experiences' => array(
                 'section_class' => 'snow-section',
                 'widgets' => array(
-                    'snow-experiences' => 'snow-experiences',
+                    'snow-prefooter' => 'snow-prefooter',
                     'social-feeds' => 'social-feeds'
                 )
             ),
