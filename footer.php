@@ -15,7 +15,7 @@
 
     <?php
         $sections = array(
-            'experiences' => array(
+            'prefooter' => array(
                 'section_class' => 'snow-section',
                 'widgets' => array(
                     'snow-prefooter' => 'snow-prefooter',
