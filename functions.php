@@ -18,48 +18,64 @@ $snow_widgets = array(
         'id' => 'snow-home',
         'before_widget' => '<div id="snow-home" class="snow-home">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-title">',
+        'after_title' => '</h2>'
     ),
     'access-site' => array(
         'name' => __( 'Accessing the Site', 'access' ),
         'id' => 'access-site',
         'before_widget' => '<div id="snow-access" class="snow-access">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-access-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-access-title">',
+        'after_title' => '</h2>'
     ),
-    'snow-experiences' => array(
-        'name' => __( 'Experiences', 'experiences' ),
-        'id' => 'snow-experiences',
-        'before_widget' => '<div id="snow-experiences" class="snow-experiences">',
+    'snow-prefooter' => array(
+        'name' => __( 'Prefooter', 'snow-prefooter' ),
+        'id' => 'snow-prefooter',
+        'before_widget' => '<div id="snow-prefooter" class="snow-prefooter">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-experiences-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2 class="snow-prefooter-title">',
+        'after_title' => '</h2>'
+    ),
+    'social-feeds' => array(
+        'name' => __( 'Social Feeds', 'social-feeds' ),
+        'id' => 'social-feeds',
+        'before_widget' => '<div id="social-feeds" class="snow-prefooter">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="snow-prefooter-title">',
+        'after_title' => '</h2>'
     ),
     'license-info' => array(
         'name' => __( 'License Information', 'license-info' ),
         'id' => 'license-info',
         'before_widget' => '<div id="snow-license" class="small-12 medium-4 snow-license">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-license-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
     ),
     'contact' => array(
         'name' => __( 'Contact Information', 'contact' ),
         'id' => 'contact',
         'before_widget' => '<div id="snow-contact" class="small-12 medium-4 snow-contact">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-contact-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
     ),
     'partners' => array(
         'name' => __( 'Partners', 'partners' ),
         'id' => 'partners',
         'before_widget' => '<div id="snow-partners" class="small-12 medium-4 snow-partners">',
         'after_widget' => '</div>',
-        'before_title' => '<h1 class="snow-partners-title">',
-        'after_title' => '</h1>'
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
+    ),
+    'menu' => array(
+        'name' => __( 'Second Menu', 'second-menu' ),
+        'id' => 'second-menu',
+        'before_widget' => '<div class="a11y-main-nav-items second-menu">',
+        'after_widget' => '</div>',
+        'before_title' => '',
+        'after_title' => ''
     ),
     'post',
     'page'
@@ -250,7 +266,6 @@ function allow_pages_tags_categories() {
     }
 }
 add_action('init', 'allow_pages_tags_categories');
-
 
 // Ensure all tags and categories are included in queries
 function add_queries_tags_categories($wp_query) {

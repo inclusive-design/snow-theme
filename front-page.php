@@ -8,10 +8,13 @@ get_header(); ?>
 
     <main id="content" class="a11y-site-main small-12 columns">
         <div class="a11y-site-tagline">
-            <p><span>Welcome to</span><br /> <span class="a11y-tagline-emphasis">SNOW</span></p>
-            </span>
+            <h1><span>Welcome to</span><br /> <span class="a11y-tagline-emphasis">SNOW</span></h1>
         </div>
 
+        <div class="snow-container">
+            <div class="flc-toc-tocContainer"></div>
+        </div>
+        
         <?php
 
             $sections = array(
@@ -29,19 +32,8 @@ get_header(); ?>
                         'panel2' => 'a11y-front-panel2',
                         'panel3' => 'a11y-front-panel3',
                     )
-                ),
-                'experiences' => array(
-                    'section_class' => '',
-                    'widgets' => array(
-                        'snow-experiences' => 'snow-experiences'
-                    )
-                ),
-                'empty' => array(
-                    'section_class' => 'row a11y-panel-container',
-                    'widgets' => array()
                 )
             );
-
             add_widgets($sections, 'section');
         ?>
 

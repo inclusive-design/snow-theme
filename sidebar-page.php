@@ -10,7 +10,7 @@
 global $category_landing_id;
 ?>
 
-<aside class="a11y-site-aside small-14 medium-4 columns" role="complementary">
+<aside class="a11y-site-aside small-12 medium-4 columns" role="complementary">
     <?php
         create_sidebar('page');
     ?>

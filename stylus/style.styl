@@ -13,109 +13,102 @@ Tags: accessibility
 */
 
 /* Colours */
-peach ?= #F7AC82;
-orange ?= #F9C981;
-limegreen ?= #DCDE70;
-seagreen ?= #7EC9BC;
-black ?= #0F191D;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
 @font-face {
-    font-family: "Roboto";
+    font-family: verdana, sans-serif;
 }
 
-primary-font ?= "Roboto", sans-serif;
-header-font ?= "Roboto";
-header-color ?= #F9C981;
-body-background ?= #fff;
-corner-flourish-color ?= #fff;
+primary-font = verdana, sans-serif;
+header-font = verdana;
+header-color = #0F191D;
+body-background = #fff;
+corner-flourish-color = #fff;
+foreground = #fff;
 
 /* Masthead colours */
-masthead-background ?= #fff;
-masthead-color ?= #7EC9BC;
-masthead-color-hover ?= #fff;
-masthead-background-hover ?= #7EC9BC;
-masthead-border ?= 0.8rem solid #7EC9BC;
+masthead-color = #7EC9BC;
+masthead-background-hover = #7EC9BC;
+masthead-border = 0.8rem solid #7EC9BC;
 
-main-nav-link-color ?= #0F191D;
-main-nav-link-color-hover ?= #0F191D;
-main-nav-link-background-hover ?= #7EC9BC;
-main-nav-link-focus ?= 0.2rem solid #00303C;
+main-nav-link-color = #0F191D;
+main-nav-link-color-hover = #0F191D;
+main-nav-link-background-hover = #7EC9BC;
+main-nav-link-focus = 0.2rem solid #0F191D;
 
 /* Sidebar */
-sidebar-color ?= #DCDE70;
-sidebar-background ?= #DCDE70;
-sidebar-link-color ?= #0F191D;
-sidebar-link-background-hover ?= #0F191D;
-sidebar-link-color-hover ?= #0F191D;
-sidebar-link-focus ?= 0.2rem solid #0F191D;
+sidebar-color = #E8ECB2;
+sidebar-background = #E8ECB2;
+sidebar-link-color = #0F191D;
+sidebar-link-background-hover = #0F191D;
+sidebar-link-color-hover = #0F191D;
+sidebar-link-focus = 0.2rem solid #0F191D;
 
 /* Front Main Content Area */
-front-main-content-link-color ?= #0F191D;
-front-main-content-link-hover-background ?= #006274;
-front-main-content-link-hover ?= #fff;
-front-main-content-link-focus ?= 0.2rem solid #006274;
+front-main-content-link-color = #0F191D;
 
 /* Main Content Area for all other pages */
-main-content-border ?= 1.6rem solid #fff;
-main-content-background ?= #fff;
-main-content-color ?= #000;
-main-content-link-color ?= #AD3362;
+main-content-link-color = #385c8a;
+main-content-accent = #D4DB7C;
+main-content-background = #fff;
+main-content-color = #0F191D;
+main-content-title = #dd535b;
 
 /* Front Page Panels */
-front-panel-container-background ?= #F7AC82;
-front-panel-background ?= #fff;
-front-panel-header ?= #DCDE70;
-front-panel-text ?= #0F191D;
+front-panel-container-background = #F7AC82;
+front-panel-header = #D4DB7C;
+front-panel-text = #0F191D;
 
 /* Skip Links */
-skip-color ?= #006274;
-skip-background ?= #ECEDED;
-skip-focus-outer-border ?= #006274;
-skip-focus-inner-border ?= #ECEDED;
-skip-hover-color ?= #ECEDED;
-skip-hover-background ?= #006274;
+skip-color = #7EC9BC;
+skip-background = #fff;
+skip-focus-outer-border = #7EC9BC;
+skip-focus-inner-border = #fff;
+skip-hover-color = #0F191D;
+skip-hover-background = #7EC9BC;
 
 /* Front Page Footer */
-front-footer-background ?= #7EC9BC;
-front-footer-color ?= #fff;
-front-footer-link-color ?= #fff;
-front-footer-link-hover-background ?= #fff;
-front-footer-link-hover ?= #006274;
-front-footer-link-focus ?= 0.2rem solid #fff;
+front-footer-background = #7EC9BC;
+front-footer-color = #fff;
+front-footer-link-color = #fff;
+front-footer-link-hover-background = #fff;
+front-footer-link-hover = #006274;
+front-footer-link-focus = 0.2rem solid #fff;
 
 /* Sub Page Footer */
-footer-background ?= #7EC9BC;
-footer-color ?= #0F191D;
-footer-link-color ?= #0F191D;
-footer-link-hover-background ?= #0F191D;
-footer-link-hover ?= #fff;
-footer-link-focus ?= 0.2rem solid #0F191D;
+footer-background = #7EC9BC;
+footer-color = #0F191D;
+footer-link-color = #0F191D;
+footer-link-hover-background = #0F191D;
+footer-link-hover = #fff;
+footer-link-focus = 0.2rem solid #0F191D;
 
 /* Site description */
-site-tagline-color ?= #fff;
-site-tagline-emphasis ?= #F7AC82;
-site-tagline-background-image ?= "./images/banner.jpg";
+site-tagline-color = #fff;
+site-tagline-emphasis = #F7AC82;
+site-tagline-background-image = "./images/banner-COLOUR.jpg";
 
 /* Mixins */
 apply-contrast-sidebar-images(foreground fileSuffix) {
-/*    .a11y-site-aside {
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-01.svg");
+    .a11y-site-aside {
+        background-image: none;
     }
 
     .a11y-site-footer {
-        border-top: 0.2rem solid foreground;
-        background-image: url("./images/sidebar-graphic-"+fileSuffix+"-02.svg");
-    }*/
+        border-top: none;
+        background-image: none;
+    }
 }
 
 apply-contrast-tagline-background(fileSuffix) {
     .a11y-site-tagline {
-        background: url("./images/logo-"+fileSuffix+".svg");
-        background-position: 83% 3.6rem;
-        background-size: 14% auto;
+        background: url("./images/banner-"+fileSuffix+".jpg");
+        background-position: 9rem -5rem;
+        background-size: 82% auto;
         background-repeat: no-repeat;
+        padding: 3rem 15rem 3rem 15rem;
+        min-height: 25rem;
     }
 }
 
@@ -142,28 +135,48 @@ apply-contrast-colours(foreground background fileSuffix) {
         border: 0.2rem solid foreground;
     }
 
+    .a11y-site-header {
+        border-bottom: none;
+    }
+
     .a11y-site-tagline {
         text-shadow: none;
         background: none;
     }
 
+    .a11y-site-tagline h1 {
+        background: none !important;
+    }
+
     .a11y-panel-container {
-        background: foreground !important;
+        background: none !important;
+    }
+
+    .a11y-front-panel {
+        border-bottom-color: background !important;
+        border-top-color: background !important;
+        border-left-color: background !important;
+        border-right-color: background !important;
     }
 
     .a11y-site-aside {
         border-top: 1.6rem solid background !important;
     }
 
-    .a11y-site-header {
-        border-bottom: 0.2rem solid foreground;
-        h1 a {
+    .a11y-site-title {
+        a {
             background-image: url("./images/logo-"+fileSuffix+".svg");
         }
     }
 
+    .a11y-main-nav-items {
+        li.current-menu-item:before {
+            border-top: 0.6rem solid foreground;
+        }
+    }
+
     .a11y-site-footer {
-        border-top: 0.2rem solid;
+        border-top: none;
         p {
             background: none !important;
         }
@@ -176,42 +189,42 @@ apply-contrast-colours(foreground background fileSuffix) {
 }
 
 #ontario-logo {
-    width: 8rem;
-    fill: #fff;
-    margin: 0 auto;
-    display: block;
-    height: 2.2rem;
+    display: none;
 }
 
 /* General styles */
-html {
-    font-size: 16px;
-}
-
 .a11y-theme {
+    display: block;
     font-family: primary-font;
     background-color: body-background;
-    display: block !important;
 
     h1, h2, h3 {
         font-family: header-font;
         color: header-color;
-        text-transform: capitalize;
         font-weight: bold;
+    }
+
+    a {
+        text-decoration: underline;
+        color: main-content-link-color;
     }
 }
 
 .a11y-site-header {
-    padding: 0;
-    margin-top: 0;
+    margin-top: 1.2rem;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+
+/*    nav {
+        display: inline-flex;
+    }*/
 }
 
 .dropdown {
-    border: 0.01rem solid;
-    height: 5.5rem;
     padding: 0;
+    background-color: main-content-accent;
 }
-
 
 /* Skip links */
 #skip {
@@ -249,7 +262,7 @@ html {
 }
 
 /* UI Options. */
-.fl-prefsEditor-separatedPanel .fl-panelBar {
+.fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen {
     flex-flow: row wrap;
     display: flex;
     justify-content: flex-end;
@@ -276,9 +289,9 @@ html {
 
     .a11y-site-title {
         margin: 0;
+        padding: 0.5rem;
         display: inline-block;
         text-transform: none;
-        font-size: none;
     }
 
     .a11y-site-title a {
@@ -286,10 +299,11 @@ html {
         display:flex;
         align-items:flex-end;
 
-        background: url("./images/snow_logo.png") -0.1rem/10.5rem 4rem no-repeat;
-        background-size: 15rem 6rem;
-        width: 15rem;
-        height: 5rem;
+        background: url("./images/logo-COLOUR.svg") no-repeat;
+        background-size: auto 6rem;
+        background-position: 10% 24%;
+        width: 23rem;
+        height: 6rem;
 
         &:hover {
             background-color: masthead-background-hover;
@@ -301,12 +315,25 @@ html {
         }
     }
 
-    nav {
-        display: inline;
+    .snow-header {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .snow-search {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
     }
 }
 
 .a11y-main-nav {
+
+    display: flex;
+    flex-direction: row;
 
     .title-bar {
         display: inline-block;
@@ -341,37 +368,19 @@ html {
 
 /* Shared navigation styles for all screen sizes. */
 .a11y-main-nav-items {
+
     ul {
         display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: normal;
-        align-content: center;
-        width: 100%;
-
-        li {
-            width: 100%;
-            flex: 1 1 auto;
-            align-self: auto;
-            margin: 0rem !important;
-            text-align: center;
-        }
-
-        li.current-menu-item:before {
-            border-top: 0.6rem solid #000;
-            width: calc(40rem / 7);
-            margin: 0 2.5rem;
-            display: inline-block;
-            position: absolute;
-            content: "";
-        }
+        justify-content: space-between;
+        flex-wrap: wrap;
 
         a {
-            display: inline-block;
             color: main-nav-link-color;
             text-transform: uppercase;
+            text-decoration: none;
             font-weight: bold;
+            font-size: 0.9rem;
+            line-height: 1.2rem;
 
             &:hover {
                 background-color: main-nav-link-background-hover;
@@ -386,10 +395,21 @@ html {
     }
 }
 
-/* Navigation for medium screens and larger. */
-@media screen and (min-width: 40em) {
+.second-menu {
+    background: masthead-color;
+}
+
+@media screen and (min-width: 40em) and (max-width: 65.999em) {
     .a11y-main-nav-items {
+
         width: 100%;
+
+        ul li {
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            width: 100%;
+        }
 
         .menu-item {
             border-right: none;
@@ -400,9 +420,74 @@ html {
         }
 
         .menu li a {
+            padding: 0.7rem 0.8rem;
+        }
+    }
+
+    .a11y-site-header {
+        .snow-search {
+            align-content: flex-end;
+            align-self: flex-end;
+            justify-content: center;
+        }
+    }
+}
+
+/* Navigation for medium screens and larger. */
+@media screen and (min-width: 66em) {
+    .a11y-main-nav-items {
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: center;
+            flex-flow: row wrap;
+        }
+
+        a {
+            justify-content: center;
+            align-content: center;
+        }
+
+        ul li {
+            margin: 0;
+            flex: 1 1;
+        }
+
+        .menu-item {
+            border-right: none;
+
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+
+        .menu li a {
+            text-align: center;
             padding: 1.6rem 2rem;
             width: 100%;
             height: 100%;
+
+        }
+
+        li {
+            align-self: auto;
+            margin: auto;
+        }
+
+        li.current-menu-item {
+            border-top: 0.6rem solid main-nav-link-color;
+            margin-top: -0.25rem;
+        }
+    }
+
+    .a11y-site-header {
+        .snow-search {
+            align-content: flex-end;
+            align-self: flex-end;
+            justify-content: flex-end;
         }
     }
 }
@@ -411,26 +496,33 @@ html {
 .home .a11y-site-main {
     background-color: front-main-content-background;
     padding: 0;
+    border: 0;
     overflow-x: hidden;
+}
+
+.snow-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 2rem 0rem 2rem;
 }
 
 .snow-intro {
     position: relative;
-    z-index: 10;
     display: flex;
-    padding: 2rem;
-    box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
+    flex-direction: column;
+    padding: 0rem 2rem 2rem 2rem;
 }
 
 .snow-home {
-    flex-grow: 1;
+    flex: auto;
     padding: 2rem 2rem 2rem 0;
     float: left;
 }
 
 .snow-access {
-    width: 90rem;
-    border: 1px solid #DCDE70;
+    flex: auto;
+    width: 100%;
+    border: 1px solid main-content-accent;
     margin: auto;
     padding: 2rem;
     vertical-align: middle;
@@ -441,36 +533,37 @@ html {
 }
 
 .snow-access-title {
-    color: front-main-content-link-color !important;
     font-weight: bold;
     text-align: center;
-    border-bottom: 1px solid #DCDE70;
+    border-bottom: 1px solid main-content-accent;
     padding-bottom: 0.5rem;
-    font-size: 1.2rem !important;
+    text-transform: capitalize;
+    font-size: 1.2rem;
 }
 
-.snow-experiences {
+.snow-section {
+    padding: 2.5rem 6rem;
+    background-color: main-content-accent;
+}
+
+.snow-prefooter {
     text-align: center;
-    background-color: #DCDE70;
-    padding: 1rem 1rem;
+    padding: 0;
     margin: 0;
     position: relative;
-    z-index: 10;
-    box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
-
 }
 
-h1.snow-experiences-title {
+h2.snow-prefooter-title {
     text-transform: uppercase;
     text-align: center;
-    color: #0F191D;
-    font-size: 1.3rem !important;
+    color: front-main-content-link-color;
+    font-size: 1.3rem;
 }
 
-h1.snow-title {
+h2.snow-title {
     color: front-main-content-link-color;
     font-weight: bold;
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
 }
 
 .snow-license   {
@@ -485,67 +578,57 @@ h1.snow-title {
     float: right;
 }
 
-.column, .columns {
-    padding: 0 !important;
-}
-
-
 
 // Main - All other pages.
 .category,
-.single {
+.single,
+.page {
     main {
         border: none;
         background: main-content-background;
         padding: 1.6rem;
 
         a {
+            text-decoration: underline;
             color: main-content-link-color;
         }
 
-        a:focus,
-        a:hover {
-            text-decoration: underline;
-        }
     }
 
+}
+
+.column, .columns {
+     padding: 0;
 }
 
 /* Site Tagline (appears on front page only) */
 .a11y-site-tagline {
-    background-color: #274D5D;
-    background: url(site-tagline-background-image) 0 -3rem/100% auto no-repeat,#274D5D;
+    background-color: foreground;
+    background-image: url(site-tagline-background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
     padding: 1rem 2rem;
-
+    min-height: 15rem;
     display: flex;
-    justify-content: flex-end;
-
-    p {
-        width: 100%;
-    }
 
     span {
-        font-size: 6rem;
         font-weight: bold;
         text-transform: uppercase;
         text-shadow: none;
         color: site-tagline-color;
-        background: rgb(15,25,29);
         background: rgba(15,25,29,.7);
-        line-height: 8rem;
-        display: inline;
     }
 }
 
-.a11y-tagline-emphasis {
-    color: site-tagline-emphasis !important;
+.a11y-site-tagline .a11y-tagline-emphasis {
+    color: site-tagline-emphasis;
 }
 
 /* The Three Panels that appear on the front page. */
 .a11y-panel-container {
     padding: 2rem 2rem;
     background-color: front-panel-container-background;
-
 
     &.row {
         // override Foundation margins.
@@ -558,24 +641,32 @@ h1.snow-title {
     background-color: front-panel-background;
     border: 1rem solid front-panel-container-background;
 
-    color: inherit;
-
     &:focus, &:hover {
-        color: inherit;
+        color: none;
         border-color: front-panel-header;
     }
 
     &.columns {
         padding: 0;
+        background-color: #fff;
     }
 
-    h1 {
+    h2 {
         font-size: 1.2rem;
         text-transform: none;
+        padding: 1rem 1.5rem;
+        margin: 0;
+        color: front-main-content-link-color;
+        text-align: center;
+        background: front-panel-header;
     }
 
-    h1, section, .snow-widget {
-        padding: 0.5rem 1.5rem;
+    section {
+        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .snow-widget {
+        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
     }
 
     .snow-widget a {
@@ -588,11 +679,8 @@ h1.snow-title {
 /* Site Sidebar (appears on all other pages, except front page) */
 .a11y-site-aside {
     color: sidebar-color;
-    font-size: 1.1rem;
-    box-shadow: 0.09rem 0.2rem 1rem -0.2rem #808080;
+    font-size: 0.9rem;
     background: sidebar-background;
-    padding-top: 5rem;
-    z-index: 1;
 
     ul {
         list-style: none;
@@ -615,6 +703,7 @@ h1.snow-title {
         color: sidebar-link-color;
         padding: 0.4rem;
         margin-bottom: 0.2rem;
+        text-decoration: none;
         width: 100%;
         display: inline-block;
 
@@ -637,27 +726,39 @@ h1.snow-title {
     h1, h2, h3 {
         color: sidebar-color;
         font-size: 1.2rem;
+        text-transform: none;
     }
 }
 
 /* Main Content Area Styles */
-.a11y-site-main h1, .a11y-entry-header h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: #0F191D;
-    background-color: none !important;
+.snow-access-title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
-.a11y-panel-header {
+.snow-title {
+    font-size: 1.5rem;
+}
+
+.snow-prefooter-title {
+    font-size: 1.3rem;
     text-align: center;
-    background-color: front-panel-header;
-    color: #0F191D;
+    color: main-content-color;
+}
+
+.a11y-site-main h1, .a11y-entry-header h1 {
+    font-size: 2.2rem;
+    text-transform: none;
+    color: main-content-title;
+    background-color: none;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .a11y-site-main article {
     h1, h2, h3 {
         margin-bottom: 0.8rem;
-        margin-top: 2rem;
+        margin-top: 0;
     }
 
     h1 {
@@ -665,22 +766,43 @@ h1.snow-title {
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+        text-transform: none;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     blockquote {
         color: main-content-color;
-        border-left: 0.2rem solid #000;
+        border-left: 0.1rem solid #000;
     }
 }
 
 .a11y-entry-content h2 {
     color: #000;
-    border-bottom: 0.2rem solid #000;
+    border-bottom: 0.1rem solid #000;
+}
+
+.a11y-entry-content h3 {
+    color: #000;
+}
+
+.a11y-entry-content p {
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1.entry-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: main-content-title;
+    text-transform: none;
+}
+
+h3.comment-reply-title {
+    color: #000;
 }
 
 /* Footer */
@@ -689,8 +811,10 @@ h1.snow-title {
     display: flex;
     padding: 2rem 2rem;
     background-color: footer-background;
+    background-image: none;
     color: footer-color;
     font-size: 0.9rem;
+    text-align: center;
 
     &.row {
         // override Foundation margins.
@@ -700,8 +824,9 @@ h1.snow-title {
 
     a {
         color: footer-link-color;
+
         &:hover {
-            background-color: footer-link-hover-background
+            background-color: footer-link-hover-background;
             color: footer-link-hover;
         }
 
@@ -711,19 +836,72 @@ h1.snow-title {
         }
     }
 
-    h1 {
-        font-size: 0.9rem !important;
+    h2 {
+        font-size: 0.9rem;
         color: footer-color;
+        padding: 0;
+        margin: 0;
+    }
+
+    .snow-license, .snow-contact, .snow-partners {
+        border: 1rem solid footer-background;
     }
 }
+
+.snow-footer-logo {
+    padding: 2rem 2rem;
+    background: #fff;
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.row {
+        // override Foundation margins.
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-copy {
+        padding-top: 2rem;
+        text-align: center;
+    }
+}
+
+.idrc-logo {
+    background-image: url("images/logo-idrc.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    width: 290px;
+    height: 80px;
+    position: relative;
+    margin-top: 0;
+    resize: both;
+}
+
+.ontario-logo {
+    background-image: url("images/logo-ontario.svg");
+    background-repeat: no-repeat;
+    background-position: 65% bottom;
+    background-size: contain;
+    width: 290px;
+    height: 80px;
+    position: relative;
+    margin-top: 0;
+    resize: both;
+}
+
 
 /* Footer styles for the home page only. */
 .home .a11y-site-footer {
     background-color: front-footer-background;
 
-    a{
+    a {
         &:hover {
-            background-color: front-footer-link-hover-background
+            background-color: front-footer-link-hover-background;
             color: front-footer-link-hover;
         }
 
@@ -771,8 +949,18 @@ h1.snow-title {
           height: 5.2rem;
       }
 
+    .a11y-site-header {
+
+        .a11y-site-title a {
+            background-size: auto 8rem;
+            background-position: 20% 25%;
+            width: 35rem;
+            height: 11rem;
+        }
+     }
+
       .column, .columns {
-        padding: 0 !important;
+        padding: 0;
       }
 
       .fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
@@ -780,10 +968,12 @@ h1.snow-title {
       }
 
      .a11y-site-header {
+         margin-top: 0;
          border-bottom: 0;
          margin-bottom: 0;
          position: relative;
          padding-bottom: 0;
+         padding-top: 1rem;
 
          h1 {
              font-size: 2rem;
@@ -805,11 +995,7 @@ h1.snow-title {
       }
 
       .a11y-site-aside {
-          padding: 3rem 1rem 25rem 1.6rem !important;
-          background-image: url("./images/sidebar-graphic-COLOUR-01.svg");
-          background-position: left bottom;
-          background-repeat: no-repeat;
-          background-size: 18rem auto;
+          padding: 6rem 1rem 25rem 1.6rem;
 
           ul ul {
               margin-left: 1rem;
@@ -819,25 +1005,35 @@ h1.snow-title {
       .a11y-site-tagline {
           margin: 0 -10rem;
           padding: 3rem 15rem;
-          min-height: 16rem;
-          font-size: 1.6rem;
           text-align: right;
-          background-position: 0 -10rem;
+          background-position: 0% 0%;
+          justify-content: flex-end;
+          min-height: 35rem;
+
+          span {
+            font-size: 6rem;
+            font-weight: bold;
+            line-height: 8rem;
+            display: inline;
+            align-items: flex-start;
+        }
       }
 
       .a11y-site-footer {
-          background-image: url("./images/sidebar-graphic-COLOUR-02.svg");
-          background-position: left top;
-          background-repeat: no-repeat;
-
-          background-size: 18rem auto;
+          background-image: none;
       }
 
-      .single .a11y-site-main, .category .a11y-site-main {
-          border-top: main-content-border;
-          border-left: main-content-border;
-          border-right: main-content-border;
-          padding-bottom: 4rem;
+      .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main, .columns .a11y-site-main {
+          border: 0;
+          padding: 6rem 5rem 4rem 5rem;
+      }
+
+      .home .a11y-site-main {
+        padding: 0;
+      }
+
+      .snow-intro {
+        flex-direction: row;
       }
 
       .fl-theme-wb {
@@ -865,12 +1061,9 @@ h1.snow-title {
 /* Large screens and bigger */
 @media screen and (min-width: 64em) {
       .a11y-site-tagline {
-          background: url("./images/logo-COLOUR.svg") no-repeat,
-                      url(site-tagline-background-image) no-repeat,
-                      #274D5D;
-          background-position: 83% 3.6rem, 9rem -5rem;
-          background-size: 14% auto, 82% auto;
-
+          background: url(site-tagline-background-image) no-repeat, #fff;
+          background-position: 9rem -5rem;
+          background-size: 82% auto;
           padding: 3rem 15rem 3rem 15rem;
           min-height: 25rem;
       }
@@ -878,6 +1071,16 @@ h1.snow-title {
       .a11y-site-aside ul ul {
           margin-left: 2rem;
       }
+
+    .a11y-site-header {
+
+        .a11y-site-title a {
+            background-size: auto 8rem;
+            background-position: 20% 25%;
+            width: 35rem;
+            height: 11rem;
+        }
+     }
 
       .fl-theme-wb {
           apply-contrast-tagline-background ("WHITE");
@@ -900,29 +1103,39 @@ h1.snow-title {
       }
 }
 
-
+/* Overriding Foundation to work with UIO */
+label, p {
+  line-height: inherit;
+}
 
 /* Styles specific for Font Awesome */
 span.fa {
     font: normal normal normal 3rem FontAwesome !important; /* Fix a bug where UIO was replacing icon with adjuster font */
 }
 
-.a11y-front-panel {
-    h1 {
-        font-size: 1.2rem;
-        text-transform: none;
-        padding: 1rem 1.5rem;
-        margin: 0;
-    }
+/* Search bar */
 
-    section {
-        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-    }
+#searchform {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    border: 0.09rem solid #0f191d;
+    padding: 0.1rem 0.8rem;
+    width: 20rem;
 }
+
+#search {
+    flex-grow: 2;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
 
 /* Styles for Social media feeds */
 .bi-social-feeds .a11y-front-panel:focus,
 .bi-social-feeds .a11y-front-panel:hover {
-    border-color: #eceded;
+    border-color: front-panel-header;
 }
 

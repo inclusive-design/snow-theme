@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation-flex.min.css" />
     <?php wp_head(); ?>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
 </head>
 
@@ -35,17 +36,24 @@
             ?>
 
             <div class="a11y-site-header small-12 columns">
-                <h1 class="a11y-site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
-                </h1>
+                <div class="row snow-header">
+                    <div class="small-12 large-8 a11y-site-title">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
+                    </div>
+                    <div class="small-12 large-4 snow-search">
+                        <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+                            <input type="text" value="" name="s" id="search" /><button type="submit" id="searchsubmit">Search</button>
+                        </form>
+                    </div>
+                </div>
 
                 <nav class="a11y-main-nav">
-                    
-
+                    <div class="title-bar float-right" data-responsive-toggle="site-menu" data-hide-for="medium">
+                        <button class="menu-icon" type="button" data-toggle="site-menu"></button>
+                    </div>
                     <div id="site-menu">
                         <div class="top-bar-left a11y-main-nav-items">
                             <ul class="dropdown menu" data-dropdown-menu>
-                                <li class="show-for-small-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Home</a></li>
                                 <?php echo $nav_menu;
                                 /*
                                 Check that the Feedback Post plugin is installed.
@@ -61,6 +69,17 @@
                             </ul>
                         </div>
                     </div>
+                    <?php
+                        $sections = array(
+                            'second-menu' => array(
+                                'section_class' => '',
+                                'widgets' => array(
+                                    'second-menu' => 'second-menu'
+                                )
+                            )
+                        );
+                        add_widgets($sections, 'section');
+                    ?>
                 </nav>
             </div>
 
