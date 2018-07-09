@@ -20,6 +20,14 @@ This theme is still under development.
 2. Copy this theme into a sub-directory in your Wordpress `themes` directory.
 3. Activate the `SNOW` theme.
 
+## Generating CSS files
+
+1. Install [Stylus](http://stylus-lang.com/).
+2. Run this command in the command line:
+```
+stylus < ./stylus/style.styl > style.css
+```
+
 # Content Structure
 
 The structure of the content for the SNOW site follows the content structure outlined in the wp-a11y theme.
