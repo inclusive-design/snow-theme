@@ -198,7 +198,7 @@ Tags: accessibility
   line-height: 1.2rem;
 }
 .a11y-main-nav-items ul a:hover {
-  background-color: #7ec9bc;
+  background-color: #fff;
   color: #0f191d;
 }
 .a11y-main-nav-items ul a:focus {
@@ -956,7 +956,7 @@ h3.comment-reply-title {
   .page .a11y-site-main,
   .columns .a11y-site-main {
     border: 0;
-    padding: 6rem 5rem 4rem 5rem;
+    padding: 2.5rem 5rem 4rem 5rem;
   }
   .home .a11y-site-main {
     padding: 0;
@@ -1083,6 +1083,26 @@ span.fa {
   padding: 0;
   margin: 0;
   box-shadow: none;
+}
+/* Breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+}
+.breadcrumbs li {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: capitalize;
+  font-size: 0.85rem;
+  margin-right: 0.8rem;
+}
+.breadcrumbs li:after {
+  display: none;
+}
+.separator {
+  color: #fff;
 }
 /* Styles for Social media feeds */
 .bi-social-feeds .a11y-front-panel:focus,

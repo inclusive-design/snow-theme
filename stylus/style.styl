@@ -34,7 +34,7 @@ masthead-border = 0.8rem solid #7EC9BC;
 
 main-nav-link-color = #0F191D;
 main-nav-link-color-hover = #0F191D;
-main-nav-link-background-hover = #7EC9BC;
+main-nav-link-background-hover = #fff;
 main-nav-link-focus = 0.2rem solid #0F191D;
 
 /* Sidebar */
@@ -1025,7 +1025,7 @@ h3.comment-reply-title {
 
       .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main, .columns .a11y-site-main {
           border: 0;
-          padding: 6rem 5rem 4rem 5rem;
+          padding: 2.5rem 5rem 4rem 5rem;
       }
 
       .home .a11y-site-main {
@@ -1132,6 +1132,30 @@ span.fa {
     box-shadow: none;
 }
 
+/* Breadcrumbs */
+
+.breadcrumbs {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-size: 0.85rem;
+    margin-right: 0.8rem;
+
+    &:after {
+        display: none;
+    }
+}
+
+.separator {
+    color: #fff;
+}
 
 /* Styles for Social media feeds */
 .bi-social-feeds .a11y-front-panel:focus,
