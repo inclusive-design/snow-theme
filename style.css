@@ -198,7 +198,7 @@ Tags: accessibility
   line-height: 1.2rem;
 }
 .a11y-main-nav-items ul a:hover {
-  background-color: #7ec9bc;
+  background-color: #fff;
   color: #0f191d;
 }
 .a11y-main-nav-items ul a:focus {
