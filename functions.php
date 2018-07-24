@@ -172,6 +172,9 @@ add_filter('widget_text', 'do_shortcode');
 
 /* Create sidebar menus for posts or pages */
 function create_sidebar($post_type) {
+    // Get currently displayed category ID as defined in category.php
+    global $category_landing_id;
+    
     $category_current = get_the_category();
     $category_link = get_term_link ($category_current[0]->slug, "category");
     $current_displayed_id = get_the_ID (); // the ID of the post currently displayed in the main content panel.
@@ -180,6 +183,7 @@ function create_sidebar($post_type) {
         $args = array(
         // get posts belonging to the current category.
             'post_type' => $post_type,
+            'posts_per_page'=>-1,
             'category_name' => $category_current[0]->slug,
         );
         $sidebar_query = new WP_Query($args);
@@ -280,7 +284,6 @@ function add_queries_tags_categories($wp_query) {
 }
 add_action('pre_get_posts', 'add_queries_tags_categories');
 
-
 // Breadcrumbs
 // Modified from https://www.thewebtaylor.com/articles/wordpress-creating-breadcrumbs-without-a-plugin
 function custom_breadcrumbs() {
@@ -288,8 +291,8 @@ function custom_breadcrumbs() {
     wp_reset_query();
 
     // Settings
-    $separator          = '&gt;';
     $breadcrumbs_class   = 'breadcrumbs';
+    $output = '';
 
     // Get the query & post information
     global $post,$wp_query;
@@ -298,11 +301,12 @@ function custom_breadcrumbs() {
     if ( !is_front_page() ) {
 
         // Build the breadcrums
-        echo '<ul class="' . $breadcrumbs_class . '">';
+        $output .= '<nav aria-label="breadcrumb">';
+        $output .= '<ul class="' . $breadcrumbs_class . '">';
 
         if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
 
-            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . '</strong></li>';
+            $output .= '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . '</strong></li>';
 
         } else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
 
@@ -315,14 +319,11 @@ function custom_breadcrumbs() {
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_archive = get_post_type_archive_link($post_type);
 
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
-                echo '<li class="separator"> ' . $separator . ' </li>';
-
+                $output .= '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
             }
 
         } else if ( is_single() ) {
 
-            // If post is a custom post type
             $post_type = get_post_type();
 
             // If it is a custom post type display name and link
@@ -331,9 +332,7 @@ function custom_breadcrumbs() {
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_archive = get_post_type_archive_link($post_type);
 
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
-                echo '<li class="separator"> ' . $separator . ' </li>';
-
+                $output .= '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
             }
 
             // Get post category info
@@ -344,31 +343,20 @@ function custom_breadcrumbs() {
                 // Get last category post is in
                 $last_category = end(array_values($category));
 
-                // Get parent any categories and create array
-                $get_cat_parents = rtrim(get_category_parents($last_category->term_id, true, ','),',');
-                $cat_parents = explode(',',$get_cat_parents);
+                // If there is a parent category, get all possible parents.
+                if ($last_category->category_parent > 0){
+                    $output .= '<li>';
 
-                // Loop through parent categories and store in variable $cat_display
-                $cat_display = '';
-                foreach($cat_parents as $parents) {
-                    $cat_display .= '<li class="item-cat">'.$parents.'</li>';
-                    $cat_display .= '<li class="separator"> ' . $separator . ' </li>';
+                    // Get a string of parents as links, each separated by </li><li>.
+                    $parent_cats = get_category_parents($last_category->term_id, true, '</li><li>');
+
+                    // Trim off the last '<li>' from the output so last list item closes properly.
+                    $output .= substr ($parent_cats, 0, -(strlen('<li>')));
                 }
 
+                // The current item in the breadcrumb.
+                $output .= '<li class="item-current" aria-current="page"><strong>' . get_the_title() . '</strong></li>';
             }
-
-            // Check if the post is in a category
-            if(!empty($last_category)) {
-                echo $cat_display;
-                echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
-
-            }
-
-        } else if ( is_category() ) {
-
-            // Category page
-            echo '<li class="item-current item-cat"><strong class="bread-current bread-cat">' . single_cat_title('', false) . '</strong></li>';
-
         } else if ( is_page() ) {
 
             // Standard page
@@ -381,29 +369,26 @@ function custom_breadcrumbs() {
                 $anc = array_reverse($anc);
 
                 // Parent page loop
-                if ( !isset( $parents ) ) $parents = null;
+                // if ( !isset( $parents ) ) $parents = null;
                 foreach ( $anc as $ancestor ) {
-                    $parents .= '<li class="item-parent item-parent-' . $ancestor . '"><a class="bread-parent bread-parent-' . $ancestor . '" href="' . get_permalink($ancestor) . '" title="' . get_the_title($ancestor) . '">' . get_the_title($ancestor) . '</a></li>';
-                    $parents .= '<li class="separator separator-' . $ancestor . '"> ' . $separator . ' </li>';
+                    $output .= '<li><a href="' . get_permalink($ancestor) . '>' . get_the_title($ancestor) . '</a></li>';
                 }
 
-                // Display parent pages
-                echo $parents;
-
                 // Current page
-                echo '<li class="item-current item-' . $post->ID . '"><strong title="' . get_the_title() . '"> ' . get_the_title() . '</strong></li>';
+                $output .= '<li class="item-current"><strong>' . get_the_title() . '</strong></li>';
 
             } else {
 
-                // Just display current page if not parents
-                echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '"> ' . get_the_title() . '</strong></li>';
+                // Just display current page if no parents
+                $output .= '<li class="item-current"><strong>' . get_the_title() . '</strong></li>';
 
             }
 
         }
 
-        echo '</ul>';
+        $output .= '</ul></nav>';
 
+        echo $output;
     }
 
 }

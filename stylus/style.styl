@@ -173,7 +173,16 @@ apply-contrast-colours(foreground background fileSuffix) {
         li.current-menu-item:before {
             border-top: 0.6rem solid foreground;
         }
+        li {
+            outline: 0.2rem solid foreground;
+        }
+        li.current-menu-item a {
+            background: foreground !important;
+            color: background !important;
+        }
     }
+
+
 
     .a11y-site-footer {
         border-top: none;
@@ -477,9 +486,8 @@ apply-contrast-colours(foreground background fileSuffix) {
             margin: auto;
         }
 
-        li.current-menu-item {
-            border-top: 0.6rem solid main-nav-link-color;
-            margin-top: -0.25rem;
+        li.current-menu-item a {
+            outline: main-nav-link-focus;
         }
     }
 
@@ -768,30 +776,27 @@ h2.snow-title {
     h2 {
         font-size: 1.3rem;
         text-transform: none;
+        color: main-content-color;
+        border-bottom: 0.1rem solid main-content-color;
+        margin-top: 2rem;
     }
 
     h3 {
         font-size: 1.1rem;
+        text-transform: none;
+        color: main-content-color;
+        margin-top: 2.5rem;
     }
 
     blockquote {
         color: main-content-color;
-        border-left: 0.1rem solid #000;
+        border-left: 0.1rem solid main-content-color;
     }
-}
 
-.a11y-entry-content h2 {
-    color: #000;
-    border-bottom: 0.1rem solid #000;
-}
-
-.a11y-entry-content h3 {
-    color: #000;
-}
-
-.a11y-entry-content p {
-    line-height: 2rem;
-    margin-bottom: 2rem;
+    p {
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 h1.entry-title {
@@ -803,6 +808,14 @@ h1.entry-title {
 
 h3.comment-reply-title {
     color: #000;
+}
+
+.a11y-site-main table td {
+    vertical-align: initial;
+
+    p {
+        line-height: normal;
+    }
 }
 
 /* Footer */
@@ -1146,20 +1159,20 @@ span.fa {
     vertical-align: middle;
     text-transform: capitalize;
     font-size: 0.85rem;
-    margin-right: 0.8rem;
 
-    &:after {
-        display: none;
+    &:not(:last-child)::after {
+        content: ">";
+        color: #000;
     }
 }
 
 .separator {
-    color: #fff;
+    margin: 0 0.5rem;
 }
+
 
 /* Styles for Social media feeds */
 .bi-social-feeds .a11y-front-panel:focus,
 .bi-social-feeds .a11y-front-panel:hover {
     border-color: front-panel-header;
 }
-
