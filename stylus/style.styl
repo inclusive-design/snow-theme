@@ -29,7 +29,7 @@ foreground = #fff;
 
 /* Masthead colours */
 masthead-color = #7EC9BC;
-masthead-background-hover = #7EC9BC;
+masthead-background-hover = #E8ECB2;
 masthead-border = 0.8rem solid #7EC9BC;
 
 main-nav-link-color = #0F191D;
@@ -59,6 +59,7 @@ main-content-title = #dd535b;
 front-panel-container-background = #F7AC82;
 front-panel-header = #D4DB7C;
 front-panel-text = #0F191D;
+front-panel-background = #fff;
 
 /* Skip Links */
 skip-color = #7EC9BC;
@@ -76,13 +77,13 @@ front-footer-link-hover-background = #fff;
 front-footer-link-hover = #006274;
 front-footer-link-focus = 0.2rem solid #fff;
 
-/* Sub Page Footer */
-footer-background = #7EC9BC;
-footer-color = #0F191D;
-footer-link-color = #0F191D;
-footer-link-hover-background = #0F191D;
-footer-link-hover = #fff;
-footer-link-focus = 0.2rem solid #0F191D;
+/* Pre Footer */
+pre-footer-background = #7EC9BC;
+pre-footer-color = #0F191D;
+pre-footer-link-color = #0F191D;
+pre-footer-link-hover-background = #0F191D;
+pre-footer-link-hover = #fff;
+pre-footer-link-focus = 0.2rem solid #0F191D;
 
 /* Site description */
 site-tagline-color = #fff;
@@ -283,7 +284,7 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 
     button:focus {
-        outline: 0.2rem solid #000;
+        outline: main-nav-link-focus;
     }
 
     .fl-prefsEditor-showHide {
@@ -648,15 +649,11 @@ h2.snow-title {
 .a11y-front-panel {
     background-color: front-panel-background;
     border: 1rem solid front-panel-container-background;
+    padding: 0;
 
     &:focus, &:hover {
         color: none;
         border-color: front-panel-header;
-    }
-
-    &.columns {
-        padding: 0;
-        background-color: #fff;
     }
 
     h2 {
@@ -807,7 +804,7 @@ h1.entry-title {
 }
 
 h3.comment-reply-title {
-    color: #000;
+    color: main-content-color;
 }
 
 .a11y-site-main table td {
@@ -823,9 +820,9 @@ h3.comment-reply-title {
 
     display: flex;
     padding: 2rem 2rem;
-    background-color: footer-background;
+    background-color: pre-footer-background;
     background-image: none;
-    color: footer-color;
+    color: pre-footer-color;
     font-size: 0.9rem;
     text-align: center;
 
@@ -836,28 +833,28 @@ h3.comment-reply-title {
     }
 
     a {
-        color: footer-link-color;
+        color: pre-footer-link-color;
 
         &:hover {
-            background-color: footer-link-hover-background;
-            color: footer-link-hover;
+            background-color: pre-footer-link-hover-background;
+            color: pre-footer-link-hover;
         }
 
         &:focus {
-            outline: footer-link-focus;
-            color: footer-link-color; // override Foundation style.
+            outline: pre-footer-link-focus;
+            color: pre-footer-link-color; // override Foundation style.
         }
     }
 
     h2 {
         font-size: 0.9rem;
-        color: footer-color;
+        color: pre-footer-color;
         padding: 0;
         margin: 0;
     }
 
     .snow-license, .snow-contact, .snow-partners {
-        border: 1rem solid footer-background;
+        border: 1rem solid pre-footer-background;
     }
 }
 

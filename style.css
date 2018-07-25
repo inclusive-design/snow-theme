@@ -23,7 +23,7 @@ Tags: accessibility
 /* Front Page Panels */
 /* Skip Links */
 /* Front Page Footer */
-/* Sub Page Footer */
+/* Pre Footer */
 /* Site description */
 /* Mixins */
 /* Styles for specific SVG images. */
@@ -109,7 +109,7 @@ Tags: accessibility
   margin-right: 5em;
 }
 .fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen button:focus {
-  outline: 0.2rem solid #000;
+  outline: 0.2rem solid #0f191d;
 }
 .fl-prefsEditor-separatedPanel .fl-panelBar-wideScreen .fl-prefsEditor-showHide {
   min-width: 7em;
@@ -136,7 +136,7 @@ Tags: accessibility
   height: 6rem;
 }
 .a11y-site-header .a11y-site-title a:hover {
-  background-color: #7ec9bc;
+  background-color: #e8ecb2;
   color: masthead-color-hover;
 }
 .a11y-site-header .a11y-site-title a:focus {
@@ -394,17 +394,14 @@ h2.snow-title {
   margin-right: 0;
 }
 .a11y-front-panel {
-  background-color: front-panel-background;
+  background-color: #fff;
   border: 1rem solid #f7ac82;
+  padding: 0;
 }
 .a11y-front-panel:focus,
 .a11y-front-panel:hover {
   color: none;
   border-color: #d4db7c;
-}
-.a11y-front-panel.columns {
-  padding: 0;
-  background-color: #fff;
 }
 .a11y-front-panel h2 {
   font-size: 1.2rem;
@@ -530,7 +527,7 @@ h1.entry-title {
   text-transform: none;
 }
 h3.comment-reply-title {
-  color: #000;
+  color: #0f191d;
 }
 .a11y-site-main table td {
   vertical-align: initial;
