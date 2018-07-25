@@ -50,13 +50,7 @@ get_sidebar('post');
     <main id="content" class="a11y-site-main columns">
         <div class="flc-toc-tocContainer"></div>
 
-
-        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-            <?php if(function_exists('bcn_display'))
-            {
-            bcn_display();
-            }?>
-        </div>
+        <?php custom_breadcrumbs(); ?>
 
         <h1><?php echo $category_name ?></h1>
         <section>

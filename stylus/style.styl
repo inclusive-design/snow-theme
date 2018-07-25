@@ -29,12 +29,12 @@ foreground = #fff;
 
 /* Masthead colours */
 masthead-color = #7EC9BC;
-masthead-background-hover = #7EC9BC;
+masthead-background-hover = #E8ECB2;
 masthead-border = 0.8rem solid #7EC9BC;
 
 main-nav-link-color = #0F191D;
 main-nav-link-color-hover = #0F191D;
-main-nav-link-background-hover = #7EC9BC;
+main-nav-link-background-hover = #fff;
 main-nav-link-focus = 0.2rem solid #0F191D;
 
 /* Sidebar */
@@ -59,6 +59,7 @@ main-content-title = #dd535b;
 front-panel-container-background = #F7AC82;
 front-panel-header = #D4DB7C;
 front-panel-text = #0F191D;
+front-panel-background = #fff;
 
 /* Skip Links */
 skip-color = #7EC9BC;
@@ -76,13 +77,13 @@ front-footer-link-hover-background = #fff;
 front-footer-link-hover = #006274;
 front-footer-link-focus = 0.2rem solid #fff;
 
-/* Sub Page Footer */
-footer-background = #7EC9BC;
-footer-color = #0F191D;
-footer-link-color = #0F191D;
-footer-link-hover-background = #0F191D;
-footer-link-hover = #fff;
-footer-link-focus = 0.2rem solid #0F191D;
+/* Pre Footer */
+pre-footer-background = #7EC9BC;
+pre-footer-color = #0F191D;
+pre-footer-link-color = #0F191D;
+pre-footer-link-hover-background = #0F191D;
+pre-footer-link-hover = #fff;
+pre-footer-link-focus = 0.2rem solid #0F191D;
 
 /* Site description */
 site-tagline-color = #fff;
@@ -173,7 +174,16 @@ apply-contrast-colours(foreground background fileSuffix) {
         li.current-menu-item:before {
             border-top: 0.6rem solid foreground;
         }
+        li {
+            outline: 0.2rem solid foreground;
+        }
+        li.current-menu-item a {
+            background: foreground !important;
+            color: background !important;
+        }
     }
+
+
 
     .a11y-site-footer {
         border-top: none;
@@ -274,7 +284,7 @@ apply-contrast-colours(foreground background fileSuffix) {
     }
 
     button:focus {
-        outline: 0.2rem solid #000;
+        outline: main-nav-link-focus;
     }
 
     .fl-prefsEditor-showHide {
@@ -477,9 +487,8 @@ apply-contrast-colours(foreground background fileSuffix) {
             margin: auto;
         }
 
-        li.current-menu-item {
-            border-top: 0.6rem solid main-nav-link-color;
-            margin-top: -0.25rem;
+        li.current-menu-item a {
+            outline: main-nav-link-focus;
         }
     }
 
@@ -640,15 +649,11 @@ h2.snow-title {
 .a11y-front-panel {
     background-color: front-panel-background;
     border: 1rem solid front-panel-container-background;
+    padding: 0;
 
     &:focus, &:hover {
         color: none;
         border-color: front-panel-header;
-    }
-
-    &.columns {
-        padding: 0;
-        background-color: #fff;
     }
 
     h2 {
@@ -768,30 +773,27 @@ h2.snow-title {
     h2 {
         font-size: 1.3rem;
         text-transform: none;
+        color: main-content-color;
+        border-bottom: 0.1rem solid main-content-color;
+        margin-top: 2rem;
     }
 
     h3 {
         font-size: 1.1rem;
+        text-transform: none;
+        color: main-content-color;
+        margin-top: 2.5rem;
     }
 
     blockquote {
         color: main-content-color;
-        border-left: 0.1rem solid #000;
+        border-left: 0.1rem solid main-content-color;
     }
-}
 
-.a11y-entry-content h2 {
-    color: #000;
-    border-bottom: 0.1rem solid #000;
-}
-
-.a11y-entry-content h3 {
-    color: #000;
-}
-
-.a11y-entry-content p {
-    line-height: 2rem;
-    margin-bottom: 2rem;
+    p {
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 h1.entry-title {
@@ -802,7 +804,15 @@ h1.entry-title {
 }
 
 h3.comment-reply-title {
-    color: #000;
+    color: main-content-color;
+}
+
+.a11y-site-main table td {
+    vertical-align: initial;
+
+    p {
+        line-height: normal;
+    }
 }
 
 /* Footer */
@@ -810,9 +820,9 @@ h3.comment-reply-title {
 
     display: flex;
     padding: 2rem 2rem;
-    background-color: footer-background;
+    background-color: pre-footer-background;
     background-image: none;
-    color: footer-color;
+    color: pre-footer-color;
     font-size: 0.9rem;
     text-align: center;
 
@@ -823,28 +833,28 @@ h3.comment-reply-title {
     }
 
     a {
-        color: footer-link-color;
+        color: pre-footer-link-color;
 
         &:hover {
-            background-color: footer-link-hover-background;
-            color: footer-link-hover;
+            background-color: pre-footer-link-hover-background;
+            color: pre-footer-link-hover;
         }
 
         &:focus {
-            outline: footer-link-focus;
-            color: footer-link-color; // override Foundation style.
+            outline: pre-footer-link-focus;
+            color: pre-footer-link-color; // override Foundation style.
         }
     }
 
     h2 {
         font-size: 0.9rem;
-        color: footer-color;
+        color: pre-footer-color;
         padding: 0;
         margin: 0;
     }
 
     .snow-license, .snow-contact, .snow-partners {
-        border: 1rem solid footer-background;
+        border: 1rem solid pre-footer-background;
     }
 }
 
@@ -1025,7 +1035,7 @@ h3.comment-reply-title {
 
       .single .a11y-site-main, .category .a11y-site-main, .page .a11y-site-main, .columns .a11y-site-main {
           border: 0;
-          padding: 6rem 5rem 4rem 5rem;
+          padding: 2.5rem 5rem 4rem 5rem;
       }
 
       .home .a11y-site-main {
@@ -1132,10 +1142,34 @@ span.fa {
     box-shadow: none;
 }
 
+/* Breadcrumbs */
+
+.breadcrumbs {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-size: 0.85rem;
+
+    &:not(:last-child)::after {
+        content: ">";
+        color: #000;
+    }
+}
+
+.separator {
+    margin: 0 0.5rem;
+}
+
 
 /* Styles for Social media feeds */
 .bi-social-feeds .a11y-front-panel:focus,
 .bi-social-feeds .a11y-front-panel:hover {
     border-color: front-panel-header;
 }
-
