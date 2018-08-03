@@ -345,13 +345,7 @@ function custom_breadcrumbs() {
                 // Current page
                 $output .= '<li class="item-current"><strong>' . get_the_title() . '</strong></li>';
 
-            } else {
-
-                // Just display current page if no parents
-                $output .= '<li class="item-current"><strong>' . get_the_title() . '</strong></li>';
-
-            }
-
+            } 
         }
 
         $output .= '</ul></nav>';
