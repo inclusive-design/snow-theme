@@ -520,6 +520,9 @@ h2.snow-title {
   line-height: 2rem;
   margin-bottom: 1rem;
 }
+.a11y-site-main article ul {
+  margin-bottom: 1.5rem;
+}
 h1.entry-title {
   margin-top: 0;
   margin-bottom: 2rem;
