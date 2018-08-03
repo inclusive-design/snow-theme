@@ -182,7 +182,7 @@ function create_sidebar($post_type) {
     ));
 
     // Get the immediate parent
-    $parent_id = wp_get_post_parent_id();
+    $parent_id = wp_get_post_parent_id($current_displayed_id);
 
     if ($pages && $parent_id) {
         // If somewhere in the middle of a Pages branch (there are parent and children Pages)
