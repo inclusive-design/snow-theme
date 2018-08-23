@@ -8,13 +8,13 @@ get_header(); ?>
 
     <main id="content" class="a11y-site-main small-12 columns">
         <div class="a11y-site-tagline">
-            <h1><span>Welcome to</span><br /> <span class="a11y-tagline-emphasis">SNOW</span></h1>
+            <h1><span>Learning with technology</span><br /> <span class="a11y-tagline-emphasis">since 1998</span></h1>
         </div>
 
         <div class="snow-container">
             <div class="flc-toc-tocContainer"></div>
         </div>
-        
+
         <?php
 
             $sections = array(
