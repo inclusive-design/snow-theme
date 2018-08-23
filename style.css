@@ -305,9 +305,6 @@ Tags: accessibility
   padding: 2rem;
   vertical-align: middle;
 }
-.snow-access .textwidget {
-  padding: 1rem;
-}
 .snow-access-title {
   font-weight: bold;
   text-align: center;
@@ -422,6 +419,13 @@ h2.snow-title {
   color: #0f191d;
   text-decoration: underline;
 }
+.a11y-front-panel article,
+.a11y-front-panel .textwidget {
+  padding: 1rem;
+}
+.a11y-front-panel article a h3 {
+  margin-top: 0;
+}
 /* Site Sidebar (appears on all other pages, except front page) */
 .a11y-site-aside {
   color: #e8ecb2;
@@ -520,7 +524,8 @@ h2.snow-title {
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-.a11y-site-main article ul {
+.a11y-site-main article ul,
+.a11y-site-main article ol {
   margin-bottom: 1.5rem;
 }
 h1.entry-title {
@@ -981,9 +986,9 @@ h3.comment-reply-title {
     min-height: 35rem;
   }
   .a11y-site-tagline span {
-    font-size: 6rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    line-height: 8rem;
+    line-height: 5rem;
     display: inline;
     align-items: flex-start;
   }
