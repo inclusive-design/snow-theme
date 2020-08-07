@@ -130,7 +130,7 @@ class snow_panel_widget extends WP_Widget {
     }
 
     /* Create the widget output */
-    public function widget( $args ) {
+    public function widget( $args, $instance ) {
         echo $args['before_widget'] . $args['before_title'] . $this->title . $args['after_title']; ?>
         <div class="snow-widget">
             <?php echo do_shortcode('[snow_front_panel_sticky cat=' . $this->category . ']'); ?>
